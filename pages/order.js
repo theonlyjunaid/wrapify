@@ -5,9 +5,7 @@ import { useRouter } from 'next/router'
 
 const order = ({ order, clearCart }) => {
 
-    // print the order details
     const router = useRouter()
-    // console.log(router.query.clearCart)
     if (router.query.clearCart == 1) {
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cart')
@@ -88,18 +86,6 @@ const order = ({ order, clearCart }) => {
 
 export default order
 
-//getServerSideProps
-// const getServerSideProps = async (context) => {
-//     const { params } = context;
-//     const { id } = params;
-//     const order = await Order.findById(id);
-//     return {
-//         props: {
-//             order: JSON.parse(JSON.stringify(order)),
-//         },
-//     };
-// }
-// export { getServerSideProps };
 export async function getServerSideProps(context) {
     if (!mongoose.connections[0].readyState) {
         await mongoose.connect(process.env.MONGO_URI)

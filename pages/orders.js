@@ -3,14 +3,12 @@ import Link from 'next/link'
 
 
 const Orders = () => {
-    //post requst to server for fething the orders
     const [orderdata, setOrderdata] = useState([])
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const user = JSON.parse(localStorage.getItem('myuser'))
 
 
-            //  console.log(token)
             fetch('/api/myorders', {
                 method: 'POST',
                 headers: {
@@ -21,13 +19,10 @@ const Orders = () => {
 
                 t.json()
             ).then((data) => {
-                // console.log(data.orders)
                 setOrderdata(data.orders)
-                // setOrders(data)
             })
         }
     }, [])
-    // console.log(orderdata)
 
     return (
         <div>

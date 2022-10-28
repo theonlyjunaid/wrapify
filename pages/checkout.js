@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
+import {AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
 import Link from 'next/link'
 import Head from 'next/head'
-import Script from 'next/script'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, user }) => {
-    // console.log(let item in cart)
-
-
-
     const [info, setInfo] = useState({
         name: '',
         email: '',
@@ -138,8 +133,6 @@ const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, u
         return new Promise((resolve) => {
             const script = document.createElement("script");
             script.src = "https://checkout.razorpay.com/v1/checkout.js";
-            // document.body.appendChild(script);
-
             script.onload = () => {
                 resolve(true);
             };

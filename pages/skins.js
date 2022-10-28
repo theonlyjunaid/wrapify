@@ -7,20 +7,7 @@ import Link from 'next/link'
 
 
 const Skins = ({ products }) => {
-    // console.log(process.env.SECRET_KEY);
-    // useEffect(() => {
-    //     setFirst('Iphone 14')
-    // }, [])
-    // let data = []
-    // const data = await fetch('http://localhost:3000/api/getproducts')
-    // // data = await data.json()
-    // console.log(data);
-    // const getproducts = async () => {
-    //     const data = await fetch('http://localhost:3000/api/getproducts')
-    //     const data1 = await data.json()
-    //     console.log(data1);
-    // }
-    // getproducts()
+ 
 
     console.log(products);
     return (
@@ -71,28 +58,4 @@ export async function getServerSideProps(context) {
         props: { products: JSON.parse(JSON.stringify(products)) },
     }
 }
-//get static props
-// export async function getStaticProps(context) {
-//     if (!mongoose.connections[0].readyState) {
-//         await mongoose.connect(process.env.MONGODB_URI);
 
-//     }
-//     let products = await Product.find({ color: 'gray' });
-//     return {
-//         props: { products: JSON.parse(JSON.stringify(products)) },
-//     }
-// }
-//get static paths
-// export async function getStaticPaths() {
-//     if (!mongoose.connections[0].readyState) {
-//         await mongoose.connect(process.env.MONGODB_URI);
-
-//     }
-//     let products = await Product.find({ color: 'gray' });
-//     return {
-//         paths: products.map((product) => ({
-//             params: { slug: product.slug },
-//         })),
-//         fallback: false,
-//     }
-// }
