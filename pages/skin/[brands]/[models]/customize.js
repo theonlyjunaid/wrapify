@@ -9,7 +9,10 @@ import 'react-toastify/dist/ReactToastify.css';
 // import { theme } from '../../data/theme'
 // import Theme from '../../../../../../components/Item/Theme'
 
-export default function Slug({ cart, addToCart, removeFromCart, clearCart, subTotal, buyNow, products }) {
+export default function Slug({ products,  addToCart, buyNow, cart, size, setSize }) {
+    useEffect(() => {
+        setSize('Choose')
+    }, [])
     const theme = {
         'PLain Colours': [{
             name: 'green',
@@ -19,6 +22,8 @@ export default function Slug({ cart, addToCart, removeFromCart, clearCart, subTo
             name: 'gray',
             URL: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSDxIVFRUVFRUVFRUVFRUVFRUVFRcXFxUVFRUYHSggGB0lHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZFRkrKy0tKy0rKzc3LS0tKzctLTctKy0rLTctLTctLTc3Ny03Ny0tLSstLTctLSstKys3Lf/AABEIAOEA4QMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EABgQAQEBAQEAAAAAAAAAAAAAAAABEQJB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD0+mqiKpKEEKkWmAkBcAoAoCiCKgKigIEASgAWhQVBUEIqKCJ01WaCYGAOiKgoqRRFRUFAWCIRcQFUSAAAWpVMBCFICCpAAAEVICgoIzW2egZ0AHSpjSAAQAKAogAoARUAVNWsgoSlBLQUEDVBEVKAGgAQBWeliUGRcAbpVqUEUUEABQgAJVAFQFQKCAAAAAAgAItEBdIRQQWpQZwAHRAAWoAUgQBQAIQBQAEtAECoDSEUBKtQEgACLqAsWJABOqtZoAAN0EBYRFAFQBTABUABUAqKkARUAxpItBNRYAYlCggKBqxnFBWbGkBEQB0qVamAsNDAILgACwEAAhRQZo1jIBixMAihQGVTAAoCAAKkWArNrVYoAgDoCCqqKAigioKCCgAIBUDQNLQ0FQ0gAAIAAQAIrMUCs1pKDIaA6VFoArKgACrFSAgtqAAJQRQBFoABDQEwoAi6gL1UACCyIC6z1VrPVBAUV1qLUESgAoAKIAoQgCKgBSJQVABUUBDSoAqAKhQFtQAGK1UoJougOvTK1AVIAKIAsIEACgKhCgkABRADQABUAQAEFoEMF0GUqs0EUAdUqpQA0ABRRLQEUQBSoAAAAAiiAKgAACKlUBDTQKy1WaAMqDshUqKLEFFKICiRQCAIqVUACJQUQAoABRQRFATBUBFRQRlaAyoIOqU1BVIzaoKIAsWIqogAqwTTQVFKCACCACiKCaUqUF00xAC0qaAlKgINCK2IAAALEAaiACNRBQABaUAKgIACoU8AU9UASoAiJQAqAKAIj//Z'
         }]
+        
+
     }
 
     const [color, setColor] = useState('plain')
@@ -56,24 +61,29 @@ export default function Slug({ cart, addToCart, removeFromCart, clearCart, subTo
             </div>
             <div className='w-full md:w-1/2 pt-6 md:pt-0  md:mt-6 lg:mt-0 text-center  md:text-left   md:px-20   bg-gray-100'>
 
-                    <h1 className='text-2xl font-mono'>Configure Your Design</h1>
+                    <h1 className='text-2xl font-mono md:text-3xl font-base md:mt-20 md:mb-3'>Configure Your Design</h1>
 
-                    <h2 className='font-semibold text-xl'>DESIGN</h2>
-                    <h3>{color.toUpperCase()}</h3>
-                    <div>
+                    {size == 'Choose' && <div>
+                    <h2 className='font-semibold text-xl mt-7'>DESIGN</h2>
+                    <h3 className='md:hidden'>{color.toUpperCase()}</h3>
+                <div className='h-[300px]  overflow-y-scroll -ml-5'>
 
                         {
                             Object.keys(theme).map((key, index) => {
                                 console.log(key)
                                 return (
-                                    <div className=' justify-center items-center'>
-                                        <h2 className='flex justify-start mx-14 py-2'>{key}</h2>
-                                        <div className='grid grid-cols-5 px-14 mb-3'>
+                                    <div key={index} className=' justify-center items-center '>
+                                        <h2 className='flex justify-start mx-6 py-2'>{key}</h2>
+                                        <div className='grid grid-cols-4   mb-3  '>
                                             {
                                                 theme[key].map((item, index) => {
                                                     return (
-                                                        <div key={index} onClick={() => setColor(item.name)}>
-                                                            <img src={item.URL} alt="" className='w-[50px] h-[50px] rounded-full' />
+                                                        <div key={index} onClick={() => setColor(item.name)} className='text-center mb-3 flex justify-center'>
+                                                            <div >
+
+                                                            <img src={item.URL} alt="" className='w-[50px] md:w-[100px] h-[50px] rounded-full' />
+                                                            <p className='text-[12px] flex justify-center'>{item.name.toUpperCase()}</p>
+                                                            </div>
                                                         </div>
                                                     )
                                                 }
@@ -85,14 +95,64 @@ export default function Slug({ cart, addToCart, removeFromCart, clearCart, subTo
                             }
                             )
                         }
-
-                        <div>
-                            <h2 className='font-semibold text-xl'>PRICE</h2>
-                            <h3 className='font-semibold text-xl'>rs {mobile[0].price}</h3>
-                            <div>Buy Now</div>
-                        </div>
                     </div>
 
+                <div className="md:flex  justify-center items-center md:justify-between my-5 md:mt-10">
+                    <div className=''> <span className='text-lg md:text-xl font-mono line-through mx-1'>₹{200 + mobile[0].price}</span><span className='text-2xl md:text-3xl font-semibold py-2'> ₹{mobile[0].price}</span>
+                    </div>
+                        {color !== 'plain' && <div className='my-6 md:my-0 flex justify-around px-5 items-center'>
+                        <button className='px-8  text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl md:w-[200px]' onClick={() => setSize('Choosing')}>Buy Now</button>
+                    </div>}
+                </div>
+                </div>}
+                {
+                    size !== 'Choose' && color!=='plain'&&<div className='pb-10 text-left'>
+                        <div className='p-auto mb-5 flex font-extralight  cursor-pointer ' onClick={() => setSize('Choose')} ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            style={{ fill: "rgba(30, 30, 80, 1)", transform: "", msfilter: "", marginRight: '10px' }}
+                        >
+                            <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z" />
+                        </svg>
+                            Back</div>
+                        <h1 className="text-xl md:text-2xl font-mono font-semibold tracking-widest">
+                            Customize Your Size
+                        </h1>
+
+                        <div className='w-full border border-black rounded-md my-5'>
+                            <div className={`h-[100px] md:h-[120px] flex  border-b border-b-black gap-3 cursor-pointer ${size === 'backfit' ? 'bg-[#ffa825]' : ""}`} onClick={() => setSize('backfit')}>
+                                <img src="/icons/backfit.webp" alt="" className='h-full' />
+                                <div className='py-1'>
+                                    <h1 className='text-md md:text-lg font-semibold'>Back Fit</h1>
+                                    <p className='text-sm md:text-md font-extralight'>- Cover Your Back panel</p>
+                                    <p className='text-sm md:text-md font-extralight'>- Very Easy to apply</p>
+                                </div>
+                            </div>
+                            <div className={`h-[100px] md:h-[120px] flex  gap-3 cursor-pointer ${size === 'fullcover' ? 'bg-[#ffa825]' : ""}`} onClick={() => setSize('fullcover')}>
+                                <img src="/icons/fullcover.webp" alt="" className='h-full' />
+                                <div className='  py-auto'>
+                                    <h1 className='text-md md:text-lg font-semibold'>Full Coverage</h1>
+                                    <p className='text-sm md:text-md font-extralight'>- Cover Your Back panel</p>
+                                    <p className='text-sm md:text-md font-extralight'>- Cover Your Side Panel</p>
+                                    <p className='text-sm md:text-md font-extralight'>- Hard to apply</p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div className='w-full flex justify-around px-5 items-center'>
+                            {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
+                            <button className='px-8 text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(mobile[0].slug + "-" + size, 1, mobile[0].price, mobile[0].name + " (" + mobile[0].color + "/" + size + ")", size, mobile[0].color, mobile[0].img) }}>Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                }
 
 
             </div>

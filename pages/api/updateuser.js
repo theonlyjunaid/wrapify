@@ -11,7 +11,7 @@ const handler = async (req, res) => {
         let user = await User.findOne({ email: decoded.email });
         // console.log(user);
         if (user) {
-            let dbuser = await User.findOneAndUpdate({ email: decoded.email }, { name: req.body.name, phone: req.body.phone, address: req.body.address, pincode: req.body.pincode });
+            let dbuser = await User.findOneAndUpdate({ email: decoded.email }, { name: req.body.name, phone: req.body.phone, address1: req.body.address1,address2:req.body.address2, pincode: req.body.pincode });
             const { name, email, phone, address, pincode } = dbuser;
             res.status(200).json({ success: true, name, email, phone, address, pincode });
         }

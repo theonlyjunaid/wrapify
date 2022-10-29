@@ -1,58 +1,95 @@
 import React, { useState, useEffect } from 'react'
-import {AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
+import { BsTrash, BsCircle, BsCheck2Circle } from 'react-icons/bs'
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, user }) => {
+const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, user ,setSubTotal}) => {
     const [info, setInfo] = useState({
         name: '',
         email: '',
         phone: '',
-        address: '',
+        address1: '',
+        address2: '',
         city: '',
         state: '',
         pincode: '',
-        disbled: true
+        delivery: 'standard',
+        disbled: false
     })
+    console.log(info)
     useEffect(() => {
 
         if (typeof window !== 'undefined') {
             if (localStorage.getItem('myuser')) {
+                const myuser = JSON.parse(localStorage.getItem('myuser'));
                 const user = JSON.parse(localStorage.getItem('myuser'))
                 setInfo({
                     ...info,
                     email: user.email,
                 })
+                fetchData(myuser.token)
+
             }
         }
+
+
     }, [])
+    const fetchData = async (token) => {
+        const res = await fetch(`/api/getuser`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ token: token })
+        })
+        const json = await res.json()
+        const userData = json.user
+        console.log(userData)
+        setInfo({
+            ...info,
+            name: userData.name,
+            email: userData.email,
+            phone: userData.phone,
+            address1: userData.address1,
+            address2: userData.address2,
+
+            pincode: userData.pincode,
+        })
+        // console.log(json)
+        // console.log(user)
+    }
+
+
     const handleChange = async (e) => {
 
         setInfo({ ...info, [e.target.name]: e.target.value })
         if (info.name && info.email && info.phone && info.address && info.pincode) {
             setInfo({ ...info, disbled: false })
         }
-        if (e.target.name === "phone") {
-            if (e.target.value.length !== 10) {
-                setInfo({ ...info, disbled: true })
-                toast.error('enetr 10 digit number', {
-                    position: "top-left",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
-            }
-        }
+     
+        // if (e.target.name === "phone") {
+        //     if (e.target.value.length !== 10) {
+        //         setInfo({ ...info, disbled: true })
+        //         toast.error('enetr 10 digit number', {
+        //             position: "top-left",
+        //             autoClose: 5000,
+        //             hideProgressBar: false,
+        //             closeOnClick: true,
+        //             pauseOnHover: true,
+        //             draggable: true,
+        //             progress: undefined,
+        //             theme: "light",
+        //         });
+        //     }
+        // }
 
-        if (e.target.name === 'pincode') {
+        if (e.target.name === 'pinode') {
             console.log(e.target.value);
-
+setInfo({ ...info, pincode: e.target.value })
             if (e.target.value.length == 6) {
                 // console.log(pincode)
                 let pins = await fetch(`/api/pincode`)
@@ -145,7 +182,7 @@ const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, u
     };
 
     return (
-        <form className='container m-auto' >
+        <div className='container m-auto ' >
             <Head>
                 <title>Checkout</title>
                 <meta name='description' content='Checkout Page' />
@@ -164,159 +201,252 @@ const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, u
             />
 
 
-            <h1 className='font-bold text-3xl text-center my-8'>Checkout</h1>
-            <h2>1. Delivery Details</h2>
-            <div className="mx-auto flex ">
-                <div className="px-2 w-1/2">
-                    <div className=" mb-4">
-                        <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-                            Name
+            <h1 className='font-bold text-3xl text-center mt-8 mb-3'>Checkout</h1>
+            <div className='md:flex '>
+                <div className='md:w-3/5'>
+                    <h2> Contact Info</h2>
+                    <div className="mx-auto md:flex border-b bo">
+                        <div className="px-2 md:w-1/2">
+                            <div className=" mb-4">
+                                <label htmlFor="name" className="leading-7 text-sm text-gray-600">
+                                    Name
+                                </label>
+                                <input
+                                    onChange={handleChange}
+                                    type="text"
+                                    id="name"
+                                    value={info.name}
+                                    name="name"
+                                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                />
+                            </div>
+
+                        </div>
+                        {user?.email ? <div className="px-2 md:w-1/2">
+                            <div className=" mb-4">
+                                <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+                                    Email
+                                </label>
+                                <input
+                                    readOnly
+                                    value={user.email}
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    className="w-full bg-gray-200 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                />
+                            </div>
+
+                        </div> : <div className="px-2 w-1/2">
+                            <div className=" mb-4">
+                                <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+                                    Email
+                                </label>
+                                <input
+                                    onChange={handleChange}
+                                    type="email"
+                                    id="email"
+                                    value={info.email}
+                                    name="email"
+                                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                />
+                            </div>
+
+                        </div>}
+
+                    </div>
+                    <h2 className='mt-4'> Delivery Details</h2>
+
+                    <div className="relative px-2 mb-4">
+                        <label htmlFor="message" className="leading-7 text-sm text-gray-600">
+                            Address
                         </label>
-                        <input
+                        <textarea
                             onChange={handleChange}
-                            type="text"
-                            id="name"
-                            name="name"
-                            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            id="address1"
+                            name="address1"
+value={info.address1}
+                            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-12 text-base outline-none text-gray-700 pt-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                            defaultValue={""}
+                            minLength={10}
+                            placeholder="House No. , Street Name, Block"
                         />
                     </div>
+                    <div className="relative px-2 mb-2">
 
+                        <textarea
+                            onChange={handleChange}
+                            id="address2"
+                            name="address2"
+                            value={info.address2}
+                            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-12 text-base outline-none text-gray-700 pt-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                            defaultValue={""}
+                            minLength={10}
+                            placeholder="Locality , Landmark"
+                        />
+                    </div>
+                    <div className="flex">
+                        <div className="px-2 w-1/2">
+                            <div className=" mb-4">
+                                <label htmlFor="phone" className="leading-7 text-sm text-gray-600">
+                                    phone
+                                </label>
+                                <input
+                                    onChange={handleChange}
+                                    type="number"
+                                    id="phone"
+                                    value={info.phone}
+                                    name="phone"
+                                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                />
+                            </div>
+
+                        </div>
+                        <div className="px-2 w-1/2">
+                            <div className=" mb-4">
+                                <label htmlFor="city" className="leading-7 text-sm">
+                                    city
+                                </label>
+                                <input
+                                    onChange={handleChange}
+                                    type="text"
+                                    id="city"
+                                    value={info.city}
+                                    name="city"
+                                    className="w-full   rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                />
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div className="flex">
+                        <div className="px-2 w-1/2">
+                            <div className=" mb-4">
+                                <label htmlFor="state" className="leading-7 text-sm">
+                                    State
+                                </label>
+                                <input
+                                    onChange={handleChange}
+                                    type="text"
+                                    id="state"
+                                    value={info.state}
+                                    name="state"
+                                    className="w-full   rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                />
+                            </div>
+
+                        </div>
+                        <div className="px-2 w-1/2">
+                            <div className=" mb-4">
+                                <label htmlFor="pincode" className="leading-7 text-sm text-gray-600">
+                                    pincode
+                                </label>
+                                <input
+                                    onChange={handleChange}
+                                    type="number"
+                                    id="pincode"
+                                    value={info.pincode}
+                                    name="pincode"
+                                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                />
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div className='mt-4'>
+                        <h2>Delivery type</h2>
+                        <div className="md:flex gap-2 px-2">
+                        <div className="flex border py-2 cursor-pointer w-full  px-2 items-center rounded-md" onClick={()=>{setInfo({...info,delivery:'standard'})}}>
+
+                                {info.delivery === 'standard' ? <BsCheck2Circle className='scale-150 ml-2'/>:<BsCircle className='ml-2' />}
+                            <div className="px-2 w-3/5 ">
+                            <p className='ml-2 '>Standard </p>
+                                <p className='ml-2'> 5-10 days Delivery</p>
+                            </div>
+                           <div className='w-1/5 flex justify-end'>
+                            <p className='ml-auto'>Free</p>
+                           </div>
+                        </div>
+                            {/* <div className="flex border cursor-pointer py-2 md:w-1/2 px-2 items-center rounded-md" onClick={() => { setInfo({ ...info, delivery: 'express' }) }}>
+                                {info.delivery === 'express' ? <BsCheck2Circle className='scale-150 ml-2' /> : <BsCircle className='ml-2'/>}
+
+                            <div className="px-2 w-3/5 ">
+                            <p className='ml-2 '>Express </p>
+                                <p className='ml-2'> 4-6 days Delivery</p>
+                            </div>
+                           <div className='w-1/5 flex justify-end'>
+                                    <p className='ml-auto'>₹50</p>
+                           </div>
+                        </div> */}
+                        </div>
+
+
+
+                    <div className='mt-4 px-2 w-full relative'>
+                    <Link href=""><a>
+                        <button disabled={info.disbled} onClick={makePayment} className="dis disabled:bg-gray-500 disabled:cursor-not-allowed cursor-pointer relative mx-auto flex justify-center   w-full   py-3  rounded-md my-5  bg-black text-white">Pay Now</button>
+                    </a></Link>
+                    </div>
+                    </div>
                 </div>
-                {user?.email ? <div className="px-2 w-1/2">
-                    <div className=" mb-4">
-                        <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-                            Email
-                        </label>
-                        <input
-                            readOnly
-                            value={user.email}
-                            type="email"
-                            id="email"
-                            name="email"
-                            className="w-full bg-gray-200 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
+                <div className='hidden md:block md:w-2/5 bg-gray-100'>
+                    <div className="sidbar  p-4  py-10  w-[100%]  z-20">
+                        <div className='list-decimal text-semibold text-black'>
+                            {Object.keys(cart).length === 0 && <li className='my-4 font-normal'>Cart is empty</li>}
+                            {Object.keys(cart).map((key) => {
+                                const { name, price, qty, size, varient, img } = cart[key]
+
+                                return (
+                                    <div key={name} className='flex  border-b border-gray-400  py-[10px]' >
+                                        <div className='flex flex-col justify-center items-center relative w-[100px] h-[100px]'>
+                                            <Image
+                                            priority
+                                                src={img}
+                                                layout='fill'
+                                                objectFit='contain'
+                                                alt="Picture of the Skin"
+                                            />
+                                        </div>
+
+                                        <div className=' ml-1 md:ml-4  items-center w-3/5'>
+                                            <p className='font-mono flex items-center'>{name.split("(")[0]} </p>
+                                            <p className='font-thin text-gray-800 my-[5px]'>{varient}</p>
+                                            <div className='md:flex'>
+                                                <p className='font-thin text-gray-800 my-[5px]'>Size: {size} /</p>
+                                                <p className='font-thin text-gray-800 my-[5px] ml-2'>Qty: {qty}</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div className=' ml-1 md:ml-4 flex items-center text-center w-1/5'>
+                                            {/* <p className='font-mono'>Price</p> */}
+                                            <p className='font-mono'>₹{price * qty}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div className='flex justify-between items-center mt-4'>
+                            <p className='font-base'>Subtotal</p>
+                            <p className='font-semibold'>₹{subTotal}</p>
+                        </div>
+                        <div className='flex justify-between items-center mt-4'>
+                            <p className='font-base'>Delivery Charges</p>
+                            <p className='font-semibold'>₹{0}</p>
+                        </div>
+
+                        <div className='flex justify-between items-center mt-4 border-t border-gray-500 pt-4'>
+                            <p className='font-base'>Total Amount</p>
+                            <p className='font-semibold text-2xl'>₹{subTotal}</p>
+                        </div>
+
                     </div>
-
-                </div> : <div className="px-2 w-1/2">
-                    <div className=" mb-4">
-                        <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-                            Email
-                        </label>
-                        <input
-                            onChange={handleChange}
-                            type="email"
-                            id="email"
-                            name="email"
-                            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
-
-                </div>}
-
+                </div>
             </div>
 
-            <div className="relative mb-4">
-                <label htmlFor="message" className="leading-7 text-sm text-gray-600">
-                    Address
-                </label>
-                <textarea
-                    onChange={handleChange}
-                    id="address"
-                    name="address"
-                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-12 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                    defaultValue={""}
-                />
-            </div>
-            <div className="flex">
-                <div className="px-2 w-1/2">
-                    <div className=" mb-4">
-                        <label htmlFor="phone" className="leading-7 text-sm text-gray-600">
-                            phone
-                        </label>
-                        <input
-                            onChange={handleChange}
-                            type="number"
-                            id="phone"
-                            name="phone"
-                            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
-
-                </div>
-                <div className="px-2 w-1/2">
-                    <div className=" mb-4">
-                        <label htmlFor="city" className="leading-7 text-sm text-gray-600">
-                            city
-                        </label>
-                        <input
-                            onChange={handleChange}
-                            type="text"
-                            id="city"
-                            value={info.city}
-                            readOnly
-                            name="city"
-                            className="w-full bg-gray-200 cursor-not-allowed rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
-
-
-                </div>
-            </div>
-            <div className="flex">
-                <div className="px-2 w-1/2">
-                    <div className=" mb-4">
-                        <label htmlFor="state" className="leading-7 text-sm text-gray-600">
-                            State
-                        </label>
-                        <input
-                            onChange={handleChange}
-                            type="text"
-                            readOnly
-                            id="state"
-                            value={info.state}
-                            name="state"
-                            className="w-full bg-gray-200 cursor-not-allowed rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
-
-                </div>
-                <div className="px-2 w-1/2">
-                    <div className=" mb-4">
-                        <label htmlFor="pincode" className="leading-7 text-sm text-gray-600">
-                            pincode
-                        </label>
-                        <input
-                            onChange={handleChange}
-                            type="number"
-                            id="pincode"
-                            name="pincode"
-                            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
-
-
-                </div>
-            </div>
-            <h2>2. Review cart item </h2>
-            <div className="sidbar  p-4  py-10  w-[100%] bg-gray-200 z-20">
-                <ol className='list-decimal text-semibold text-black'>
-                    {Object.keys(cart).length === 0 && <li className='my-4 font-normal'>Cart is empty</li>}
-                    {Object.keys(cart).map((k) => {
-                        const { name, price, qty, size, varient } = cart[k]
-                        return (
-                            <li className='flex my-2 text-lg' key={k}>
-                                <div className='w-1/3 '>{name} </div>
-                                <div className='flex items-center justify-center w-1/3 '><AiOutlineMinusCircle className='mx-1 cursor-pointer' onClick={() => { removeFromCart(k, 1, price, name, size, varient) }} />
-                                    {qty}  <AiOutlinePlusCircle className='mx-1 cursor-pointer' onClick={() => { addToCart(k, 1, price, name, size, varient) }} /> </div>
-                            </li>)
-                    })}
-                    <span>the total amount is {subTotal}</span>
-                </ol>
-                <Link href=""><a >
-                    <button disabled={info.disbled} onClick={makePayment} className="disabled:bg-green-200 mx-4 px-1 py-1 w-max rounded-md my-5  bg-green-500">Pay Now</button>
-                </a></Link>
-            </div>
-        </form>
+        </div>
     )
 }
 

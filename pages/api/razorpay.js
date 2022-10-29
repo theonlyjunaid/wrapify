@@ -57,6 +57,7 @@ const handler = async (req, res) => {
                 return;
             }
         }
+        sumTotal = sumTotal;
         if (sumTotal !== subTotal) {
             res.status(200).json({ success: false, message: 'Cart is tempered total', cartClear: true });
             return;
@@ -73,7 +74,7 @@ const handler = async (req, res) => {
             email: info.email,
             orderId: oid,
             phone: info.phone,
-            address: info.address,
+            address: info.address1 + "-" + info.address2,
             city: info.city,
             state: info.state,
             pincode: info.pincode,

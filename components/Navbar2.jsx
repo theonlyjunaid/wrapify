@@ -36,22 +36,22 @@ const Navbar2 = ({ user, logout }) => {
         </div>
 
       </nav>
-      {!user.value && <div className={`right-14 absolute bg-slate-100 border rounded-md top-10 px-2 z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
-        <Link href="/login"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer'>
+      {!user.value && <div className={`right-14 absolute bg-white shadow-xl border rounded-md top-10  z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
+        <Link href="/login"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
           Login
         </div></a></Link>
-        <Link href="/signup"><a><div className='px-5 py-1 cursor-pointer'>
+        <Link href="/signup"><a><div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
           Sign Up
         </div></a></Link>
       </div>}
-      {user.value && <div className={`right-14 absolute bg-slate-100 border rounded-md top-10 px-2 z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
-        <Link href="/myaccount"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer'>
+      {user.value && <div className={`right-14 absolute bg-slate-100 border rounded-md top-10  z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
+        <Link href="/myaccount"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
           my account
         </div></a></Link>
-        <Link href="/orders"><a><div className='px-5 py-1 cursor-pointer'>
+        <Link href="/orders"><a><div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
 My Orders
         </div></a></Link>
-        <div className='px-5 py-1 cursor-pointer' onClick={logout}>
+        <div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200' onClick={logout}>
 Log out
         </div>
       </div>}

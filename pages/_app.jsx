@@ -106,7 +106,7 @@ console.log(itemCode)
       onLoaderFinished={() => setProgress(0)}
     />
     <Navbar2 logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} />
-    <Component user={user} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal}  {...pageProps} buyNow={buyNow} size={size} setSize={setSize} />
+    <Component user={user} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} setSubTotal={setSubTotal}  {...pageProps} buyNow={buyNow} size={size} setSize={setSize} />
     <Footer2 />
   </div>
 
