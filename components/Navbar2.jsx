@@ -4,6 +4,14 @@ import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlineSearch, AiOutlinePlu
 import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
 const Navbar2 = ({ user, logout }) => {
   const [dropdown, setDropdown] = useState('hidden')
+  const toggleDropdown = () => {
+    if (dropdown === 'hidden') {
+      setDropdown('block')
+    } else {
+      setDropdown('hidden')
+    }
+  }
+
   return (
     <div>
       <nav className='flex justify-between  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-lg border border-b'>
@@ -15,7 +23,7 @@ const Navbar2 = ({ user, logout }) => {
         <div className='flex items-center text-2xl gap-6 lg:hidden'>
           <Link href="/cart"><a><AiOutlineShoppingCart className='cursor-pointer' /></a></Link>
           <AiOutlineSearch className='cursor-pointer' />
-          <AiOutlineMenu className='cursor-pointer' />
+          <AiOutlineMenu className='cursor-pointer' onClick={toggleDropdown} />
         </div>
         <div className='hidden lg:flex items-center text-2xl gap-6 font-neue'>
           <Link href="/"><a><h1 className='text-xl cursor-pointer'>Home</h1></a></Link>
