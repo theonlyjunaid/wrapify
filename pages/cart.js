@@ -13,7 +13,7 @@ function CartItem({cart, item,subTotal ,addToCart,removeFromCart}) {
                 {Object.keys(cart).length === 0 && <li className='my-4 font-normal'>Cart is empty</li>}
                 {Object.keys(cart).map((key) => {
                     const { name, price, qty, size, varient, img } = cart[key]
-                    console.log(cart[key])
+                    // console.log(cart[key])
                     return (
                    
                         <div key={name} className='flex items-center border-b-2 py-[24px]' >

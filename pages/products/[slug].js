@@ -231,7 +231,7 @@ const Post = ({ cart, addToCart, removeFromCart, clearCart, subTotal, buyNow }) 
                             <span className="title-font font-medium text-2xl text-gray-900">
                                 $58.00
                             </span>
-                            <button onClick={() => { addToCart('iphone-14-green', 1, 499, 'Iphone -11 - Green', 'Normal', 'Green'); console.log(cart) }} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                            <button onClick={() => { addToCart('iphone-14-green', 1, 499, 'Iphone -11 - Green', 'Normal', 'Green') }} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                                 Add to cart
                             </button>
                             <button onClick={() => { buyNow('iphone-14-green', 1, 499, 'Iphone -11 - Green', 'Normal', 'Green') }} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">

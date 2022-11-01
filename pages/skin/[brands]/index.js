@@ -17,7 +17,7 @@ function Index({ products, brand }) {
     //     setRola(router.query.brands)
     // }, [router.isReady]);
     // console.log(router.query.brands)
-    console.log(products);
+    // console.log(products);
 
     return (
         <div className='pb-20'>

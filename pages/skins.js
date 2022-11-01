@@ -9,7 +9,7 @@ import Link from 'next/link'
 const Skins = ({ products }) => {
  
 
-    console.log(products);
+    // console.log(products);
     return (
         // <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  text-gray-600 body-font py-10 px-2 ">
         //     {products.map((product) => (<Link href={"/products/" + product.slug} key={product._id} >

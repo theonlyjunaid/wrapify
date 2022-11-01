@@ -20,7 +20,7 @@ const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, u
         delivery: 'standard',
         disbled: false
     })
-    console.log(info)
+    // console.log(info)
     useEffect(() => {
 
         if (typeof window !== 'undefined') {
@@ -48,7 +48,7 @@ const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, u
         })
         const json = await res.json()
         const userData = json.user
-        console.log(userData)
+        // console.log(userData)
         setInfo({
             ...info,
             name: userData.name,
@@ -94,10 +94,10 @@ setInfo({ ...info, pincode: e.target.value })
                 // console.log(pincode)
                 let pins = await fetch(`/api/pincode`)
                 let pinJson = await pins.json()
-                console.log(pinJson)
+                // console.log(pinJson)
                 if (Object.keys(pinJson).includes(e.target.value)) {
-                    console.log(pinJson[e.target.value][0])
-                    console.log(pinJson[e.target.value][1])
+                    // console.log(pinJson[e.target.value][0])
+                    // console.log(pinJson[e.target.value][1])
                     setInfo({ ...info, city: pinJson[e.target.value][1], state: pinJson[e.target.value][0], pincode: e.target.value })
                 }
 
@@ -106,13 +106,13 @@ setInfo({ ...info, pincode: e.target.value })
                 setInfo({ ...info, city: '', state: '' })
             }
         }
-        console.log(info)
+        // console.log(info)
     }
 
 
     const makePayment = async () => {
 
-        console.log("here...");
+        // console.log("here...");
         const res = await initializeRazorpay();
         let oid = Math.floor(Math.random() * Date.now());
         if (!res) {
@@ -147,7 +147,7 @@ setInfo({ ...info, pincode: e.target.value })
                     contact: 91 + info.phone,
                 },
             };
-            console.log(options);
+            // console.log(options);
             const paymentObject = new window.Razorpay(options);
             paymentObject.open();
         } else {
@@ -237,7 +237,7 @@ setInfo({ ...info, pincode: e.target.value })
                                 />
                             </div>
 
-                        </div> : <div className="px-2 w-1/2">
+                        </div> : <div className="px-2 md:w-1/2">
                             <div className=" mb-4">
                                 <label htmlFor="email" className="leading-7 text-sm text-gray-600">
                                     Email

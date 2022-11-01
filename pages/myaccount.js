@@ -45,7 +45,7 @@ const MyAccount = ({ user }) => {
         })
         const json = await res.json()
         const userData = json.user
-        console.log(userData)
+        // console.log(userData)
         setInfo({
             ...info,
             name: userData.name,
@@ -99,7 +99,7 @@ const MyAccount = ({ user }) => {
         //         setInfo({ ...info, city: '', state: '' })
         //     }
         // }
-        console.log(info)
+        // console.log(info)
     }
 
     const handleSubmit = async (e) => {
@@ -113,7 +113,7 @@ const MyAccount = ({ user }) => {
             body: JSON.stringify(data)
         })
         let json = await fetching.json()
-        console.log(json)
+        // console.log(json)
     }
     const handlePassword = async (e) => {
         e.preventDefault()
@@ -126,8 +126,8 @@ const MyAccount = ({ user }) => {
             body: JSON.stringify(data)
         })
         let json = await fetching.json()
-        console.log(fetching)
-        console.log(json)
+        // console.log(fetching)
+        // console.log(json)
     }
 
     return (

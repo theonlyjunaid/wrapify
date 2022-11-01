@@ -5,7 +5,7 @@ var jsonwebtoken = require('jsonwebtoken');
 
 const handler = async (req, res) => {
     if (req.method === 'POST') {
-        console.log(req.body.token);
+        // console.log(req.body.token);
         let token = req.body.token
         let decoded = jsonwebtoken.verify(token, process.env.JWT_SECRET);
         let user = await User.findOne({ email: decoded.email });

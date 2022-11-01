@@ -26,11 +26,11 @@ const handler = async (req, res) => {
       
 //         console.log(cartItem)
 // console.log(cartItem)
-        if (!Object.keys(pincode).includes(info.pincode)) {
+        // if (!Object.keys(pincode).includes(info.pincode)) {
 
-            res.status(200).json({ success: false, message: 'Sorry, we do not deliver to your pincode' });
-            return;
-        }
+        //     res.status(200).json({ success: false, message: 'Sorry, we do not deliver to your pincode' });
+        //     return;
+        // }
 
         // console.log(cart);
         if (info.phone.length != 10) {
@@ -44,7 +44,7 @@ const handler = async (req, res) => {
             return;
         }
         for (let item in products) {
-            console.log(item);
+            // console.log(item);
             // const slug = item.split("-").slice(0, -1).join("-")
             sumTotal += products[item].price * products[item].qty;
             product = await Product.findOne({ slug: item });
@@ -52,7 +52,7 @@ const handler = async (req, res) => {
                 res.status(200).json({ success: false, message: "Product is out of stock", cartClear: true });
                 return
             } else if (product?.price !== products[item].price) {
-                console.log(product)
+                // console.log(product)
                 res.status(200).json({ success: false, message: "Cart is tempered", cartClear: true });
                 return;
             }
@@ -112,7 +112,7 @@ const handler = async (req, res) => {
                 receipt: response.receipt,
             });
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             res.status(400).json(err);
         }
     } else {

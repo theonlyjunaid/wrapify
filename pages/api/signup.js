@@ -4,7 +4,7 @@ var CryptoJS = require("crypto-js");
 
 const handler = async (req, res) => {
     if (req.method === 'POST') {
-        console.log(req.body);
+        // console.log(req.body);
         const { name, email } = req.body;
         let user = await User.findOne({ email: email });
         if (user) {
@@ -13,7 +13,7 @@ const handler = async (req, res) => {
             let u = new User({ name, email, password: CryptoJS.AES.encrypt(req.body.password, process.env.SECRET_KEY).toString() });
             await u.save();
             res.status(200).json({ success: true, message: 'Account Created successfully Now you can login' });
-            console.log(u);
+            // console.log(u);
         }
     }
     else {

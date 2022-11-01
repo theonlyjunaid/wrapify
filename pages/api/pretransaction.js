@@ -7,7 +7,7 @@ const PaytmChecksum =  require('paytmchecksum');
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        console.log(req.body);
+        // console.log(req.body);
       
 
 var paytmParams = {};
@@ -63,7 +63,7 @@ PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), process.env.PA
         });
 
         post_res.on('end', function(){
-            console.log('Response: ', response);
+//             console.log('Response: ', response);
         });
     });
 

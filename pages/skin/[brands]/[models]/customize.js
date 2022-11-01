@@ -27,12 +27,12 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
     }
 
     const [color, setColor] = useState('plain')
-    console.log(products)
+    // console.log(products)
     let mobile = products.filter(product => product.color === color)
     // for (let i = 0; i < products.length; i++) {
     //     console.log(products[i].name)
     // }
-    console.log(mobile)
+    // console.log(mobile)
     // const destinationback = "/skin/" + products.brand + "/" + products.name.split(" ").join("-").toLowerCase();
 
 
@@ -70,7 +70,7 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
 
                         {
                             Object.keys(theme).map((key, index) => {
-                                console.log(key)
+                                // console.log(key)
                                 return (
                                     <div key={index} className=' justify-center items-center '>
                                         <h2 className='flex justify-start mx-6 py-2'>{key}</h2>

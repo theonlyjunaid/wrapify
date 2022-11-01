@@ -38,7 +38,7 @@ export default function Example() {
             body: JSON.stringify(data)
         })
         const json = await res.json()
-        console.log(json)
+        // console.log(json)
         setEmail("")
         setName("")
         setPassword("")

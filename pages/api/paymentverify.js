@@ -12,8 +12,8 @@ const handler = async (req, res) => {
     var expectedSignature = crypto.createHmac('sha256', process.env.RAZORPAY_SECRET)
         .update(body.toString())
         .digest('hex');
-    console.log("sig" + razorpay_signature)
-    console.log("sig" + expectedSignature)
+    // console.log("sig" + razorpay_signature)
+    // console.log("sig" + expectedSignature)
     if (expectedSignature === razorpay_signature) {
         order = await Order.findOneAndUpdate({ 'paymentInfo.id': razorpay_order_id }, { status: 'paid', paymentInfo: req.body });
         let products = order.products;
