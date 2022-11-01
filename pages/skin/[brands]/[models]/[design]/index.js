@@ -363,7 +363,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                         </svg>
                             Back</div>
                         <h1 className="text-xl md:text-2xl font-mono font-semibold tracking-widest">
-                            Customize Your Size
+                            Select Your Size
                         </h1>
 
                         <div className='w-full border border-black rounded-md my-5'>
@@ -389,10 +389,10 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                         </div>
 
 
-                        <div className='w-full flex justify-around px-5 items-center'>
+                        {size !== 'Choosing' && size !== 'Choose' && <Link href="/cart"><a><div className='w-full flex justify-around px-5 items-center'>
                             {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
                             <button className='px-8 text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(product.slug + "-"+size, 1, product.price, product.name + " (" + product.color+"/"+size+")",size, product.color, product.img); console.log(cart) }}>Add to Cart</button>
-                        </div>
+                        </div></a></Link>}
 
 
 

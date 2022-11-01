@@ -144,10 +144,10 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
                         </div>
 
 
-                        <div className='w-full flex justify-around px-5 items-center'>
+                        {size !== 'Choosing' && size !== 'Choose' && <Link  href="/cart"><a><div className='w-full flex justify-around px-5 items-center'>
                             {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
                             <button className='px-8 text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(mobile[0].slug + "-" + size, 1, mobile[0].price, mobile[0].name + " (" + mobile[0].color + "/" + size + ")", size, mobile[0].color, mobile[0].img) }}>Add to Cart</button>
-                        </div>
+                        </div></a></Link>}
 
 
 

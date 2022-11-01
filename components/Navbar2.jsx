@@ -29,8 +29,7 @@ const Navbar2 = ({ user, logout }) => {
           <Link href="/"><a><h1 className='text-xl cursor-pointer'>Home</h1></a></Link>
           <Link href="/skin"><a><h1 className='text-xl cursor-pointer'>Skin</h1></a></Link>
           <Link href="/about"><a><h1 className='text-xl cursor-pointer'>About</h1></a></Link>
-          <Link href="/privacy"><a><h1 className='text-xl cursor-pointer'>Privacy</h1></a></Link>
-          <Link href="/login"><a><h1 className='text-xl cursor-pointer'>Login</h1></a></Link>
+
         </div>
         <div className='hidden lg:flex items-center relative gap-4 text-2xl'>
 

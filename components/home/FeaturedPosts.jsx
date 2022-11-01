@@ -41,7 +41,7 @@ const FeaturedPosts = () => {
 
     const customLeftArrow = (
         <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6  text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
         </div>
@@ -49,7 +49,7 @@ const FeaturedPosts = () => {
 
     const customRightArrow = (
         <div className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6  text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
         </div>
@@ -60,17 +60,17 @@ const FeaturedPosts = () => {
             <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemclassName="px-4">
 
                 <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.webp')] h-[360px] md:h-[720px] bg-cover">
-                    <div className="text-xl md:text-6xl text-left hidden md:block md:absolute right-[15%]  items-center align-middle top-[40%] ">
-                        <h2>Now Its Your Turn </h2>
-                        <h2>To <button className='bg-[#bcffbc] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
+                    <div className="text-xl md:text-6xl text-left hidden md:block md:absolute right-[15%] overflow-y-hidden  items-center align-middle top-[40%] ">
+                        <h2 className='overflow-y-hidden'> Now Its Your Turn </h2>
+                        <h2 className='overflow-y-hidden'>To <button className='bg-[#bcffbc] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
                     </div>
                 </div>
 
                 <div className="bg-[url('/sale/12.webp')] md:bg-[url('/sale/2.webp')] h-[360px] md:h-[720px] bg-cover">
                     <div className='text-6xl text-left hidden md:block md:absolute left-[15%]  items-center align-middle top-[40%]'>
 
-                        <h2>Now Its Your Turn </h2>
-                        <h2>To <button className='bg-[#7d927d] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
+                        <h2 className='overflow-y-hidden'>Now Its Your Turn </h2>
+                        <h2 className='overflow-y-hidden'>To <button className='bg-[#7d927d] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
                     </div>
                 </div>
 
