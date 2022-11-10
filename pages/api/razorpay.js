@@ -8,7 +8,10 @@ import pincode from '../../pincode.json'
 
 const handler = async (req, res) => {
     if (req.method === "POST") {
+
         const { subTotal, qty, cart, oid, info } = req.body;
+        console.log(info)
+
         let products = {};
         for (let key in cart) {
             let temp = key.split("-").slice(0, -1).join("-")
@@ -33,7 +36,7 @@ const handler = async (req, res) => {
         // }
 
         // console.log(cart);
-        if (info.phone.length != 10) {
+        if (info.phone.length < 10 || info.phone.length > 10) {
             res.status(200).json({ success: false, message: 'Please enter 10 digit valid number' });
         }
         //check if cart is tempered

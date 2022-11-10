@@ -38,6 +38,7 @@ const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, u
 
 
     }, [])
+
     const fetchData = async (token) => {
         const res = await fetch(`/api/getuser`, {
             method: 'POST',
