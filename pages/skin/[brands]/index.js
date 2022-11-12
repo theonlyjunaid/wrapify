@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 
 function Index({ products, brand }) {
     const [show, setShow] = useState('hidden')
-
+console.log(products)
     // const router = useRouter();
     // const [rola, setRola] = useState('')
     // useEffect(() => {
