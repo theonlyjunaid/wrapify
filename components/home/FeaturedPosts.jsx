@@ -56,17 +56,17 @@ const FeaturedPosts = () => {
     );
 
     return (
-        <div className=" mb-8  text-center  w-full">
+        <div className=" mb-8    w-full">
             <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemclassName="px-4">
 
-                <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.webp')] h-[360px] md:h-[720px] bg-cover">
+                <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.png')] h-[100px] level1:h-[150px] level2:h-[240px] level3:h-[360px] level4:h-[480px] sm:h-[500px] md:h-[400px] lg:h-[500px] xl:h-[650px] 2xl-[720px] bg-cover">
                     <div className="text-xl md:text-6xl text-left hidden md:block md:absolute right-[15%] overflow-y-hidden  items-center align-middle top-[40%] ">
                         <h2 className='overflow-y-hidden'> Now Its Your Turn </h2>
                         <h2 className='overflow-y-hidden'>To <button className='bg-[#bcffbc] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
                     </div>
                 </div>
 
-                <div className="bg-[url('/sale/12.webp')] md:bg-[url('/sale/2.webp')] h-[360px] md:h-[720px] bg-cover">
+                <div className="bg-[url('/sale/12.webp')] md:bg-[url('/sale/2.png')] h-[100px] level1:h-[150px] level2:h-[240px] level3:h-[360px] level4:h-[480px] sm:h-[500px] md:h-[400px] lg:h-[500px] xl:h-[650px] 2xl-[720px] bg-cover">
                     <div className='text-6xl text-left hidden md:block md:absolute left-[15%]  items-center align-middle top-[40%]'>
 
                         <h2 className='overflow-y-hidden'>Now Its Your Turn </h2>
@@ -84,3 +84,40 @@ const FeaturedPosts = () => {
 
 
 export default FeaturedPosts;
+
+
+
+// import React, { Component } from "react";
+// import Slider from "react-slick";
+
+// export default class SimpleSlider extends Component {
+//     render() {
+//         const settings = {
+//             dots: true,
+//             infinite: true,
+//             speed: 500,
+//             slidesToShow: 1,
+//             slidesToScroll: 1
+//         };
+//         return (
+//             <div>
+//                 <Slider {...settings}>
+// <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.webp')] h-[360px] md:h-[720px] bg-cover">
+//                      <div className="text-xl md:text-6xl text-left hidden md:block md:absolute right-[15%] overflow-y-hidden  items-center align-middle top-[40%] ">
+//               <h2 className='overflow-y-hidden'> Now Its Your Turn </h2>
+//                          <h2 className='overflow-y-hidden'>To <button className='bg-[#bcffbc] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
+//                      </div>
+//                  </div>
+
+//                  <div className="bg-[url('/sale/12.webp')] md:bg-[url('/sale/2.webp')] h-[360px] md:h-[720px] bg-cover">
+//                      <div className='text-6xl text-left hidden md:block md:absolute left-[15%]  items-center align-middle top-[40%]'>
+
+//                          <h2 className='overflow-y-hidden'>Now Its Your Turn </h2>
+//                          <h2 className='overflow-y-hidden'>To <button className='bg-[#7d927d] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
+//                      </div>
+//                  </div>
+//                 </Slider>
+//             </div>
+//         );
+//     }
+// }

@@ -13,9 +13,9 @@ const Navbar2 = ({ user, logout }) => {
   }
 
   return (
-    <div>
-      <nav className='flex justify-between  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-lg border border-b'>
-        <div>
+    <div className='w-full'>
+      <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-lg border border-b'>
+        <div className='w-[30%]'>
           <Link href="/"><a><h1 className='text-xl cursor-pointer'>Wrap</h1></a></Link>
         </div>
 
@@ -25,16 +25,18 @@ const Navbar2 = ({ user, logout }) => {
           <AiOutlineSearch className='cursor-pointer' />
           <AiOutlineMenu className='cursor-pointer' onClick={toggleDropdown} />
         </div>
-        <div className='hidden lg:flex items-center text-2xl gap-6 font-neue'>
+        <div className='hidden lg:flex w-[40%] justify-center items-center text-2xl gap-6 font-neue'>
           <Link href="/"><a><h1 className='text-xl cursor-pointer'>Home</h1></a></Link>
           <Link href="/skin"><a><h1 className='text-xl cursor-pointer'>Skin</h1></a></Link>
           <Link href="/about"><a><h1 className='text-xl cursor-pointer'>About</h1></a></Link>
 
         </div>
-        <div className='hidden lg:flex items-center relative gap-4 text-2xl'>
+        <div className='hidden w-[30%] lg:flex items-center ml-auto justify-end relative gap-4 text-2xl'>
+<div className='flex items-center'>
 
           <AiOutlineSearch className='cursor-pointer absolute ml-3 text-2xl ' />
           <input type="text" className='border flex items-center rounded-[100px] py-2 px-[48px] w-[180px] cursor-text h-10 bg-[#f5f5f5] text-lg text-gray-600' placeholder='Search' onClick={() => alert("clciked")} />
+</div>
           {!user.value && <FaRegUserCircle onClick={() => { setDropdown('') }} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }} />}
 
           {user.value && <FaUserCircle onClick={() => { setDropdown('') }} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }} />}
