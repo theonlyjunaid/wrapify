@@ -1,6 +1,6 @@
 import React from 'react'
 import mongoose from 'mongoose'
-import Orders from './Orders'
+import Orders from '../../../components/admin/Order'
 // import Image from 'next/image'
 import Product from '../../../model/Product'
 import User from '../../../model/User'
