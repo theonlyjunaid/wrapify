@@ -6,6 +6,7 @@ import Product from '../../../model/Product';
 import Link from 'next/link'
 import mongoose from 'mongoose';
 import { useRouter } from 'next/router'
+import Image from 'next/image';
 
 function Index({ products, brand }) {
     const [show, setShow] = useState('hidden')
@@ -32,7 +33,7 @@ console.log(products)
                                 onMouseEnter={() => setShow(product.slug)}
                                 onMouseLeave={() => setShow('')}
                             >
-                                <img src={product.img} alt="" className='w-[260px] relative -top-0' />
+                                <Image src={product.img} alt="" className=' relative -top-0' width={280} height={400} />
                                 <div className={`sm:absolute bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl ${show === product.slug ? '' : 'hidden'}`}>
                                     <div className='text-mono'>{product.brand}</div>
                                     <div>{product.name}</div>

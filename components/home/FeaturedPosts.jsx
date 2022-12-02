@@ -62,7 +62,7 @@ const FeaturedPosts = () => {
                 <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.png')] h-[100px] level1:h-[150px] level2:h-[360px] level3:h-[360px] level5:h-[440px]   md:h-[400px] lg:h-[500px] xl:h-[650px] 2xl-[720px] bg-cover">
                     <div className="text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute right-[15%] overflow-y-hidden  items-center align-middle top-[40%] ">
                         <h2 className='overflow-y-hidden'> Now Its Your Turn </h2>
-                        <h2 className='overflow-y-hidden'>To <button className='bg-[#bcffbc] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
+                        <h2 className='overflow-y-hidden'>To <h2 className='bg-[#bcffbc] px-3  rounded-xl' > Convert</h2></h2>
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ const FeaturedPosts = () => {
                     <div className='text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute left-[15%]  items-center align-middle top-[40%]'>
 
                         <h2 className='overflow-y-hidden'>Now Its Your Turn </h2>
-                        <h2 className='overflow-y-hidden'>To <button className='bg-[#7d927d] px-3 py-1 rounded-xl' onClick={() => ''}> Convert</button></h2>
+                        <h2 className='overflow-y-hidden'>To <h2 className='bg-[#7d927d] px-3  rounded-xl'> Convert</h2></h2>
                     </div>
                 </div>
 

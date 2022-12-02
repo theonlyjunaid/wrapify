@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Product from '../../../../model/Product';
 import Link from 'next/link'
 import mongoose from 'mongoose';
+import Image from 'next/image';
 
 function Index({ products }) {
     const [show, setShow] = useState('hidden')
@@ -13,7 +14,7 @@ function Index({ products }) {
                             <Link href={destination} key={index}><a><div className='grid grid-cols-1 place-items-center  border-2 border-l-0 hover:shadow-2xl transition-all ease-in-out relative '
                                 onMouseEnter={() => setShow(product.slug)}
                                 onMouseLeave={() => setShow('')}
-                            ><img src={product.img} alt="" className='w-[260px] my-2' />
+                            ><Image src={product.img} alt="" className=' my-2' width={280} height={400} />
                                 <div className={`sm:absolute bg-slate-100 bg-opacity-50 w-[100%] bottom-0 flex justify-center py-6 ${show === product.slug ? '' : 'hidden'} `}>
                                     <div>{product.color}</div>
                                 </div>
