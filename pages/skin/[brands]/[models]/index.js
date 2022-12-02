@@ -15,7 +15,7 @@ function Index({ products }) {
                                 onMouseEnter={() => setShow(product.slug)}
                                 onMouseLeave={() => setShow('')}
                             ><Image src={product.img} alt="" className=' my-2' width={280} height={400} />
-                                <div className={`sm:absolute bg-slate-100 bg-opacity-50 w-[100%] bottom-0 flex justify-center py-6 ${show === product.slug ? '' : 'hidden'} `}>
+                                <div className={`sm:absolute bg-slate-100 bg-opacity-50 w-[100%] bottom-0 flex justify-center py-6 md:${show === product.slug ? '' : 'hidden'} `}>
                                     <div>{product.color}</div>
                                 </div>
                             </div></a></Link>

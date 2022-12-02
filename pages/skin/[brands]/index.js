@@ -34,7 +34,7 @@ console.log(products)
                                 onMouseLeave={() => setShow('')}
                             >
                                 <Image src={product.img} alt="" className=' relative -top-0' width={280} height={400} />
-                                <div className={`sm:absolute bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl ${show === product.slug ? '' : 'hidden'}`}>
+                                <div className={`sm:absolute bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl md:${show === product.slug ? '' : 'hidden'}`}>
                                     <div className='text-mono'>{product.brand}</div>
                                     <div>{product.name}</div>
                                 </div>
