@@ -40,7 +40,7 @@ const FeaturedPosts = () => {
     //     , [windowsize.innerWidth])
 
     const customLeftArrow = (
-        <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
+        <div className="absolute arrow-btn hidden md:flex left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
@@ -48,7 +48,7 @@ const FeaturedPosts = () => {
     );
 
     const customRightArrow = (
-        <div className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
+        <div className="absolute arrow-btn right-0 hidden md:flex text-center py-3 cursor-pointer bg-pink-600 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -57,12 +57,12 @@ const FeaturedPosts = () => {
 
     return (
         <div className=" mb-8    w-full">
-            <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemclassName="px-4">
+            <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemclassName="px-4" autoPlay={true} autoPlaySpeed={3000}>
 
                 <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.png')] h-[100px] level1:h-[150px] level2:h-[360px] level3:h-[360px] level5:h-[440px]   md:h-[400px] lg:h-[500px] xl:h-[650px] 2xl-[720px] bg-cover">
                     <div className="text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute right-[15%] overflow-y-hidden  items-center align-middle top-[40%] ">
                         <h2 className='overflow-y-hidden'> Now Its Your Turn </h2>
-                        <h2 className='overflow-y-hidden'>To <h2 className='bg-[#bcffbc] px-3  rounded-xl' > Convert</h2></h2>
+                        <h2 className='overflow-y-hidden flex'>To <h2 className='bg-[#bcffbc] px-3 text-md mx-2  overflow-y-hidden   rounded-xl' > Convert</h2></h2>
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ const FeaturedPosts = () => {
                     <div className='text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute left-[15%]  items-center align-middle top-[40%]'>
 
                         <h2 className='overflow-y-hidden'>Now Its Your Turn </h2>
-                        <h2 className='overflow-y-hidden'>To <h2 className='bg-[#7d927d] px-3  rounded-xl'> Convert</h2></h2>
+                        <h2 className='overflow-y-hidden flex'>To <h2 className='bg-[#7d927d] px-3 text-md mx-2 overflow-y-hidden  rounded-xl'> Convert</h2></h2>
                     </div>
                 </div>
 
