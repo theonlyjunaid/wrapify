@@ -3,9 +3,9 @@ import Order from "../../model/Order";
 import connectDB from "../../middleware/mongoose";
 import crypto from "crypto";
 const mailgun = require("mailgun-js");
-const DOMAIN = 'www.mzart.in';
+const DOMAIN = process.env.MAILGUN_DOMAIN;
 const mg = mailgun({
-    apiKey: process.env.API_MAIL, domain: DOMAIN
+    apiKey: process.env.API_EMAIL, domain: DOMAIN
 });
 
 
