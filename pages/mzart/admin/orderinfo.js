@@ -131,17 +131,17 @@ const Authenticate = (e) => {
                 Price
               </a>
             </div>
-      {Object.keys(orders.products).map((item) => {
+      {Object.keys(orders.products).map((item,index) => {
 // console.log(orders.products[item])
 const { name, price, quantity,img,size,varient,qty} = orders.products[item]
 // console.log(name)
         return (  
-          <div>
+          <div key={item+index}>
            {
               
                 name.map((item, index) => {
                   return (
-                    <div key={name} className='grid grid-cols-4 items-center border-b-2 py-[4px] md:text-sm' >
+                    <div key={name+index} className='grid grid-cols-4 items-center border-b-2 py-[4px] md:text-sm' >
                       <div className='flex flex-col justify-center items-center relative w-[100px] h-[100px]'>
                         <Image
                           src={img}
