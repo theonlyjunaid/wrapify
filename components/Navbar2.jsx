@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Link from 'next/link'
 import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlineSearch, AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineMenu } from 'react-icons/ai'
 import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
+// import Product from '../../../model/Product';
+// import Link from 'next/link'
+// import mongoose from 'mongoose';
+// import { useRouter } from 'next/router'
+// import Image from 'next/image';
+
 const Navbar2 = ({ user, logout }) => {
   const [dropdown, setDropdown] = useState('hidden')
+  const [search, setSearch] = useState(false)
+  const [searchItems, setSearchItems] = useState({})
+  const [searchItem, setSearchItem] = useState([])
   const toggleDropdown = () => {
     if (dropdown === 'hidden') {
       setDropdown('block')
@@ -11,7 +20,34 @@ const Navbar2 = ({ user, logout }) => {
       setDropdown('hidden')
     }
   }
+  const searchProduct = () => {
 
+fetch('/api/getproducts', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.then(data => {
+  // console.log(data.Skins.filter("iphone 14"))
+  // console.log(data.Skins?.find(item => item === "iphone 14"))
+  // console.log(data.Skins)
+  setSearchItems(data.Skins)
+  setSearchItem(Object.keys(searchItems))
+}
+)
+}
+useEffect(() => {
+  console.log(searchItem)
+ 
+}, [searchItems])
+
+const List = (e)=>{
+// console.log(e.target.value)
+let filldata = e.target.value
+console.log(searchItem.filter(item=>item.include(filldata)))
+
+}
   return (
     <div className='w-full'>
       <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-lg border border-b'>
@@ -32,11 +68,13 @@ const Navbar2 = ({ user, logout }) => {
 
         </div>
         <div className='hidden w-[30%] lg:flex items-center ml-auto justify-end relative gap-4 text-2xl'>
-<div className='flex items-center'>
+<div className='flex items-center '>
 
           <AiOutlineSearch className='cursor-pointer absolute ml-3 text-2xl ' />
-          <input type="text" className='border flex items-center rounded-[100px] py-2 px-[48px] w-[180px] cursor-text h-10 bg-[#f5f5f5] text-lg text-gray-600' placeholder='Search' onClick={() => alert("clciked")} />
+            <input type="text" className={`border flex items-center rounded-[100px] py-2 px-[48px] ${search ? 'w-[300px]' : 'w-[180px]'} cursor-text h-10 bg-[#f5f5f5] text-lg text-gray-600`} placeholder='Search' onClick={() => { setSearch(true); searchProduct() }} onChange={(e)=>List(e)} />
 </div>
+
+
           {!user.value && <FaRegUserCircle onClick={() => { setDropdown('') }} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }} />}
 
           {user.value && <FaUserCircle onClick={() => { setDropdown('') }} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }} />}
@@ -69,3 +107,4 @@ Log out
 }
 
 export default Navbar2
+

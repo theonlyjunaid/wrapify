@@ -57,7 +57,10 @@ const FeaturedPosts = () => {
 
     return (
         <div className=" mb-8    w-full">
-            <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemclassName="px-4" autoPlay={true} autoPlaySpeed={3000}>
+            <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemclassName="px-4" autoPlay={true} autoPlaySpeed={3000}
+                keyBoardControl={true}
+
+            >
 
                 <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.png')] h-[100px] level1:h-[150px] level2:h-[360px] level3:h-[360px] level5:h-[440px]   md:h-[400px] lg:h-[500px] xl:h-[650px] 2xl-[720px] bg-cover">
                     <div className="text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute right-[15%] overflow-y-hidden  items-center align-middle top-[40%] ">
