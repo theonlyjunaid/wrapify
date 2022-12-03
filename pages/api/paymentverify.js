@@ -2,6 +2,13 @@ import mongoose from "mongoose";
 import Order from "../../model/Order";
 import connectDB from "../../middleware/mongoose";
 import crypto from "crypto";
+const mailgun = require("mailgun-js");
+const DOMAIN = 'www.mzart.in';
+const mg = mailgun({
+    apiKey: '4dc3c62ba33182c94c5a34d523f72430-f2340574-e5eb0edd', domain: DOMAIN
+});
+
+
 
 
 const handler = async (req, res) => {
@@ -16,6 +23,15 @@ const handler = async (req, res) => {
     // console.log("sig" + expectedSignature)
     if (expectedSignature === razorpay_signature) {
         order = await Order.findOneAndUpdate({ 'paymentInfo.id': razorpay_order_id }, { status: 'paid', paymentInfo: req.body });
+        const data = {
+            from: 'Mz art <order@www.mzart.in>',
+            to: order.email,
+            subject: 'Order Placed',
+            html: '<h1>Your Order is been placed</h1>'
+        };
+        mg.messages().send(data, function (error, body) {
+            console.log(body);
+        });
         let products = order.products;
         for (let slug in products) {
             await mongoose.connection.db.collection('products').updateOne({ slug: slug }, { $inc: { availableQty: -products[slug].qty } });
