@@ -5,7 +5,7 @@ import crypto from "crypto";
 const mailgun = require("mailgun-js");
 const DOMAIN = 'www.mzart.in';
 const mg = mailgun({
-    apiKey: '4dc3c62ba33182c94c5a34d523f72430-f2340574-e5eb0edd', domain: DOMAIN
+    apiKey: process.env.API_MAIL, domain: DOMAIN
 });
 
 
