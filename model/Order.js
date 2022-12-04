@@ -15,5 +15,10 @@ const OrderSchema = new mongoose.Schema({
     amount: { type: Number, required: true },
     dileveryStatus: { type: String, default: 'pending' },
     status: { type: String, default: 'pending', required: true },
-}, { timestamps: true });
+    createdAt: { type: String, required: true, default: new Date().toLocaleString() },
+    updatedAt: { type: String, required: true , default: new Date().toLocaleString() },
+}, { timestamps: true
+
+
+});
 export default mongoose.models.Order || mongoose.model('Order', OrderSchema);

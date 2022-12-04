@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 function Order({ orders }) {
+    console.log(orders)
     return (
         <div>
             {
