@@ -1,22 +1,63 @@
 import mongoose from 'mongoose'
-import React from 'react'
+import React,{useEffect} from 'react'
 import Order from '../model/Order'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const order = ({ order, clearCart }) => {
 
     const router = useRouter()
+    const sendmail = async () => {
+        const data = await fetch("/api/mailapi", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ 'id': order._id }),
+        }).then((t) =>
+            t.json()        
+            );
+            console.log(data)
+        if (data.success) {
+            toast.success(data.message, {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        else if (data.success === false) {
+     console.log(data.message)
+        }
+    };
     if (router.query.clearCart == 1) {
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cart')
         }
+        sendmail()
     }
 
-// console.log(order)
-
     return (
-        <div><section className="text-gray-600 body-font overflow-hidden">
+        <div>
+            <ToastContainer
+                position="top-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
+            <section className="text-gray-600 body-font overflow-hidden">
             <div className="container px-5 py-24 mx-auto">
                 <div className="lg:w-4/5 mx-auto flex flex-wrap">
                     <div className=" w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
@@ -30,7 +71,7 @@ const order = ({ order, clearCart }) => {
                             Order has been successfully placed your payment is {order.status}
                         </h2>
                         <div className="grid grid-cols-4">
-                            <a href="" className='flex-grow border-b-2 border-gray-300 py-2 text-lg px-1'></a>
+<div></div>
                             <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
                                 Description
                             </a>

@@ -13,12 +13,10 @@ const OrderSchema = new mongoose.Schema({
     state: { type: String, required: true },
     pincode: { type: Number, required: true },
     amount: { type: Number, required: true },
+    ordermailsent: { type: Boolean, required:true ,default: false },
     dileveryStatus: { type: String, default: 'pending' },
     status: { type: String, default: 'pending', required: true },
     createdAt: { type: String, required: true, default: new Date().toLocaleString() },
     updatedAt: { type: String, required: true , default: new Date().toLocaleString() },
-}, { timestamps: true
-
-
-});
+}, { timestamps: true});
 export default mongoose.models.Order || mongoose.model('Order', OrderSchema);
