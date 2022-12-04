@@ -6,6 +6,18 @@ import { BsTrash } from 'react-icons/bs'
 
 
 function CartItem({cart, item,subTotal ,addToCart,removeFromCart}) {
+
+
+//     const temp = ()=> {
+// localStorage.setItem('cart', JSON.stringify({
+//     'cart': "cart",
+// }))
+//     }
+// useEffect(() => {
+//     temp()
+// }, [])
+
+
     return (
         <div className='md:flex mt-10 justify-center'>
             <div className='grid grid-cols-1 w-[80%] xl:max-w-[800px] mx-10'>

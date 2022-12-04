@@ -54,6 +54,7 @@ function MyApp({ Component, pageProps }) {
     })
 
     setSubTotal(subt)
+    console.log(subt)
     // console.log(cart)
   }
   const addToCart = (itemCode, qty, price, name, size, varient,img) => {
@@ -64,9 +65,10 @@ function MyApp({ Component, pageProps }) {
       newCart[itemCode] = { qty: 1, price, name, size, varient ,img}
     }
 console.log(itemCode)
+
     setCart(newCart)
     saveCart(newCart)
-    // console.log(cart)
+    console.log(newCart)
 
   }
   const clearCart = () => {
