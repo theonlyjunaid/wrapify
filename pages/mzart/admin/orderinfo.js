@@ -16,6 +16,7 @@ const Authenticate = (e) => {
   fetch('https://apiv2.shiprocket.in/v1/external/auth/login', {
       method: 'POST',
       headers: {
+        'Access-Control-Allow-Origin': 'https://coral-app-yj3q3.ondigitalocean.app',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
