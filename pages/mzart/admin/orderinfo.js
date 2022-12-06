@@ -16,8 +16,10 @@ const Authenticate = (e) => {
   fetch('https://apiv2.shiprocket.in/v1/external/auth/login', {
       method: 'POST',
       headers: {
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
+
       body: JSON.stringify({
         email,
         password,
@@ -78,9 +80,9 @@ const Authenticate = (e) => {
       "transaction_charges": 0,
       "total_discount": 0,
       "sub_total": orders.amount,
-      "length": 10,
-      "breadth": 15,
-      "height": 20,
+      "length": 20,
+      "breadth": 10,
+      "height": 5,
       "weight": 0.5
     }
     fetch('https://apiv2.shiprocket.in/v1/external/orders/create/adhoc', {
