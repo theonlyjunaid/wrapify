@@ -10,7 +10,7 @@ import Order from '../../../model/Order'
 const firozandjunaid = ({ products ,users,orders}) => {
     // console.log(products)
   return (
-    <div>firozandjunaid
+    <div className='w-full justify-center flex'>
       <Orders orders={orders}/>
     </div>
   )

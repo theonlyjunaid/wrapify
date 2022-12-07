@@ -1,7 +1,7 @@
 import React from "react";
 const Footer2 = () => {
     return (
-        <footer className=" body-font shadow-xl  border-t-2 border-black">
+        <footer className=" body-font shadow-xl  border-t-2 border-black ">
             <div className="container  px-5 py-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap justify-between flex-wrap flex-col">
                 <div>
 <h2 className="tracking-widest font-mono text-2xl">
@@ -188,7 +188,7 @@ Help
                     </div>
                     <div>
 
-                        <img src="icons/payment.svg" alt="" />
+                        <img src="icons/payment.svg" alt="payment methods" />
                              
 
                     </div>

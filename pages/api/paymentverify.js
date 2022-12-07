@@ -18,7 +18,7 @@ const handler = async (req, res) => {
     // console.log("sig" + razorpay_signature)
     // console.log("sig" + expectedSignature)
     if (expectedSignature === razorpay_signature) {
-        order = await Order.findOneAndUpdate({ 'paymentInfo.id': razorpay_order_id }, { status: 'paid', paymentInfo: req.body });
+        order = await Order.findOneAndUpdate({ 'paymentInfo.id': razorpay_order_id }, { status: 'paid', paymentInfo: req.body, orderDate: new Date() });
 
         let products = order.products;
         for (let slug in products) {

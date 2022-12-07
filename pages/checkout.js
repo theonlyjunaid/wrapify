@@ -203,7 +203,7 @@ setInfo({ ...info, pincode: e.target.value })
 
 
             <h1 className='font-bold text-3xl text-center mt-8 mb-3'>Checkout</h1>
-            <div className='md:flex '>
+            <div className='md:flex  mb-10 pr-5'>
                 <div className='md:w-3/5'>
                     <h2> Contact Info</h2>
                     <div className="mx-auto md:flex border-b bo">
@@ -392,7 +392,7 @@ value={info.address1}
                     </div>
                     </div>
                 </div>
-                <div className='hidden md:block md:w-2/5 bg-gray-100'>
+                <div className='hidden md:block md:w-2/5 bg-gray-200  rounded-xl ml-4'>
                     <div className="sidbar  p-4  py-10  w-[100%]  z-20">
                         <div className='list-decimal text-semibold text-black'>
                             {Object.keys(cart).length === 0 && <li className='my-4 font-normal'>Cart is empty</li>}
