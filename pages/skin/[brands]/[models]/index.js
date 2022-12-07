@@ -9,7 +9,7 @@ function Index({ products }) {
     const [show, setShow] = useState('hidden')
     const router = useRouter();
     const { brands, models } = router.query;
-
+console.log(products)
 
     return (
         <div>
@@ -20,8 +20,8 @@ function Index({ products }) {
                 {products[0].name} Skins Designs
             </div>
                 <div className='flex items-center gap-4 mt-3 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light'>
-                <div className=' text-gray-700 w-2/5'> Select your Design or
-                </div>  <button className='bg-[#EDEFF2] max-w-3/5  items-center md:gap-2 flex  hover:bg-yellow-400  transition ease-in-out duration-300 fo  antialiased md:px-[42px] px-5  py-2 md:py-[12px] rounded-[51px]'> <div> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                <div className=' text-gray-700  md:w-contain'> Select your Design or
+                    </div>  <button className='bg-[#EDEFF2]   md:w-fit items-center md:gap-2 flex  hover:bg-yellow-400  transition ease-in-out duration-300 fo  antialiased md:px-[42px] px-5  py-2 md:py-[12px] rounded-[51px]'> <div> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     // width="25" height="25"
                     className='h-[13px] w-[13px] md:h-[25px] md:w-[25px]'
                     viewBox="0 0 50 50">
@@ -29,19 +29,33 @@ function Index({ products }) {
                     </svg></div> <Link href={`/skin/${brands}/${models}/customize`}><a ><div className=''>Start the Customizer</div></a></Link>  </button>
             </div>
             </div>
-            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4   pb-4 min-h-screen relative '>
+            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4  gap-8 pb-4 min-h-screen relative mx-20 '>
                 {products.map((product, index) => {
                     const destination = '/skin/' + product.brand + '/' + product.name.split(" ").join("-") + '/' + product.color;
                     return (
-                        <Link href={destination} key={index}><a className='h-max'><div className='grid  grid-cols-1 place-items-center border-2 border-black hover:border400 border-l-0  relative '
+                        <Link href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
                             onMouseEnter={() => setShow(product.slug)}
                             onMouseLeave={() => setShow('')}
                         ><Image src={product.img} alt="" className=' my-2 absolute hover:scale-[103%] transition-all ease-in-out duration-300' width={280} height={400} />
-                            <div className={`sm:absolute bg-slate-100 bg-opacity-50 w-[100%] bottom-0  flex justify-center font-semibold py-6 md:${show === product.slug ? '' : 'hidden'} `}>
+                        
+                        </div>
+                            <div className={`sm: bg-gray-00  w-[100%] bottom-0   font-base py-3 md:${show === product.slug ? '' : 'hiden'} `}>
                                 <div>{product.color.toUpperCase()}</div>
+                                <div className=''>
+                                    <span className='text-lg font-semibold'>   ₹{
+                                        product.price
+                                        
+                                    }
+                                 </span >
+                                 <span className='mx-2  line-through'>
+                                        ₹499
+                                 </span>
+                                </div>
                             </div>
                         
-                        </div></a></Link>
+                        </a>
+                        
+                        </Link>
                     )
                 })}
             </div>

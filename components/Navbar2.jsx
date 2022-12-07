@@ -37,6 +37,7 @@ fetch('/api/getproducts', {
 }
 )
 }
+console.log(searchItems)
 useEffect(() => {
   console.log(searchItem)
 
@@ -112,7 +113,7 @@ console.log(e.target.value)
             return (
               <li key={index} className='bg-white  z-50 border-t'>
                
-                <Link href=""><a>{item}</a></Link>
+                <Link href={`/skin/${searchItems[item].brand}/${item}`}><a>{item}</a></Link>
               </li>
             )
           }
