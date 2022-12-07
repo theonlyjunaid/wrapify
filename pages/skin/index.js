@@ -21,16 +21,16 @@ export default function Popular({ products }) {
                 <p className='overflow-y-hidden'>Skins</p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6  gap-5  mx-20">
-                <Link href='/skin/apple'><a> <div className=" grid grid-cols-1 place-items-center  border-2 border-black hover:shadow-2xl transition-all ease-in-out relative ">
+                <Link href='/skin/apple'><a> <div className=" grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
                     <Image src="https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14promax/plain.webp" alt="" className='absolute -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' width={140} height={200} />
                     <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl transition-all ease-in-out duration-300 `}>
-                        <div className='text-mono'>Apple</div>
+                        <div className='text-mono font-semibold'>Apple</div>
                     </div>
                 </div></a></Link>
-                <Link href='/skin/samsung'><a>  <div className="grid grid-cols-1 place-items-center  border-2 border-black hover:shadow-2xl transition-all ease-in-out relative ">
+                <Link href='/skin/samsung'><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
                     <Image src='https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/note22series/note22ultra/plain.webp' className='absolute -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' alt="" width={140} height={200} />
                     <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl transition-all ease-in-out duration-300 `}>
-                        <div className='text-mono'>Samsung</div>
+                        <div className='text-mono font-semibol'>Samsung</div>
                     </div>
                 </div> </a></Link>
             </div>
@@ -48,11 +48,11 @@ item[0].brand.split("").slice(1).join("")
                                 {
                                     item.map((item, index) => {
                                         return (
-                                            <Link href={`/skin/${item.brand}/${item.name}`}><a>  <div className="grid grid-cols-1 place-items-center  border-2 border-black hover:shadow-2xl transition-all ease-in-out relative ">
+                                            <Link href={`/skin/${item.brand}/${item.name}`}><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative ">
                                                 <Image src={item.img} className='absolute -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' alt="" width={140} height={200} />
-                                                <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl transition-all ease-in-out duration-300 `}>
-                                                    <div className='text-mono'>{item.brand}</div>
-                                                    <div className='text-mono'>{item.model}</div>
+                                                <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-2 text-xl transition-all ease-in-out duration-300 `}>
+                                                    <div className='text-mono font-semibold'>{item.brand}</div>
+                                                    <div className='text-mono'>{item.name}</div>
                                                 </div>
                                             </div> </a></Link>
                                         )
