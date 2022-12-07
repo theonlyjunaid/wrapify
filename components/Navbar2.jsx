@@ -39,20 +39,37 @@ fetch('/api/getproducts', {
 }
 useEffect(() => {
   console.log(searchItem)
- 
+
 }, [searchItems])
 
 const List = (e)=>{
-// console.log(e.target.value)
-let filldata = e.target.value
-console.log(searchItem.filter(item=>item.include(filldata)))
+console.log(e.target.value)
+// let filldata = e.target.value
+// console.log(searchItem.search(filldata))
+  let input, filter, ul, li, a, i, txtValue;
+  input = e.target.value;
+  filter = input.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
 
 }
+
+
+
   return (
-    <div className='w-full'>
-      <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-lg border border-b'>
+    <div className='w-full '>
+      <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-xl border border-b-2 border-black'>
         <div className='w-[30%]'>
-          <Link href="/"><a><h1 className='text-xl cursor-pointer'>Wrap</h1></a></Link>
+          <Link href="/"><a><h1 className='text-xl cursor-pointer font-mono'>Wrap</h1></a></Link>
         </div>
 
 
@@ -61,19 +78,23 @@ console.log(searchItem.filter(item=>item.include(filldata)))
           <AiOutlineSearch className='cursor-pointer' />
           <AiOutlineMenu className='cursor-pointer' onClick={toggleDropdown} />
         </div>
-        <div className='hidden lg:flex w-[40%] justify-center items-center text-2xl gap-6 font-neue'>
+        <div className='hidden lg:flex w-[40%] justify-center items-center text-2xl gap-10 font-mono'>
           <Link href="/"><a><h1 className='text-xl cursor-pointer'>Home</h1></a></Link>
           <Link href="/skin"><a><h1 className='text-xl cursor-pointer'>Skin</h1></a></Link>
           <Link href="/about"><a><h1 className='text-xl cursor-pointer'>About</h1></a></Link>
 
         </div>
         <div className='hidden w-[30%] lg:flex items-center ml-auto justify-end relative gap-4 text-2xl'>
-<div className='flex items-center '>
+<div className='  '>
+            <div className='flex items-center'>
+
 
           <AiOutlineSearch className='cursor-pointer absolute ml-3 text-2xl ' />
             <input type="text" className={`border flex items-center rounded-[100px] py-2 px-[48px] ${search ? 'w-[300px]' : 'w-[180px]'} cursor-text h-10 bg-[#f5f5f5] text-lg text-gray-600`} placeholder='Search' onClick={() => { setSearch(true); searchProduct() }} onChange={(e)=>List(e)} />
-</div>
+            </div>
 
+
+</div>
 
           {!user.value && <FaRegUserCircle onClick={() => { setDropdown('') }} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }} />}
 
@@ -83,6 +104,22 @@ console.log(searchItem.filter(item=>item.include(filldata)))
         </div>
 
       </nav>
+{search && 
+      <ul className='absolute z-50 w-[270px] right-20 mr-8 top-14 border' id='myUL'>
+        {
+          searchItem.map((item, index) => {
+            console.log(item)
+            return (
+              <li key={index} className='bg-white  z-50 border-t'>
+               
+                <Link href=""><a>{item}</a></Link>
+              </li>
+            )
+          }
+          )
+        }
+      </ul>}
+
       {!user.value && <div className={`right-14 absolute bg-white shadow-xl border rounded-md top-10  z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
         <Link href="/login"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
           Login
