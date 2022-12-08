@@ -16,6 +16,7 @@ module.exports = {
       'level1': '120px',
       'level2': '240px',
       'level3': '360px',
+      'level6': '300px',
 
       'level4': '480px',
       'level5': '400px',
