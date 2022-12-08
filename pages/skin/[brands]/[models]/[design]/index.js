@@ -339,7 +339,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                     </h1>
                     <h2 className='text-lg  font-serif  md:text-6xl font-bold tracking-widest mb-4 overflow-y-hidden  mt-2' >{product.color.toUpperCase()}</h2>
                     <p className='font-mono mx-20 md:mx-0 py-3 md:text-2xl  text-[#667085]  ' >{product.desc}</p>
-                    <p className=' hidden md:flex w-full text-2xl text-[#667085] font font-ser font-sans font-extralight my-5 hidden md:flex'>Whether it's the result of climate change or a nuclear winter, all-year snowfall is just around the corner. When that day comes, you'll need Arctic Camo if you want to continue hiding from your responsibilities.
+                    <p className=' hidden md:flex w-full text-2xl text-[#667085] font font-ser font-sans font-extralight my-5  '>Whether it's the result of climate change or a nuclear winter, all-year snowfall is just around the corner. When that day comes, you'll need Arctic Camo if you want to continue hiding from your responsibilities.
                     </p>
                     <div className="md:flex  justify-center items-center md:justify-between my-5 md:mt-10">
                         <div className=''> <span className='text-lg md:text-xl font-mono line-through mx-1'>₹{200 + product.price}</span><span className='text-2xl md:text-3xl font-semibold py-2'> ₹{product.price}</span>
