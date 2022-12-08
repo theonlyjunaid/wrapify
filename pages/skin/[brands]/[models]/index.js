@@ -13,15 +13,15 @@ console.log(products)
 
     return (
         <div>
-            <div className='m-16'>
+            <div className='m-3 level3:mx-5 sm:m-12 md:m-16 text-center level3:text-start lg:m-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10'>
 
           
-                <div className='text-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold    py-2'>
+                <div className='text-black text-xl level3:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold    level4:py-2'>
                 {products[0].name} Skins Designs
             </div>
-                <div className='flex items-center gap-4 mt-3 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light'>
+                <div className=' level3:flex items-center gap-1 md:gap-4 mt-3 level3:text-sm  sm:text-xl md:text-2xl lg:text-3xl font-light'>
                 <div className=' text-gray-700  md:w-contain'> Select your Design or
-                    </div>  <button className='bg-[#EDEFF2]   md:w-fit items-center md:gap-2 flex  hover:bg-yellow-400  transition ease-in-out duration-300 fo  antialiased md:px-[42px] px-5  py-2 md:py-[12px] rounded-[51px]'> <div> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    </div>  <button className='bg-yellow-400 md:bg-[#EDEFF2] w-full justify-center level3:w-fit  md:w-fit items-center gap-2 level3:gap-0 md:gap-2 flex  hover:bg-yellow-400  transition ease-in-out duration-300 fo  antialiased md:px-[42px] px-2 level3:px-5  py-2 md:py-[12px] rounded-[51px] mt-1 mb-4 level3:mb-0 level3:mt-0'> <div> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     // width="25" height="25"
                     className='h-[13px] w-[13px] md:h-[25px] md:w-[25px]'
                     viewBox="0 0 50 50">
@@ -29,7 +29,7 @@ console.log(products)
                     </svg></div> <Link href={`/skin/${brands}/${models}/customize`}><a ><div className=''>Start the Customizer</div></a></Link>  </button>
             </div>
             </div>
-            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4  gap-8 pb-4 min-h-screen relative mx-20 '>
+            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4 min-h-screen relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10 '>
                 {products.map((product, index) => {
                     const destination = '/skin/' + product.brand + '/' + product.name.split(" ").join("-") + '/' + product.color;
                     return (
@@ -39,15 +39,15 @@ console.log(products)
                         ><Image src={product.img} alt="" className=' my-2 absolute hover:scale-[103%] transition-all ease-in-out duration-300' width={280} height={400} />
                         
                         </div>
-                            <div className={`sm: bg-gray-00  w-[100%] bottom-0   font-base py-3 md:${show === product.slug ? '' : 'hiden'} `}>
+                            <div className={`text-sm md:text-base  w-[100%] bottom-0   font-mono font-light py-1 sm:py-2 md:py-3 md:${show === product.slug ? '' : 'hiden'} `}>
                                 <div>{product.color.toUpperCase()}</div>
                                 <div className=''>
-                                    <span className='text-lg font-semibold'>   ₹{
+                                    <span className='md:text-lg font-semibold'>   ₹{
                                         product.price
                                         
                                     }
                                  </span >
-                                 <span className='mx-2  line-through'>
+                                 <span className='text-sm md:text-base mx-2  line-through'>
                                         ₹499
                                  </span>
                                 </div>

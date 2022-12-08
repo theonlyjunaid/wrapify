@@ -22,8 +22,8 @@ console.log(products)
 
     return (
         <div className='pb-20'>
-            <div className='text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold md:m-20 md:mb-10 py-2'>{brand?.split("")[0]?.toUpperCase() + brand?.split("").splice(1).join("")} Models</div>
-            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6  gap-5  mx-20'>
+            <div className='text-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold    level4:py-2 m-3 level3:mt-5 sm:mt-12 md:mt-16  lg:mt-20 level3:mx-5 sm:mx-12 md:mx-16  lg:mx-20 mb-3 sm:mb-6 md:mb-8 '>{brand?.split("")[0]?.toUpperCase() + brand?.split("").splice(1).join("")} Models</div>
+            <div className='grid level3:grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-6 md:gap-8 pb-4 relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6'>
                 {
                     products.map((product, index) => {
                         const destination = '/skin/' + product.brand + '/' + product.name.split(" ").join("-")
