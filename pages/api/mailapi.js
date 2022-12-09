@@ -7,8 +7,8 @@ const API = process.env.MAILGUN_API_KEY
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_ACCOUNT_AUTH;
 const twilio = require('twilio');
-let client = new twilio(accountSid, authToken);
 
+let client = new twilio(accountSid, authToken);
 export default async (req, res) => {
 const mg = mailgun({ apiKey: API, domain: DOMAIN })
 let data
