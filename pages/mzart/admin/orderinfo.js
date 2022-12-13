@@ -10,20 +10,10 @@ const order = ({orders}) => {
   console.log(orders)
 const Authenticate = (e) => {
     e.preventDefault()
-    const email = 'junaidmalik9069@gmail.com'
-    const password = 'Malik.@2002'
+    
 
-  fetch('https://apiv2.shiprocket.in/v1/external/auth/login', {
+  fetch('/api/shiprocket', {
       method: 'POST',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      },
-
-      body: JSON.stringify({
-        email,
-        password,
-      }),
     })
       .then((r) => r.json())
       .then((data) => {
@@ -43,7 +33,7 @@ const Authenticate = (e) => {
       "channel_id": "",
       "comment": "Seller: MZART",
       "billing_customer_name": orders.name.split(' ')[0],
-      "billing_last_name": orders.name.split(' ')[1],
+      "billing_last_name": orders.name.split(' ')[1]?orders.name.split(' ')[1]:'  ',
       "billing_address": orders.address.split('-')[0],
       "billing_address_2": orders.address.split('-')[1],
       "billing_city": orders.city,
