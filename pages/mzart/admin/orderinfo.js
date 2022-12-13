@@ -75,7 +75,7 @@ const Authenticate = (e) => {
       "height": 5,
       "weight": 0.5
     }
-    fetch('http://localhost:3000/api/shiprockorderplace', {
+    fetch('/api/shiprockorderplace', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
