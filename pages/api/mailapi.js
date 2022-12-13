@@ -1,6 +1,4 @@
-import mongoose from "mongoose";
 import Order from "../../model/Order";
-import connectDB from "../../middleware/mongoose";
 const mailgun = require("mailgun-js")
 const DOMAIN = process.env.MAILGUN_DOMAIN
 const API = process.env.MAILGUN_API_KEY

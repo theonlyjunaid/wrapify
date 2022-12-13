@@ -3,7 +3,8 @@ const shortid = require("shortid");
 import connectDB from "../../middleware/mongoose";
 import Order from "../../model/Order";
 import Product from "../../model/Product";
-import pincode from '../../pincode.json'
+import Pincodes from "../../model/Pincodes";
+// import pincode from '../../pincode.json'
 // import { useState } from "react";
 
 const handler = async (req, res) => {
@@ -39,6 +40,11 @@ const handler = async (req, res) => {
         if (info.phone.length < 10 || info.phone.length > 10) {
             res.status(200).json({ success: false, message: 'Please enter 10 digit valid number' });
         }
+        if(info.pincode.length < 6 || info.pincode.length > 6){
+            res.status(200).json({ success: false, message: 'Please enter 6 digit valid pincode' });
+        }
+
+
         //check if cart is tempered
         let product, sumTotal = 0;
         if (subTotal <= 0) {
