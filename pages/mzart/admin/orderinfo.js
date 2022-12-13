@@ -75,13 +75,14 @@ const Authenticate = (e) => {
       "height": 5,
       "weight": 0.5
     }
-    fetch('https://apiv2.shiprocket.in/v1/external/orders/create/adhoc', {
+    fetch('http://localhost:3000/api/shiprockorderplace', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        // Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(body),
+
+        body: JSON.stringify({ bode: JSON.stringify(body), token: token }),
       }).then((r) => r.json())
       .then((data) => {
         console.log(data)

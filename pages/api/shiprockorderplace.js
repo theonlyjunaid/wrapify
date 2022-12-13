@@ -4,30 +4,18 @@ import Pincodes from "../../model/Pincodes";
 
 const handler = async (req, res) => {
     if (req.method === 'POST') {
-        // let token;
-        const email = 'junaidmalik9069@gmail.com'
-        const password = 'Malik.@2002'
-        fetch('https://apiv2.shiprocket.in/v1/external/auth/login', {
+        fetch('https://apiv2.shiprocket.in/v1/external/orders/create/adhoc', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                Authorization: `Bearer ${req.body.token}`,
             },
-
-            body: JSON.stringify({
-                email,
-                password,
-            }),
-        })
-            .then((r) => r.json())
+            body: req.body.bode,
+        }).then((r) => r.json())
             .then((data) => {
-if(data&&data.token){
-             
                 res.status(200).json(data)
-
-            }}
-
-            )
-    
+            })
+        // res.status(200).json({ "message": "Order Placed Successfully" })
     }
 }
 
