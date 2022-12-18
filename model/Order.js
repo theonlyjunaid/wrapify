@@ -16,6 +16,7 @@ const OrderSchema = new mongoose.Schema({
     ordermailsent: { type: Boolean, required:true ,default: false },
     dileveryStatus: { type: String, default: 'pending' },
     status: { type: String, default: 'pending', required: true },
+    orderAt: { type: String, required: true },
     createdAt: { type: String, required: true, default: new Date().toLocaleString() },
     updatedAt: { type: String, required: true , default: new Date().toLocaleString() },
 }, { timestamps: true});
