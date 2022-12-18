@@ -89,6 +89,7 @@ const handler = async (req, res) => {
             pincode: info.pincode,
             amount: subTotal,
             products: products,
+            orderAt: new Date(),
             paymentInfo: { 'getting': 'payment info' },
             paymentDump: { 'getting': 'payment dump' }
         });

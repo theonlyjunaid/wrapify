@@ -9,17 +9,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import User from '../model/User'
 import mongoose from 'mongoose'
 
-const MyAccount = ({ user }) => {
-    // console.log(user.email)
-    // console.log(userData)
+const MyAccount = ({ user,userData }) => {
+    console.log(userData)
     const router = Router;
-// const [userData, setuserData] = useState({})
     const [info, setInfo] = useState({
         name: '',
         email: '',
         phone: '',
         address1: '',
         address2: '',
+        city: '',
+        state: '',
         pincode: '',
         password: '',
         cpassword: '',
@@ -33,6 +33,7 @@ const MyAccount = ({ user }) => {
             router.push('/myaccount')
             fetchData(myuser.token)
         }
+        
 
     }, [])
     const fetchData = async (token) => {
@@ -53,6 +54,8 @@ const MyAccount = ({ user }) => {
             phone: userData.phone,
             address1: userData.address1,
             address2: userData.address2,
+            city: userData.city,
+            state: userData.state,
 
             pincode: userData.pincode,
         })
@@ -64,47 +67,11 @@ const MyAccount = ({ user }) => {
 
         setInfo({ ...info, [e.target.name]: e.target.value })
 
-        // if (e.target.name === "phone") {
-        //     if (e.target.value.length !== 10) {
-        //         setInfo({ ...info, disbled: true })
-        //         toast.error('enetr 10 digit number', {
-        //             position: "top-left",
-        //             autoClose: 5000,
-        //             hideProgressBar: false,
-        //             closeOnClick: true,
-        //             pauseOnHover: true,
-        //             draggable: true,
-        //             progress: undefined,
-        //             theme: "light",
-        //         });
-        //     }
-        // }
-
-        // if (e.target.name === 'pincode') {
-        //     console.log(e.target.value);
-
-        //     if (e.target.value.length == 6) {
-        //         // console.log(pincode)
-        //         let pins = await fetch(`/api/pincode`)
-        //         let pinJson = await pins.json()
-        //         console.log(pinJson)
-        //         if (Object.keys(pinJson).includes(e.target.value)) {
-        //             console.log(pinJson[e.target.value][0])
-        //             console.log(pinJson[e.target.value][1])
-        //             setInfo({ ...info, city: pinJson[e.target.value][1], state: pinJson[e.target.value][0], pincode: e.target.value })
-        //         }
-
-        //     }
-        //     else {
-        //         setInfo({ ...info, city: '', state: '' })
-        //     }
-        // }
-        // console.log(info)
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        let data = { name: info.name, email: info.email, phone: info.phone, address1: info.address1,address2:info.address2, pincode: info.pincode, token: user.value }
+        let data = { name: info.name, email: info.email, phone: info.phone, address1: info.address1,address2:info.address2,   city: info.city, state: info.state,            pincode: info.pincode, token: user.value }
         let fetching = await fetch(`/api/updateuser`, {
             method: 'POST',
             headers: {
@@ -227,6 +194,40 @@ const MyAccount = ({ user }) => {
                         placeholder="Locality , Landmark"
                     />
                 </div>
+                {/* <div className="flex">
+                    <div className="px-2 w-1/2">
+                        <div className=" mb-4">
+                            <label htmlFor="city" className="leading-7 text-sm text-gray-600">
+                                city
+                            </label>
+                            <input
+
+                                onChange={handleChange}
+                                type="text"
+                                id="city"
+                                value={info.city}
+                                name="city"
+                                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            />
+                        </div>
+
+                    </div>
+                    <div className="px-2 w-1/2">
+                        <div className=" mb-4">
+                            <label htmlFor="state" className="leading-7 text-sm text-gray-600">
+                                state
+                            </label>
+                            <input
+                                onChange={handleChange}
+                                type="text"
+                                id="state"
+                                value={info.state}
+                                name="state"
+                                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            />
+                        </div>
+                    </div>
+                </div> */}
                 <div className="flex">
                     <div className="px-2 w-1/2">
                         <div className=" mb-4">
@@ -245,7 +246,6 @@ const MyAccount = ({ user }) => {
 
                     </div>
                 
-                 
                     <div className="px-2 w-1/2">
                         <div className=" mb-4">
                             <label htmlFor="pincode" className="leading-7 text-sm text-gray-600">
@@ -264,6 +264,7 @@ const MyAccount = ({ user }) => {
 
                     </div>
                 </div>
+             
 
 <div className='px-2'>
 

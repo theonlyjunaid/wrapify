@@ -102,6 +102,9 @@ const Authenticate = (e) => {
               <h2 className="text-gray-900 text-xl title-font font-medium ">name: {orders.name}</h2>
               <h2 >phone: {orders.phone}</h2>
               <h2>email: {orders.email}</h2>
+              <h2>
+                order date: {orders.orderAt}
+              </h2>
               <h2>address: {orders.address}</h2>
               <h2>city: {orders.city}</h2>
               <h2>state: {orders.state}</h2>

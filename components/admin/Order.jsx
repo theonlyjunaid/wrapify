@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 function Order({ orders }) {
-    console.log(orders)
+    // console.log(orders.orderAt)
     return (
         
-        <div className='max-w-5xl '>
+        <div className='max-w-[1300px] '>
             <div className='flex justify-between '>
 <h2>
     Order details
@@ -30,13 +30,17 @@ function Order({ orders }) {
             </div>
             {
                 orders.map((item, index) => {
+                    console.log(item?.orderAt?.slice(4,13))
                     return (
-                        <div key={index}><Link href={`/mzart/admin/orderinfo?id=${item.orderId}`} ><a><div className='flex cursor-pointer gap-10 bg-gray-400 my-2 py-2 px-10 justify-around'>
+                        <div key={index}><Link href={`/mzart/admin/orderinfo?id=${item.orderId}`} ><a><div className='flex cursor-pointer gap-10 bg-gray-300 rounded-lg my-2 py-2 px-2 justify-between'>
                             <div>
                                 <p>{item.orderId}</p>
                                 <p>
-{item.updatedAt
+                                    {item?.orderAt?.slice(4, 15)
                                     }
+                                </p>
+                                <p>
+                                    {item?.orderAt?.slice(16, 24)}
                                 </p>
                             </div>
                             <div>
