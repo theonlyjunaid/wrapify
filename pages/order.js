@@ -168,7 +168,7 @@ console.log(order)
               
                 <div className="flex justify-center flex-col items-start w-full lg:w-9/12 xl:w-full ">
                     <h3 className="text-3xl xl:text-4xl font-semibold py-1 w-full  md:text-left text-gray-800">Order Summary</h3>
-                    <p className="text-base leading-none mt-4 text-gray-800">
+                    <p className="text-base -none mt-4 text-gray-800">
                         Paid using credit card ending with <span className="font-semibold">8822</span>
                     </p>
                     <div className="flex justify-center items-center w-full mt-8  flex-col space-y-4 ">
@@ -182,11 +182,10 @@ console.log(order)
                             // console.log(name[0].split("(")[1].split("/"))
                             return (
                                 <div key={item} className="  w-full">
-                                                             {
+                                    {
                                      name.map((item,index)=>{
-                                        
-                                             return(
-                                    <div className='flex md:flex-row justify-start items-start md:items-center w-full border border-gray-200'>
+                                        return(
+                                    <div key={item} className='flex md:flex-row justify-start items-start md:items-center w-full border border-gray-200'>
 
                                   
                                     <div className="w-40 md:w-32 ">
@@ -197,16 +196,16 @@ console.log(order)
                                         <div className="flex flex-col md:flex-shrink-0  justify-start items-start">
                                             <h3 className="text-lg md:text-xl  w-full font-semibold   text-gray-800 ">{namee + " "+ varient}</h3>
                                             <div className="flex flex-row justify-start  space-x-4 md:space-x-6 items-start mt-4 ">
-                                                <p className="text-sm leading-none text-gray-600">
+                                                <p className="text-sm -none text-gray-600">
                                                                      Size: <span className="text-gray-800"> {size[index].split(" ")[0]}</span>
                                                 </p>
-                                                <p className="text-sm leading-none text-gray-600">
+                                                <p className="text-sm -none text-gray-600">
                                                                      Quantity: <span className="text-gray-800"> {size[index].split(" ")[1]}</span>
                                                 </p>
                                             </div>
                                         </div>
                                         <div className="flex mt-4 md:mt-0 md:justify-end items-center w-full ">
-                                                             <p className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-gray-800">₹ {price}</p>
+                                                             <p className="text-xl lg:text-2xl font-semibold -5 lg:-6 text-gray-800">₹ {price}</p>
                                         </div>
                                     </div>
                                     </div>
@@ -226,15 +225,15 @@ console.log(order)
                         <div className="flex justify-start items-start flex-col md:flex-row  w-full md:w-auto space-y-8 md:space-y-0 md:space-x-14 xl:space-x-8  lg:w-full">
                             <div className="flex jusitfy-start items-start flex-col space-y-2">
                                 <p className="text-base font-semibold   text-gray-800">Billing Address</p>
-                                <p className="text-sm leading-5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
+                                <p className="text-sm -5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
                             </div>
                             <div className="flex jusitfy-start items-start flex-col space-y-2">
                                 <p className="text-base font-semibold   text-gray-800">Shipping Address</p>
-                                <p className="text-sm leading-5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
+                                <p className="text-sm -5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
                             </div>
                             <div className="flex jusitfy-start items-start flex-col space-y-2">
                                 <p className="text-base font-semibold   text-gray-800">Shipping Method</p>
-                                <p className="text-sm leading-5 text-gray-600">DHL - Takes up to 3 working days</p>
+                                <p className="text-sm -5 text-gray-600">DHL - Takes up to 3 working days</p>
                             </div>
                         </div>
                         <div className="flex flex-col space-y-4 w-full">
