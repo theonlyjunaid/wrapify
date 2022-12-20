@@ -589,7 +589,7 @@ ${productData[item].varient}
                                                                                 style="text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363;">
                                                                                 Hey
                                                                             </span>
-                                                                            Smiles Davis,
+                                                                            ${order.name}
                                                                         </p>
 
 
@@ -620,7 +620,7 @@ ${productData[item].varient}
                                                                         </h2>
                                                                         <p class="muted"
                                                                             style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 14px; line-height: 26px; font-weight: normal; color: #bdbdbd; margin: 0;"
-                                                                            align="center">24/06/2018</p>
+                                                                            align="center">${order.updatedAt.slice(4,15)}</p>
                                                                     </th>
                                                                 </tr>
                                                                 <!-- END SECTION: Order Number And Date -->
@@ -688,14 +688,14 @@ ${productHtml}
                                                                                                         <span
                                                                                                             data-key="1468271_discount"
                                                                                                             style="font-weight: bold;">Discount</span>
-                                                                                                        (JUSTINCASE)
+                                                                                                        (NEWYEAR)
                                                                                                     </th>
                                                                                                     <th class="table-text"
                                                                                                         style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; width: 35%; padding: 6px 0;"
                                                                                                         align="right"
                                                                                                         bgcolor="#ffffff"
                                                                                                         valign="middle">
-                                                                                                        -$18.00</th>
+                                                                                                       - ₹${Math.floor(order.amount-(order.amount*100/118))}</th>
                                                                                                 </tr>
 
                                                                                                 <tr>
@@ -711,7 +711,7 @@ ${productHtml}
                                                                                                         align="right"
                                                                                                         bgcolor="#ffffff"
                                                                                                         valign="middle">
-                                                                                                        $89.00</th>
+                                                                                                      ₹  ${order.amount}</th>
                                                                                                 </tr>
 
                                                                                                 <tr>
@@ -729,7 +729,7 @@ ${productHtml}
                                                                                                         align="right"
                                                                                                         bgcolor="#ffffff"
                                                                                                         valign="middle">
-                                                                                                        $0.00</th>
+                                                                                                       ₹ 0.00</th>
                                                                                                 </tr>
 
 
@@ -747,7 +747,7 @@ ${productHtml}
                                                                                                         align="right"
                                                                                                         bgcolor="#ffffff"
                                                                                                         valign="middle">
-                                                                                                        $89.00</th>
+                                                                                                        ₹ ${order.amount}</th>
                                                                                                 </tr>
 
 
@@ -765,98 +765,7 @@ ${productHtml}
                                                                 </tr>
                                                                 <!-- END SECTION: Products With Pricing -->
                                                                 <!-- BEGIN SECTION: Payment Info -->
-                                                                <tr id="section-1468272" class="section payment_info">
-                                                                    <th style="mso-line-height-rule: exactly; padding: 13px 52px;"
-                                                                        bgcolor="#ffffff">
-                                                                        <table class="table-inner" cellspacing="0"
-                                                                            cellpadding="0" border="0" width="100%"
-                                                                            style="min-width: 100%;"
-                                                                            role="presentation">
-                                                                            <!-- PAYMENT INFO -->
-
-
-
-
-
-
-
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <th colspan="2"
-                                                                                        style="mso-line-height-rule: exactly;"
-                                                                                        bgcolor="#ffffff" valign="top">
-                                                                                        <h3 data-key="1468272_payment_info"
-                                                                                            style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; color: #bdbdbd; font-size: 16px; line-height: 52px; font-weight: 700; text-transform: uppercase; border-bottom-width: 0; border-bottom-color: #dadada; border-bottom-style: solid; letter-spacing: 1px; margin: 0;"
-                                                                                            align="left">Payment Info
-                                                                                        </h3>
-                                                                                    </th>
-                                                                                </tr>
-
-
-
-
-
-
-
-
-                                                                                <!-- PAYMENT METHOD IMAGE -->
-
-
-
-                                                                                <tr>
-                                                                                    <th class="table-title"
-                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: bold; color: #666363; width: 65%; padding: 6px 0;"
-                                                                                        align="left" bgcolor="#ffffff"
-                                                                                        valign="top">
-                                                                                        <table cellspacing="0"
-                                                                                            cellpadding="0" border="0"
-                                                                                            width="100%"
-                                                                                            style="min-width: 100%; font-weight: bold;"
-                                                                                            role="presentation">
-                                                                                            <tbody>
-                                                                                                <tr
-                                                                                                    style="font-weight: bold;">
-                                                                                                    <th width="40"
-                                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: bold; color: #666363; padding: 8px 10px 8px 0;"
-                                                                                                        align="left"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="middle">
-                                                                                                        <img width="40"
-                                                                                                            style="width: 40px; vertical-align: middle; height: auto !important; font-weight: bold;"
-                                                                                                            alt="Mastercard Icon"
-                                                                                                            src="https://orderlyemails.com/mobile-receipt-mastercard.png">
-                                                                                                    </th>
-                                                                                                    <th style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: bold; color: #666363; padding: 8px 0;"
-                                                                                                        align="left"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="middle">
-
-                                                                                                        Mastercard
-
-
-                                                                                                        <span
-                                                                                                            class="table-muted"
-                                                                                                            style="font-size: 14px; font-weight: bold; color: #bdbdbd; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla';">
-                                                                                                            (••••••••••••6500)</span>
-
-                                                                                                    </th>
-                                                                                                </tr>
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                    </th>
-                                                                                    <th class="table-text"
-                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; width: 35%; padding: 13px 0;"
-                                                                                        align="right" bgcolor="#ffffff"
-                                                                                        valign="middle">
-                                                                                        $89.00
-                                                                                    </th>
-                                                                                </tr>
-
-
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </th>
-                                                                </tr>
+                                                              
                                                                 <!-- END SECTION: Payment Info -->
                                                                 <!-- BEGIN SECTION: Customer And Shipping Address -->
                                                                 <tr id="section-1468273"
@@ -871,57 +780,7 @@ ${productHtml}
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <!-- BEGIN : Column 1 of 2 : BILL_TO -->
-                                                                                    <th width="50%"
-                                                                                        class="column_1_of_2 column_bill_to "
-                                                                                        style="mso-line-height-rule: exactly;"
-                                                                                        align="left" bgcolor="#ffffff"
-                                                                                        valign="top">
-                                                                                        <table align="center" border="0"
-                                                                                            width="100%" cellpadding="0"
-                                                                                            cellspacing="0"
-                                                                                            style="min-width: 100%;"
-                                                                                            role="presentation">
-                                                                                            <tbody>
-                                                                                                <tr>
-                                                                                                    <th style="mso-line-height-rule: exactly; padding-right: 5%;"
-                                                                                                        align="left"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="top">
-                                                                                                        <h3 data-key="1468273_bill_to"
-                                                                                                            style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; color: #bdbdbd; font-size: 16px; line-height: 52px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0;"
-                                                                                                            align="left">
-                                                                                                            Billing Info
-                                                                                                        </h3>
-                                                                                                    </th>
-                                                                                                </tr>
-                                                                                                <tr>
-                                                                                                    <th class="billing_address "
-                                                                                                        style="mso-line-height-rule: exactly; padding-right: 5%;"
-                                                                                                        align="left"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="top">
-                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
-                                                                                                            align="left">
-                                                                                                            Smiles
-                                                                                                            Davis<br>
-                                                                                                            600
-                                                                                                            Montgomery
-                                                                                                            St <br>
-                                                                                                            San
-                                                                                                            Francisco
-                                                                                                            CA<br>
-                                                                                                            94111<br>
-                                                                                                            United
-                                                                                                            States<br>
-                                                                                                            <a href="mailto:"
-                                                                                                                style="color: #ecba78; text-decoration: none !important; text-underline: none; word-wrap: break-word;"
-                                                                                                                target="_blank">hello@SmilesDavis.yeah</a>
-                                                                                                        </p>
-                                                                                                    </th>
-                                                                                                </tr>
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                    </th>
+                                                                                    
                                                                                     <!-- END : Column 1 of 2 : BILL_TO -->
                                                                                     <!-- BEGIN : Column 2 of 2 : SHIP_TO -->
                                                                                     <th width="50%"
@@ -957,17 +816,11 @@ ${productHtml}
                                                                                                         valign="top">
                                                                                                         <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
                                                                                                             align="right">
-                                                                                                            Smiles
-                                                                                                            Davis<br>
-                                                                                                            600
-                                                                                                            Montgomery
-                                                                                                            St <br>
-                                                                                                            San
-                                                                                                            Francisco
-                                                                                                            CA<br>
-                                                                                                            94111<br>
-                                                                                                            United
-                                                                                                            States<br>
+                                                            ${order.name}<br>
+                                                                                                           ${order.address} <br>
+                                                                                                           ${order.city}<br>
+                                                                                                            ${order.state}<br>
+                                                                                                            ${order.pincode}<br>
 
                                                                                                         </p>
                                                                                                     </th>
@@ -1008,7 +861,7 @@ ${productHtml}
                                                                         <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
                                                                             align="center">If you need help with
                                                                             anything please don't hesitate to drop us an
-                                                                            email: care@tens.co :)</p>
+                                                                            email: care@mzart.in :)</p>
                                                                     </th>
                                                                 </tr>
                                                                 <!-- END SECTION: Closing Text -->
@@ -1195,17 +1048,21 @@ ${productHtml}
                                                                                                         align="center"
                                                                                                         bgcolor="#ffffff"
                                                                                                         valign="top">
-                                                                                                        Tens<br
+                                                                                                        MZ Art<br
                                                                                                             style="text-align: center;">
-                                                                                                        84 Miller
-                                                                                                        Street<br
+                                                                                                        Shaheed Nagar<br
                                                                                                             style="text-align: center;">
-                                                                                                        Glasgow,
-                                                                                                        G11DT<br
+                                                                                                        Sahibabad,
+                                                                                                        Ghaziabad
+                                                                                                        <br>
+                                                                                                        Uttar Pradesh,
+                                                                                                        201005
+
+                                                                                                        <br
                                                                                                             style="text-align: center;">
                                                                                                         <br
                                                                                                             style="text-align: center;">
-                                                                                                        Copyright © 2018
+                                                                                                        Copyright © 2023
                                                                                                     </th>
                                                                                                 </tr>
                                                                                                 <!-- Store Address : END -->
@@ -1233,10 +1090,10 @@ ${productHtml}
                                                                                         style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 14px; line-height: 24px; font-weight: 400; color: #a3a1a1; text-transform: none; padding-bottom: 13px; padding-top: 26px;"
                                                                                         align="center"
                                                                                         bgcolor="#ffffff">
-                                                                                        <a href="https://us.tens.co/tools/emails/click/order-confirmation/1/footer-website-link/link?url=https%3A%2F%2Fus.tens.co"
+                                                                                        <a href="https://mzart.in"
                                                                                             target="_blank"
                                                                                             data-key="section_shop_block1"
-                                                                                            style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; font-weight: 400; text-transform: none;">us.tens.co</a>
+                                                                                            style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; font-weight: 400; text-transform: none;">mzart.in</a>
                                                                                     </th>
                                                                                 </tr>
                                                                                 <!-- Store Website : END -->
@@ -1280,7 +1137,7 @@ ${productHtml}
 
 </html>`,
     }
-    // mg.messages().send(data)
+    mg.messages().send(data)
     //     client.messages
     //         .create({
     //             body: `Hello ${order.name}, Thank you for your order. Your order id is ${order.orderId}. We will contact you soon.`,
