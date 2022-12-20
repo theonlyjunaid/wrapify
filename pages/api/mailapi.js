@@ -30,7 +30,7 @@ if (req.method === "POST") {
                                                                                                             class="product-image"
                                                                                                             src=${productData[item].img}
                                                                                                             alt="Product Image"
-                                                                                                            style="vertical-align: middle; text-align: center;   border-radius: 1px; padding: 0px; height:100px ; max-height:100px">
+                                                                                                            style="vertical-align: middle; text-align: center;   border-radius: 1px; padding: 0px; height:100px ; max-height:180px;background-color:white;">
                                                                                                     </th>
                                                                                                     <th class="product-details-wrapper table-stack stack-column"
                                                                                                         style="mso-line-height-rule: exactly; padding-top: 13px; padding-bottom: 13px; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid;"
