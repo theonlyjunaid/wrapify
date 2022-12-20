@@ -30,7 +30,7 @@ if (req.method === "POST") {
                                                                                                             class="product-image"
                                                                                                             src=${productData[item].img}
                                                                                                             alt="Product Image"
-                                                                                                            style="vertical-align: middle; text-align: center;   border-radius: 1px; padding: 0px; height:100px ; max-height:100px">
+                                                                                                            style="vertical-align: middle; text-align: center;   border-radius: 1px; padding: 0px; height:100px ; max-height:160px;background-color:white;">
                                                                                                     </th>
                                                                                                     <th class="product-details-wrapper table-stack stack-column"
                                                                                                         style="mso-line-height-rule: exactly; padding-top: 13px; padding-bottom: 13px; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid;"
@@ -301,7 +301,7 @@ ${productData[item].varient}
         }
 
         /* Main media query for responsive styles */
-        @media only screen and (max-width:480px) {
+        @media only screen and (max-width:280px) {
 
             /* What it does: Overrides email-container's desktop width and forces it into a 100% fluid width. */
             .email-container {
@@ -409,8 +409,7 @@ ${productData[item].varient}
             }
 
             img.product-image {
-                width: 240px !important;
-                max-width: 240px !important;
+                height: auto !important;
             }
 
             tr.row-border-bottom th.product-image-wrapper {
@@ -438,7 +437,7 @@ ${productData[item].varient}
     </style>
     <style type="text/css" data-premailer="ignore">
         /* Custom Media Queries */
-        @media only screen and (max-width:480px) {
+        @media only screen and (max-width:280px) {
             .column_logo {
                 display: block !important;
                 width: 100% !important;
@@ -679,24 +678,7 @@ ${productHtml}
                                                                                             role="presentation">
 
                                                                                             <tbody>
-                                                                                                <tr>
-                                                                                                    <th class="table-title"
-                                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: bold; color: #666363; width: 65%; padding: 6px 0;"
-                                                                                                        align="left"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="top">
-                                                                                                        <span
-                                                                                                            data-key="1468271_discount"
-                                                                                                            style="font-weight: bold;">Discount</span>
-                                                                                                        (NEWYEAR)
-                                                                                                    </th>
-                                                                                                    <th class="table-text"
-                                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; width: 35%; padding: 6px 0;"
-                                                                                                        align="right"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="middle">
-                                                                                                       - ₹${Math.floor(order.amount-(order.amount*100/118))}</th>
-                                                                                                </tr>
+                                                                                            
 
                                                                                                 <tr>
                                                                                                     <th class="table-title"
@@ -720,9 +702,7 @@ ${productHtml}
                                                                                                         align="left"
                                                                                                         bgcolor="#ffffff"
                                                                                                         valign="top">
-                                                                                                        Royal Mail
-                                                                                                        Tracked &amp;
-                                                                                                        Signed (4-9
+                                                                                                        Shipping Charge (5-10
                                                                                                         days)</th>
                                                                                                     <th class="table-text"
                                                                                                         style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; width: 35%; padding: 6px 0;"
@@ -878,7 +858,7 @@ ${productHtml}
                                                                                         style="width: 33%; mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; color: #bdbdbd; border-right-color: #dadada; border-right-style: solid; border-left-color: #dadada; border-left-style: none; letter-spacing: 1px; border: 0;"
                                                                                         align="center"
                                                                                         bgcolor="#ffffff">
-                                                                                        <a href="https://us.tens.co/tools/emails/click/order-confirmation/1/site-link/shop?url=https%3A%2F%2Fus.tens.co%2Fcollections%2Fsunglasses"
+                                                                                        <a href="https://mzart.in"
                                                                                             target="_blank"
                                                                                             style="color: #bdbdbd; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; letter-spacing: 1px;">
                                                                                             Shop
@@ -888,7 +868,7 @@ ${productHtml}
                                                                                         style="width: 33%; mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; color: #bdbdbd; border-right-color: #dadada; border-right-style: solid; border-left-color: #dadada; border-left-style: solid; letter-spacing: 1px; border: 0;"
                                                                                         align="center"
                                                                                         bgcolor="#ffffff">
-                                                                                        <a href="https://us.tens.co/tools/emails/click/order-confirmation/1/site-link/about-us?url=https%3A%2F%2Fus.tens.co%2Fpages%2Fabout-us"
+                                                                                        <a href="https://mzart.in/about"
                                                                                             target="_blank"
                                                                                             style="color: #bdbdbd; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; letter-spacing: 1px;">
                                                                                             About Us
@@ -898,7 +878,7 @@ ${productHtml}
                                                                                         style="width: 33%; mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; color: #bdbdbd; border-right-color: #dadada; border-right-style: none; border-left-color: #dadada; border-left-style: solid; letter-spacing: 1px; border: 0;"
                                                                                         align="center"
                                                                                         bgcolor="#ffffff">
-                                                                                        <a href="https://us.tens.co/tools/emails/click/order-confirmation/1/site-link/contact?url=https%3A%2F%2Fus.tens.co%2Fpages%2Fcontact-us"
+                                                                                        <a href="https://mzart.in/contact"
                                                                                             target="_blank"
                                                                                             style="color: #bdbdbd; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; letter-spacing: 1px;">
                                                                                             Contact
@@ -977,7 +957,7 @@ ${productHtml}
                                                                                                         bgcolor="#ffffff"
                                                                                                         valign="top">
                                                                                                         <a class="social-link"
-                                                                                                            href="https://www.facebook.com/tens"
+                                                                                                            href="https://www.facebook.com/mzartwala/"
                                                                                                             target="_blank"
                                                                                                             title="Facebook"
                                                                                                             style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; text-align: center;">
@@ -988,7 +968,7 @@ ${productHtml}
                                                                                                                 style="width: 32px; height: auto !important; vertical-align: middle; text-align: center; padding: 6px 6px 0 0px;">
                                                                                                         </a>
                                                                                                         <a class="social-link"
-                                                                                                            href="https://twitter.com/tens"
+                                                                                                            href="https://twitter.com/mzart_in"
                                                                                                             target="_blank"
                                                                                                             title="Twitter"
                                                                                                             style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; text-align: center;">
@@ -999,7 +979,7 @@ ${productHtml}
                                                                                                                 style="width: 32px; height: auto !important; vertical-align: middle; text-align: center; padding: 6px 6px 0;">
                                                                                                         </a>
                                                                                                         <a class="social-link"
-                                                                                                            href="https://instagram.com/tens/"
+                                                                                                            href="https://www.instagram.com/mzart.in/"
                                                                                                             target="_blank"
                                                                                                             title="Instagram"
                                                                                                             style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; text-align: center;">
@@ -1010,7 +990,7 @@ ${productHtml}
                                                                                                                 style="width: 32px; height: auto !important; vertical-align: middle; text-align: center; padding: 6px 6px 0;">
                                                                                                         </a>
                                                                                                         <a class="social-link"
-                                                                                                            href="https://www.youtube.com/c/tens-co"
+                                                                                                            href="https://www.youtube.com/@mzartin"
                                                                                                             target="_blank"
                                                                                                             title="YouTube"
                                                                                                             style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; text-align: center;">
