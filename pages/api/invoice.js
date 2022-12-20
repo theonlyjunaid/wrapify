@@ -4,63 +4,68 @@ import { createInvoice } from 'easyinvoice';
 
 const handler = async (req, res) => {
     if(req.method === 'POST'){
+
+let product = req.body.products;
+let products = [];
+        for (let item in product) {
+            for (let i = 0; i < product[item].name.length; i++) {
+                products.push({
+                    description: product[item].name[i],
+                    quantity: product[item].size[i].split(' ')[1],
+                    'tax-rate': 18,
+                    
+                    price: (product[item].price/118) * 100,
+                })
+            }
+        }
+
+
         let body  = {
                 // "customize": {
                 //     "template": "SGVsbG8gd29ybGQh" // Must be base64 encoded html. This example contains 'Hello World!' in base64
                 // },
                 images: {
-                    logo: 'https://public.easyinvoice.cloud/img/logo_en_original.png'
+                logo: 'https://mzartimages.sgp1.cdn.digitaloceanspaces.com/logo/logo_email.png'
                 },
                 sender: {
-                    company: 'Sample Corp',
-                    address: 'Sample Street 123',
-                    zip: '1234 AB',
-                    city: 'Sampletown',
-                    country: 'Samplecountry'
-                    // "custom1": "custom value 1",
+                    company: 'MZ Art',
+                    address: 'Shaheed nagar, Sahibabad',
+                    city: 'Uttar Pradesh',
+                    country: 'India',
+                    zip: 'Ghaziabad',
+                
+                    "custom1": "201005",
                     // "custom2": "custom value 2",
                     // "custom3": "custom value 3"
                 },
                 client: {
-                    company: 'Client Corp',
-                    address: 'Clientstreet 456',
-                    zip: '4567 CD',
-                    city: 'Clientcity',
-                    country: 'Clientcountry'
+                    company: req.body.name,
+                    address: req.body.address,
+                    "custom1": req.body.city,
+                    "custom2": req.body.state,
+                    "custom3": req.body.pincode,
+
+
+                    // address: 'Clientstreet 456',
+                    // zip: '4567 CD',
+                    // city: 'Clientcity',
+                    // country: 'Clientcountry',
                     // "custom1": "custom value 1",
                     // "custom2": "custom value 2",
                     // "custom3": "custom value 3"
+                    // 'mobile': req.body.phone,
                 },
                 information: {
-                    number: '2021.0001',
-                    date: '12-12-2021',
-                    'due-date': '31-12-2021'
+                    number: req.body.phone,
+                    date: req.body.updatedAt.slice(4, 15),
+                    'due-date': null
                 },
-                products: [
-                    {
-                        quantity: 2,
-                        description: 'Product 1',
-                        'tax-rate': 6,
-                        price: 33.87
-                    },
-                    {
-                        quantity: 4.1,
-                        description: 'Product 2',
-                        'tax-rate': 6,
-                        price: 12.34
-                    },
-                    {
-                        quantity: 4.5678,
-                        description: 'Product 3',
-                        'tax-rate': 21,
-                        price: 6324.453456
-                    }
-                ],
-                'bottom-notice': 'thanks for make us smile',
+                products: products,
+                'bottom-notice': 'thanks for making us smile',
                 settings: {
-                    currency: 'INR' // See documentation 'Locales and Currency' for more info. Leave empty for no currency.
+                    currency: 'INR' ,// See documentation 'Locales and Currency' for more info. Leave empty for no currency.,
                     // "locale": "nl-NL", // Defaults to en-US, used for number formatting (see docs)
-                    // "taxNotation": "gst", // Defaults to vat
+                    "taxNotation": "gst", // Defaults to vat
                     // "margin-top": 25, // Default to 25
                     // "margin-right": 25, // Default to 25
                     // "margin-left": 25, // Default to 25
@@ -87,10 +92,8 @@ const handler = async (req, res) => {
                 // },
 
         }
-        const result = await easyinvoice.createInvoice(body)
-
-
-        res.status(200).json({message: 'Invoice created', data: result});
+        const result = await createInvoice(body)
+        res.status(200).json({message: 'Invoice created', data: result.pdf});
 
     }
 }

@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { download } from 'easyinvoice'
 
 const order = ({ order }) => {
 console.log(order)
@@ -44,6 +45,22 @@ console.log(order)
     }
     let totalQuantity = 0
 
+
+    const downloadInvoice = async () => {
+        const data = await fetch("/api/invoice", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(order),
+
+        }).then((t) =>
+            t.json()
+        );
+        console.log(data.data)
+        download( `${order.orderId}.pdf`,data.data)
+
+    }
     return (
 //         <div>
 //             <ToastContainer
@@ -206,6 +223,11 @@ console.log(order)
                                         </div>
                                         <div className="flex mt-4 md:mt-0 md:justify-end items-center w-full ">
                                                              <p className="text-xl lg:text-2xl font-semibold -5 lg:-6 text-gray-800">₹ {price}</p>
+                                        </div>
+                                        <div>
+                                                        <button onClick={() => downloadInvoice() } className="flex justify-center items-center mx-2 mr-10 px-1 hover:bg-gray-300 bg-gray-100 ">
+invoice
+</button>
                                         </div>
                                     </div>
                                     </div>
