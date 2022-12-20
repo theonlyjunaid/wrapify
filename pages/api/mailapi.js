@@ -30,7 +30,7 @@ if (req.method === "POST") {
                                                                                                             class="product-image"
                                                                                                             src=${productData[item].img}
                                                                                                             alt="Product Image"
-                                                                                                            style="vertical-align: middle; text-align: center;   border-radius: 1px; padding: 0px; height:100px ; max-height:180px;background-color:white;">
+                                                                                                            style="vertical-align: middle; text-align: center;   border-radius: 1px; padding: 0px; height:100px ; max-height:160px;background-color:white;">
                                                                                                     </th>
                                                                                                     <th class="product-details-wrapper table-stack stack-column"
                                                                                                         style="mso-line-height-rule: exactly; padding-top: 13px; padding-bottom: 13px; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid;"
@@ -301,7 +301,7 @@ ${productData[item].varient}
         }
 
         /* Main media query for responsive styles */
-        @media only screen and (max-width:480px) {
+        @media only screen and (max-width:280px) {
 
             /* What it does: Overrides email-container's desktop width and forces it into a 100% fluid width. */
             .email-container {
@@ -409,8 +409,7 @@ ${productData[item].varient}
             }
 
             img.product-image {
-                width: 240px !important;
-                max-width: 240px !important;
+                height: auto !important;
             }
 
             tr.row-border-bottom th.product-image-wrapper {
@@ -438,7 +437,7 @@ ${productData[item].varient}
     </style>
     <style type="text/css" data-premailer="ignore">
         /* Custom Media Queries */
-        @media only screen and (max-width:480px) {
+        @media only screen and (max-width:280px) {
             .column_logo {
                 display: block !important;
                 width: 100% !important;
