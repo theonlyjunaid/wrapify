@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   
     <meta name="viewport" content="width=device-width">
@@ -192,7 +193,7 @@
         }
 
         /* Main media query for responsive styles */
-        @media only screen and (max-width:480px) {
+        @media only screen and (max-width:280px) {
 
             /* What it does: Overrides email-container's desktop width and forces it into a 100% fluid width. */
             .email-container {
@@ -300,8 +301,10 @@
             }
 
             img.product-image {
-                width: 240px !important;
-                max-width: 240px !important;
+                /* width: 120px !important;
+                max-width: 140px !important;
+                 */
+                height: auto !important;
             }
 
             tr.row-border-bottom th.product-image-wrapper {
@@ -329,7 +332,7 @@
     </style>
     <style type="text/css" data-premailer="ignore">
         /* Custom Media Queries */
-        @media only screen and (max-width:480px) {
+        @media only screen and (max-width:280px) {
             .column_logo {
                 display: block !important;
                 width: 100% !important;
@@ -507,7 +510,7 @@
                                                                         <h2 style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; color: #4b4b4b; font-size: 20px; line-height: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0;"
                                                                             align="center">
                                                                             <span data-key="1468270_order_number">Order
-                                                                                No.</span> TensUSA-6500
+                                                                                No.</span> ${order.orderId}
                                                                         </h2>
                                                                         <p class="muted"
                                                                             style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 14px; line-height: 26px; font-weight: normal; color: #bdbdbd; margin: 0;"
@@ -540,7 +543,7 @@
                                                                                             width="100%"
                                                                                             style="min-width: 100%;"
                                                                                             role="presentation">
-                                                                                            <tbody>
+                                                                                            <tbody id="addHere">
                                                                                                 <tr>
                                                                                                     <th colspan="2"
                                                                                                         class="product-table-h3-wrapper"
@@ -554,194 +557,6 @@
                                                                                                             ordered</h3>
                                                                                                     </th>
                                                                                                 </tr>
-
-                                                                                                <!-- Bold 2 -->
-
-
-
-
-                                                                                                <!-- end Bold 2 -->
-                                                                                                <tr
-                                                                                                    class="row-border-bottom">
-                                                                                                    <th class="table-stack product-image-wrapper stack-column-center"
-                                                                                                        width="1"
-                                                                                                        style="mso-line-height-rule: exactly; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid; padding: 13px 13px 13px 0;"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="middle">
-                                                                                                        <img width="140"
-                                                                                                            class="product-image"
-                                                                                                            src="https://cdn.shopify.com/s/files/1/1070/9630/products/Case-2_140x140_cropped@2x.jpg?v=1527243096"
-                                                                                                            alt="Product Image"
-                                                                                                            style="vertical-align: middle; text-align: center; width: 140px; max-width: 140px; height: auto !important; border-radius: 1px; padding: 0px;">
-                                                                                                    </th>
-                                                                                                    <th class="product-details-wrapper table-stack stack-column"
-                                                                                                        style="mso-line-height-rule: exactly; padding-top: 13px; padding-bottom: 13px; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid;"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="middle">
-                                                                                                        <table
-                                                                                                            cellspacing="0"
-                                                                                                            cellpadding="0"
-                                                                                                            border="0"
-                                                                                                            width="100%"
-                                                                                                            style="min-width: 100%;"
-                                                                                                            role="presentation">
-                                                                                                            <tbody>
-                                                                                                                <tr>
-
-                                                                                                                    <th class="line-item-description"
-                                                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; padding: 13px 6px 13px 0;"
-                                                                                                                        align="left"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
-                                                                                                                            align="left">
-                                                                                                                            <a href="https://us.tens.co/tools/emails/click/order-confirmation/1/product/link?url=https%3A%2F%2Fus.tens.co%2Fproducts%2Ftravel-case"
-                                                                                                                                target="_blank"
-                                                                                                                                style="color: #666363; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: left !important; font-weight: bold;">
-                                                                                                                                Travel
-                                                                                                                                Case
-                                                                                                                            </a>
-                                                                                                                            <br>
-                                                                                                                            <span
-                                                                                                                                class="muted"
-                                                                                                                                style="text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 14px; line-height: 26px; font-weight: normal; color: #bdbdbd; word-break: break-all;">
-
-                                                                                                                                Black
-                                                                                                                            </span>
-                                                                                                                        </p>
-                                                                                                                    </th>
-
-                                                                                                                    <th style="mso-line-height-rule: exactly;"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                    </th>
-
-                                                                                                                    <th class="right line-item-qty"
-                                                                                                                        width="1"
-                                                                                                                        style="mso-line-height-rule: exactly; white-space: nowrap; padding: 13px 0 13px 13px;"
-                                                                                                                        align="right"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
-                                                                                                                            align="right">
-                                                                                                                            ×&nbsp;1
-                                                                                                                        </p>
-                                                                                                                    </th>
-                                                                                                                    <th class="right line-item-line-price"
-                                                                                                                        width="1"
-                                                                                                                        style="mso-line-height-rule: exactly; white-space: nowrap; padding: 13px 0 13px 26px;"
-                                                                                                                        align="right"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
-                                                                                                                            align="right">
-                                                                                                                            $18.00
-                                                                                                                        </p>
-                                                                                                                    </th>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                    </th>
-                                                                                                </tr>
-
-                                                                                                <tr>
-                                                                                                    <th colspan="2"
-                                                                                                        class="product-empty-row"
-                                                                                                        style="mso-line-height-rule: exactly;"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="top">
-                                                                                                    </th>
-                                                                                                </tr>
-
-
-                                                                                                <!-- Bold 2 -->
-
-
-
-
-                                                                                                <!-- end Bold 2 -->
-                                                                                                <tr
-                                                                                                    class="row-border-bottom">
-                                                                                                    <th class="table-stack product-image-wrapper stack-column-center"
-                                                                                                        width="1"
-                                                                                                        style="mso-line-height-rule: exactly; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid; padding: 13px 13px 13px 0;"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="middle">
-                                                                                                        <img width="140"
-                                                                                                            class="product-image"
-                                                                                                            src="https://cdn.shopify.com/s/files/1/1070/9630/products/Classic-Black-1_140x140_cropped@2x.jpg?v=1527156339"
-                                                                                                            alt="Product Image"
-                                                                                                            style="vertical-align: middle; text-align: center; width: 140px; max-width: 140px; height: auto !important; border-radius: 1px; padding: 0px;">
-                                                                                                    </th>
-                                                                                                    <th class="product-details-wrapper table-stack stack-column"
-                                                                                                        style="mso-line-height-rule: exactly; padding-top: 13px; padding-bottom: 13px; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid;"
-                                                                                                        bgcolor="#ffffff"
-                                                                                                        valign="middle">
-                                                                                                        <table
-                                                                                                            cellspacing="0"
-                                                                                                            cellpadding="0"
-                                                                                                            border="0"
-                                                                                                            width="100%"
-                                                                                                            style="min-width: 100%;"
-                                                                                                            role="presentation">
-                                                                                                            <tbody>
-                                                                                                                <tr>
-
-                                                                                                                    <th class="line-item-description"
-                                                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; padding: 13px 6px 13px 0;"
-                                                                                                                        align="left"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
-                                                                                                                            align="left">
-                                                                                                                            <a href="https://us.tens.co/tools/emails/click/order-confirmation/1/product/link?url=https%3A%2F%2Fus.tens.co%2Fproducts%2Fclassic-sunglasses"
-                                                                                                                                target="_blank"
-                                                                                                                                style="color: #666363; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: left !important; font-weight: bold;">
-                                                                                                                                Classic
-                                                                                                                            </a>
-                                                                                                                            <br>
-                                                                                                                            <span
-                                                                                                                                class="muted"
-                                                                                                                                style="text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 14px; line-height: 26px; font-weight: normal; color: #bdbdbd; word-break: break-all;">
-
-                                                                                                                                Black
-                                                                                                                            </span>
-                                                                                                                        </p>
-                                                                                                                    </th>
-
-                                                                                                                    <th style="mso-line-height-rule: exactly;"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                    </th>
-
-                                                                                                                    <th class="right line-item-qty"
-                                                                                                                        width="1"
-                                                                                                                        style="mso-line-height-rule: exactly; white-space: nowrap; padding: 13px 0 13px 13px;"
-                                                                                                                        align="right"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
-                                                                                                                            align="right">
-                                                                                                                            ×&nbsp;1
-                                                                                                                        </p>
-                                                                                                                    </th>
-                                                                                                                    <th class="right line-item-line-price"
-                                                                                                                        width="1"
-                                                                                                                        style="mso-line-height-rule: exactly; white-space: nowrap; padding: 13px 0 13px 26px;"
-                                                                                                                        align="right"
-                                                                                                                        bgcolor="#ffffff"
-                                                                                                                        valign="top">
-                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
-                                                                                                                            align="right">
-                                                                                                                            $89.00
-                                                                                                                        </p>
-                                                                                                                    </th>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                    </th>
-                                                                                                </tr>
-
 
                                                                                             </tbody>
                                                                                         </table>
@@ -1347,10 +1162,173 @@
                 </th>
             </tr>
         </tbody>
+
     </table>
+    <div id="addItem">
+
+    </div>
     <!-- END : CONTAINER -->
 
+<script>
+    let order = {
+            "_id": {
+                "$oid": "6381f332f602089b62fa5a39"
+            },
+            "email": "n@jdjd.do",
+            "name": "Junaid Malik",
+            "phone": 9069084506,
+            "products": {
+                "samsung-s22-ultra-gray": {
+                    "qty": 1,
+                    "price": 299,
+                    "name": [
+                        "s22 ultra (gray/backfit)"
+                    ],
+                    "size": [
+                        "backfit 1"
+                    ],
+                    "varient": "gray",
+                    "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/s22series/s22ultra/gray.webp"
+                },
+                "iphone-14-pro-max-gray": {
+                    "qty": 1,
+                    "price": 299,
+                    "name": [
+                        "iphone 14 pro max (gray/fullcover)"
+                    ],
+                    "size": [
+                        "fullcover 1"
+                    ],
+                    "varient": "gray",
+                    "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14promax/gray.webp"
+                }
+            },
+            "orderId": "1550857490049",
+            "paymentInfo": {
+                "id": "order_Kke2ZeMMTFC9Fi",
+                "entity": "order",
+                "amount": 59800,
+                "amount_paid": 0,
+                "amount_due": 59800,
+                "currency": "INR",
+                "receipt": "1550857490049",
+                "offer_id": null,
+                "status": "created",
+                "attempts": 0,
+                "notes": [],
+                "created_at": 1669460786
+            },
+            "paymentDump": {
+                "getting": "payment dump"
+            },
+            "address": "Dnfn-Fbcb",
+            "city": "Dhbd",
+            "state": "Dbbd",
+            "pincode": 201005,
+            "amount": 598,
+            "dileveryStatus": "pending",
+            "status": "pending",
+            "createdAt": {
+                "$date": {
+                    "$numberLong": "1669460786290"
+                }
+            },
+            "updatedAt": {
+                "$date": {
+                    "$numberLong": "1670137583157"
+                }
+            },
+            "__v": 0
+        }
+       let products = order.products
 
+       for(let item in products){
+        for(let i=0;i<products[item].name.length;i++){
+            let name = products[item].name[i]
+document.getElementById('addHere').innerHTML += ` <tr
+                                                                                                    class="row-border-bottom">
+                                                                                                    <th class="table-stack product-image-wrapper stack-column-center"
+                                                                                                        width="1"
+                                                                                                        style="mso-line-height-rule: exactly; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid; padding: 13px 13px 13px 0;"
+                                                                                                        bgcolor="#ffffff"
+                                                                                                        valign="middle">
+                                                                                                        <img  
+                                                                                                            class="product-image"
+                                                                                                            src=${products[item].img}
+                                                                                                            alt="Product Image"
+                                                                                                            style="vertical-align: middle; text-align: center;   border-radius: 1px; padding: 0px; height:100px ; max-height:150px">
+                                                                                                    </th>
+                                                                                                    <th class="product-details-wrapper table-stack stack-column"
+                                                                                                        style="mso-line-height-rule: exactly; padding-top: 13px; padding-bottom: 13px; border-bottom-width: 2px; border-bottom-color: #dadada; border-bottom-style: solid;"
+                                                                                                        bgcolor="#ffffff"
+                                                                                                        valign="middle">
+                                                                                                        <table
+                                                                                                            cellspacing="0"
+                                                                                                            cellpadding="0"
+                                                                                                            border="0"
+                                                                                                            width="100%"
+                                                                                                            style="min-width: 100%;"
+                                                                                                            role="presentation">
+                                                                                                            <tbody>
+                                                                                                                <tr>
+
+                                                                                                                    <th class="line-item-description"
+                                                                                                                        style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; padding: 13px 6px 13px 0;"
+                                                                                                                        align="left"
+                                                                                                                        bgcolor="#ffffff"
+                                                                                                                        valign="top">
+                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
+                                                                                                                            align="left">
+                                                                                                                            <a href="#"
+                                                                                                                                style="color: #666363; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: left !important; font-weight: bold;">
+                                                                                                                             ${products[item].name}
+                                                                                                                            </a>
+                                                                                                                            <br>
+                                                                                                                            <span
+                                                                                                                                class="muted"
+                                                                                                                                style="text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 14px; line-height: 26px; font-weight: normal; color: #bdbdbd; word-break: break-all;">
+
+${products[item].varient}
+                                                                                                                            </span>
+                                                                                                                        </p>
+                                                                                                                    </th>
+
+                                                                                                                    <th style="mso-line-height-rule: exactly;"
+                                                                                                                        bgcolor="#ffffff"
+                                                                                                                        valign="top">
+                                                                                                                    </th>
+
+                                                                                                                    <th class="right line-item-qty"
+                                                                                                                        width="1"
+                                                                                                                        style="mso-line-height-rule: exactly; white-space: nowrap; padding: 13px 0 13px 13px;"
+                                                                                                                        align="right"
+                                                                                                                        bgcolor="#ffffff"
+                                                                                                                        valign="top">
+                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
+                                                                                                                            align="right">
+                                                                                                                            ×&nbsp; ${products[item].size[i].split(' ')[1]}
+                                                                                                                        </p>
+                                                                                                                    </th>
+                                                                                                                    <th class="right line-item-line-price"
+                                                                                                                        width="1"
+                                                                                                                        style="mso-line-height-rule: exactly; white-space: nowrap; padding: 13px 0 13px 26px;"
+                                                                                                                        align="right"
+                                                                                                                        bgcolor="#ffffff"
+                                                                                                                        valign="top">
+                                                                                                                        <p style="mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; line-height: 26px; font-weight: 400; color: #666363; margin: 0;"
+                                                                                                                            align="right">
+                                                                                                                            ${products[item].price}
+                                                                                                                        </p>
+                                                                                                                    </th>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </th>
+                                                                                                </tr>`
+        }
+       }
+
+</script>
 </body>
 
 
