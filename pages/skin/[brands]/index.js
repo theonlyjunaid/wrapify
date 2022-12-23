@@ -30,18 +30,18 @@ console.log(products)
                         const destination = '/skin/' + product.brand + '/' + product.name.split(" ").join("-")
 
                         return (
-                            <Link href={destination} key={index}><a><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative '
+                            <Link href={destination} key={index}><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative '
                                 onMouseEnter={() => setShow(product.slug)}
                                 onMouseLeave={() => setShow('')}
                             >
-                                <Image src={product.img} alt="" className=' absolute -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' width={140} height={200} />
+                                <Image src={product.img} alt="" className='  -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' width={140} height={200} />
                                 <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-2  level3:text-xl transition-all ease-in-out duration-300 `}>
 
                                     <div className='text-mono font-semibold'>{product.brand.split("")[0].toUpperCase() +
                                         product.brand.split("").slice(1).join("")}</div>
                                     <div>{product.name}</div>
                                 </div>
-                            </div></a></Link>
+                            </div></Link>
                         )
                     })
                 }
@@ -63,7 +63,7 @@ console.log(products)
                                         <div>{mobile[rola]?.model[item]?.name}</div>
                                     </div>
                                 </div>
-                            </a>
+                            
                             </Link>
                         )
                     }

@@ -92,13 +92,13 @@ console.log(order)
 // <div></div>
 //                             <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
 //                                 Description
-//                             </a>
+//                             
 //                             <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
 //                                 Quantity
-//                             </a>
+//                             
 //                             <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
 //                                 Price
-//                             </a>
+//                             
 //                         </div>
 //                         {Object.keys(order.products).map((item) => {
 //                             const { name, price, quantity,img,size,varient,qty} = order.products[item]

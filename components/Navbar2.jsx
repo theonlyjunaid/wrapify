@@ -70,19 +70,19 @@ console.log(e.target.value)
     <div className='w-full '>
       <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-xl border border-b-2 border-black'>
         <div className='w-[30%]'>
-          <Link href="/"><a><h1 className='text-xl cursor-pointer font-mono'>Wrap</h1></a></Link>
+          <Link href="/"><h1 className='text-xl cursor-pointer font-mono'>Wrap</h1></Link>
         </div>
 
 
         <div className='flex items-center text-2xl gap-6 lg:hidden'>
-          <Link href="/cart"><a><AiOutlineShoppingCart className='cursor-pointer' /></a></Link>
+          <Link href="/cart"><AiOutlineShoppingCart className='cursor-pointer' /></Link>
           <AiOutlineSearch className='cursor-pointer' />
           <AiOutlineMenu className='cursor-pointer' onClick={toggleDropdown} />
         </div>
         <div className='hidden lg:flex w-[40%] justify-center items-center text-2xl gap-10 font-mono'>
-          <Link href="/"><a><h1 className='text-xl cursor-pointer'>Home</h1></a></Link>
-          <Link href="/skin"><a><h1 className='text-xl cursor-pointer'>Skin</h1></a></Link>
-          <Link href="/about"><a><h1 className='text-xl cursor-pointer'>About</h1></a></Link>
+          <Link href="/"><h1 className='text-xl cursor-pointer'>Home</h1></Link>
+          <Link href="/skin"><h1 className='text-xl cursor-pointer'>Skin</h1></Link>
+          <Link href="/about"><h1 className='text-xl cursor-pointer'>About</h1></Link>
 
         </div>
         <div className='hidden w-[30%] lg:flex items-center ml-auto justify-end relative gap-4 text-2xl'>
@@ -100,7 +100,7 @@ console.log(e.target.value)
           {!user.value && <FaRegUserCircle onClick={() => { setDropdown('') }} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }} />}
 
           {user.value && <FaUserCircle onClick={() => { setDropdown('') }} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }} />}
-          <Link href="/cart"><a><AiOutlineShoppingCart className='cursor-pointer' /></a></Link>
+          <Link href="/cart"><AiOutlineShoppingCart className='cursor-pointer' /></Link>
 
         </div>
 
@@ -113,7 +113,7 @@ console.log(e.target.value)
             return (
               <li key={index} className='bg-white  z-50 border-t'>
                
-                <Link href={`/skin/${searchItems[item].brand}/${item}`}><a>{item}</a></Link>
+                <Link href={`/skin/${searchItems[item].brand}/${item}`}>{item}</Link>
               </li>
             )
           }
@@ -122,20 +122,20 @@ console.log(e.target.value)
       </ul>}
 
       {!user.value && <div className={`right-14 absolute bg-white shadow-xl border rounded-md top-10  z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
-        <Link href="/login"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
+        <Link href="/login"><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
           Login
-        </div></a></Link>
-        <Link href="/signup"><a><div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
+        </div></Link>
+        <Link href="/signup"><div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
           Sign Up
-        </div></a></Link>
+        </div></Link>
       </div>}
       {user.value && <div className={`right-14 absolute bg-slate-100 border rounded-md top-10  z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
-        <Link href="/myaccount"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
+        <Link href="/myaccount"><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
           my account
-        </div></a></Link>
-        <Link href="/orders"><a><div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
+        </div></Link>
+        <Link href="/orders"><div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200'>
 My Orders
-        </div></a></Link>
+        </div></Link>
         <div className='px-5 py-1 cursor-pointer hover:bg-gray-300 transition-all duration-200' onClick={logout}>
 Log out
         </div>

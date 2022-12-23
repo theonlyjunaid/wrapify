@@ -30,7 +30,7 @@ const Skins = ({ products }) => {
         //             </div>
         //             <div>rs {product.price}</div>
         //         </div>
-        //         </a>
+        //         
         //     </Link>),)
         //     }
         // </div >
