@@ -268,7 +268,7 @@ const MyAccount = ({ user,userData }) => {
 
 <div className='px-2'>
 
-                    <Link href="" ><button onClick={handleSubmit} className=' bg-black w-full px-2 flex items-center justify-center py-2 border rounded-lg text-lg text-white hover:bg-gray-800' type='submit'>Update Your Info</button></Link>
+                    <Link href="" ><a><button onClick={handleSubmit} className=' bg-black w-full px-2 flex items-center justify-center py-2 border rounded-lg text-lg text-white hover:bg-gray-800' type='submit'>Update Your Info</button></a></Link>
 </div>
 
             </form>
@@ -307,7 +307,7 @@ const MyAccount = ({ user,userData }) => {
                     </div>
 
                 <div className='py-1 mb-2 '>
-                            <Link href="" ><button onClick={handlePassword} className=' bg-black w-full    px-2 flex items-center justify-center  py-2 border rounded-lg text-lg hover:bg-gray-800 text-white' type='submit'>Change Password</button></Link>
+                            <Link href="" ><a><button onClick={handlePassword} className=' bg-black w-full    px-2 flex items-center justify-center  py-2 border rounded-lg text-lg hover:bg-gray-800 text-white' type='submit'>Change Password</button></a></Link>
                         </div>
 
 

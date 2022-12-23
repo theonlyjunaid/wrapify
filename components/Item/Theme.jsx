@@ -100,7 +100,7 @@ function Theme(props) {
                         <Link href="/cart"><a >   <h1 className='px-3 py-1 bg-gray-300 cursor-pointer text-center' onClick={() => {
                             addTask();
                         }}>Add to Bag</h1>
-                        </Link>
+                        </a></Link>
                     </div>
                 </div> */}
             </div>

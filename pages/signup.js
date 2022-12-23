@@ -131,7 +131,7 @@ export default function Example() {
                         </button>
                     </form>
                     <div>
-                        <p className="text-sm text-gray-500">Already have an account? <Link href="/login"><span className="text-black cursor-pointer hover:text-gray-800">Sign in</span></Link></p>
+                        <p className="text-sm text-gray-500">Already have an account? <Link href="/login"><a><span className="text-black cursor-pointer hover:text-gray-800">Sign in</span></a></Link></p>
                     </div>
 
                 </div>
