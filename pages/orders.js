@@ -75,7 +75,7 @@ const Orders = () => {
                                                 </td>
                                                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                                     {/* {item.quantity} */}
-                                                    <Link href={`/order?id=${item._id}`}><a>Details</a></Link>
+                                                    <Link href={`/order?id=${item._id}`}>Details</Link>
                                                 </td>
                                             </tr>
                                             )
