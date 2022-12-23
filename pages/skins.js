@@ -12,7 +12,7 @@ const Skins = ({ products }) => {
     // console.log(products);
     return (
         // <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  text-gray-600 body-font py-10 px-2 ">
-        //     {products.map((product) => (<Link href={"/products/" + product.slug} key={product._id} >
+        //     {products.map((product) => (<Link legacyBehavior href={"/products/" + product.slug} key={product._id} >
         //         <a ><div className=" p-2  grid grid-cols-1 place-items-center shadow-sm border hover:drop-shadow-2xl bg-white transition duration-150 ease-out hover:ease-in">
         //             <img
         //               alt="ecommerce baba"

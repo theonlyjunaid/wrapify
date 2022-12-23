@@ -32,7 +32,7 @@ function Order({ orders }) {
                 orders.map((item, index) => {
                     console.log(item?.orderAt?.slice(4,13))
                     return (
-                        <div key={index}><Link href={`/mzart/admin/orderinfo?id=${item.orderId}`} ><a><div className='flex cursor-pointer gap-10 bg-gray-300 rounded-lg my-2 py-2 px-2 justify-between'>
+                        <div key={index}><Link legacyBehavior href={`/mzart/admin/orderinfo?id=${item.orderId}`} ><a><div className='flex cursor-pointer gap-10 bg-gray-300 rounded-lg my-2 py-2 px-2 justify-between'>
                             <div>
                                 <p>{item.orderId}</p>
                                 <p>

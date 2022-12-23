@@ -443,7 +443,7 @@ value={info.address1}
 
 
                     <div className='mt-4 px-2 w-full relative'>
-                    <Link href=""><a>
+                    <Link legacyBehavior href=""><a>
                         <button disabled={info.disbled} onClick={makePayment} className="dis disabled:bg-gray-500 disabled:cursor-not-allowed cursor-pointer relative mx-auto flex justify-center   w-full   py-3  rounded-md my-5  bg-black text-white">Pay Now</button>
                     </a></Link>
                     </div>

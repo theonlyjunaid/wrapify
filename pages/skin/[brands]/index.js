@@ -30,7 +30,7 @@ console.log(products)
                         const destination = '/skin/' + product.brand + '/' + product.name.split(" ").join("-")
 
                         return (
-                            <Link href={destination} key={index}><a><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative '
+                            <Link legacyBehavior href={destination} key={index}><a><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative '
                                 onMouseEnter={() => setShow(product.slug)}
                                 onMouseLeave={() => setShow('')}
                             >
@@ -52,7 +52,7 @@ console.log(products)
                 {
                     rola && Object.keys(mobile[rola]?.model).map((item, index) => {
                         return (
-                            <Link href={`${'/skin'}/${rola}/${item?.toLocaleLowerCase().split(" ").join("-")}`} key={index}><a >
+                            <Link legacyBehavior href={`${'/skin'}/${rola}/${item?.toLocaleLowerCase().split(" ").join("-")}`} key={index}><a >
                                 <div className='grid grid-cols-1 place-items-center  border-2 border-l-0 hover:shadow-2xl transition-all ease-in-out relative '
                                     onMouseEnter={() => setShow(item)}
                                     onMouseLeave={() => setShow('')}

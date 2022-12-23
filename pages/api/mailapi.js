@@ -286,7 +286,7 @@ ${productData[item].varient}
         }
     </style>
   
-    <link
+    <Link legacyBehavior
         href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:700,400%7CKarla:700,400%7CKarla:700,700"
         rel="stylesheet" type="text/css" data-premailer="ignore">
     <style type="text/css" data-premailer="ignore">

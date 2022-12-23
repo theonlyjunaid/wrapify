@@ -51,13 +51,13 @@ const Footer2 = () => {
                     </h2>
                     <ul className="font-mono">
                         <li>
-                            <Link href="/login"><a className="text-black hover:text-gray-400">Login</a></Link>
+                            <Link legacyBehavior href="/login"><a className="text-black hover:text-gray-400">Login</a></Link>
                         </li>
                         <li>
-                            <Link href="/signup"><a className="text-black hover:text-gray-400">Sign up</a></Link>
+                            <Link legacyBehavior href="/signup"><a className="text-black hover:text-gray-400">Sign up</a></Link>
                         </li>
                         <li>
-                            <Link href="/trackorder"><a className="text-black hover:text-gray-400">Track Order</a></Link>
+                            <Link legacyBehavior href="/trackorder"><a className="text-black hover:text-gray-400">Track Order</a></Link>
                         </li>
 
 
@@ -70,13 +70,13 @@ const Footer2 = () => {
                     </h2>
                     <ul className="font-mono">
                         <li>
-                            <Link href="/about"><a className="text-black hover:text-gray-400">About Us</a></Link>
+                            <Link legacyBehavior href="/about"><a className="text-black hover:text-gray-400">About Us</a></Link>
                         </li>
                         <li>
-                            <Link href="/contact"><a className="text-black hover:text-gray-400">Contact Us</a></Link>
+                            <Link legacyBehavior href="/contact"><a className="text-black hover:text-gray-400">Contact Us</a></Link>
                         </li>
                         <li>
-                            <Link href="/faqs"><a className="text-black hover:text-gray-400">FAQs</a></Link>
+                            <Link legacyBehavior href="/faqs"><a className="text-black hover:text-gray-400">FAQs</a></Link>
                         </li>
 
                     </ul>
@@ -89,13 +89,13 @@ const Footer2 = () => {
                     </h2>
                     <ul className="font-mono">
                         <li>
-                            <Link href="/privacy_policy"><a className="text-black hover:text-gray-400">Privacy Policy</a></Link>
+                            <Link legacyBehavior href="/privacy_policy"><a className="text-black hover:text-gray-400">Privacy Policy</a></Link>
                         </li>
                         <li>
-                            <Link href="/terms_and_condition"><a className="text-black hover:text-gray-400">Terms and Conditions</a></Link>
+                            <Link legacyBehavior href="/terms_and_condition"><a className="text-black hover:text-gray-400">Terms and Conditions</a></Link>
                         </li>
                         <li>
-                            <Link href="/refund_return_policy"><a className="text-black hover:text-gray-400">Refund/Return Policy</a></Link>
+                            <Link legacyBehavior href="/refund_return_policy"><a className="text-black hover:text-gray-400">Refund/Return Policy</a></Link>
                         </li>
 
                     </ul>
@@ -181,28 +181,28 @@ const Footer2 = () => {
                 <div className="container mx-auto pt-4 px-5 flex flex-wrap w-full flex-col sm:flex-row justify-center items-center level4:items-start level4:justify-between">
                     <div>
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start items-center gap-3">
-                            <Link href=""><a>
+                            <Link legacyBehavior href=""><a>
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                     width="36" height="36"
                                     viewBox="0 0 16 16">
                                     <path d="M 3.5 1 C 2.1250151 1 1 2.1250151 1 3.5 L 1 11.5 C 1 12.874985 2.1250151 14 3.5 14 L 11.5 14 C 12.874985 14 14 12.874985 14 11.5 L 14 3.5 C 14 2.1250151 12.874985 1 11.5 1 L 3.5 1 z M 3.5 2 L 11.5 2 C 12.335015 2 13 2.6649849 13 3.5 L 13 11.5 C 13 12.335015 12.335015 13 11.5 13 L 9.9042969 13 L 9.9042969 8.9667969 L 11.300781 8.9667969 L 11.509766 7.3574219 L 9.9042969 7.3574219 L 9.9042969 6.3320312 C 9.9042969 5.8660312 10.034031 5.5488281 10.707031 5.5488281 L 11.566406 5.5488281 L 11.566406 4.109375 C 11.417406 4.089375 10.907453 4.046875 10.314453 4.046875 C 9.0764531 4.046875 8.2304688 4.795875 8.2304688 6.171875 L 8.2304688 7.3574219 L 7 7.3535156 L 7 8.9628906 L 8.2304688 8.9667969 L 8.2304688 13 L 3.5 13 C 2.6649849 13 2 12.335015 2 11.5 L 2 3.5 C 2 2.6649849 2.6649849 2 3.5 2 z"></path>
                                 </svg>
                             </a></Link>
-                            <Link href=""><a>
+                            <Link legacyBehavior href=""><a>
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                     width="36" height="36"
                                     viewBox="0 0 16 16">
                                     <path d="M 15 3.296875 C 14.476563 3.523438 13.949219 3.691406 13.367188 3.746094 C 13.949219 3.410156 14.417969 2.84375 14.648438 2.226563 C 14.066406 2.5625 13.484375 2.789063 12.84375 2.902344 C 12.257813 2.339844 11.5 2 10.683594 2 C 9.109375 2 7.824219 3.242188 7.824219 4.765625 C 7.824219 4.988281 7.824219 5.214844 7.882813 5.386719 C 4.875 5.386719 2.8125 3.691406 1.414063 2 C 1.121094 2.394531 1.003906 2.902344 1.003906 3.410156 C 1.003906 4.367188 1.53125 5.214844 2.289063 5.722656 C 1.820313 5.667969 1.355469 5.554688 1.003906 5.386719 C 1.003906 5.386719 1.003906 5.386719 1.003906 5.441406 C 1.003906 6.796875 1.996094 7.921875 3.28125 8.148438 C 3.046875 8.203125 2.8125 8.261719 2.519531 8.261719 C 2.347656 8.261719 2.171875 8.261719 1.996094 8.207031 C 2.347656 9.335938 3.976563 10.632813 5.257813 10.632813 C 4.265625 11.363281 3.34375 12 1.5 12 C 1.265625 12 1.453125 12 1 12 C 2.28125 12.789063 3.800781 13 5.375 13 C 10.683594 13 13.542969 8.769531 13.542969 5.101563 C 13.542969 4.988281 13.542969 4.878906 13.542969 4.765625 C 14.125 4.367188 14.59375 3.863281 15 3.296875"></path>
                                 </svg>
                             </a></Link>
-                            <Link href=""><a>
+                            <Link legacyBehavior href=""><a>
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                     width="36" height="36"
                                     viewBox="0 0 16 16">
                                     <path d="M 4.773438 1 C 2.695313 1 1 2.695313 1 4.773438 L 1 10.230469 C 1 12.304688 2.695313 14 4.773438 14 L 10.230469 14 C 12.304688 14 14 12.304688 14 10.226563 L 14 4.773438 C 14 2.695313 12.304688 1 10.226563 1 Z M 4.773438 2 L 10.226563 2 C 11.765625 2 13 3.234375 13 4.773438 L 13 10.226563 C 13 11.765625 11.765625 13 10.230469 13 L 4.773438 13 C 3.234375 13 2 11.765625 2 10.230469 L 2 4.773438 C 2 3.234375 3.234375 2 4.773438 2 Z M 11.5 3 C 11.222656 3 11 3.222656 11 3.5 C 11 3.777344 11.222656 4 11.5 4 C 11.777344 4 12 3.777344 12 3.5 C 12 3.222656 11.777344 3 11.5 3 Z M 7.5 4 C 5.574219 4 4 5.574219 4 7.5 C 4 9.425781 5.574219 11 7.5 11 C 9.425781 11 11 9.425781 11 7.5 C 11 5.574219 9.425781 4 7.5 4 Z M 7.5 5 C 8.886719 5 10 6.113281 10 7.5 C 10 8.886719 8.886719 10 7.5 10 C 6.113281 10 5 8.886719 5 7.5 C 5 6.113281 6.113281 5 7.5 5 Z"></path>
                                 </svg>
                             </a></Link>
-                            <Link href=""><a>
+                            <Link legacyBehavior href=""><a>
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                     width="36" height="36"
                                     viewBox="0 0 16 16">
@@ -222,7 +222,7 @@ const Footer2 = () => {
                 <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row justify-between">
                     <p className="text-black text-sm text-center sm:text-left">
                         © 2022 wrap.com —
-                        <Link href="https://twitter.com/knyttneve"><a
+                        <Link legacyBehavior href="https://twitter.com/knyttneve"><a
 
                             rel="noopener noreferrer"
                             className="text-black ml-1"
@@ -264,13 +264,13 @@ const Footer2 = () => {
         //             </h2>
         //             <ul className="font-mono">
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">Login</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">Login</a></Link>
         //                 </li>
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">Sign up</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">Sign up</a></Link>
         //                 </li>
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">Track Order</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">Track Order</a></Link>
         //                 </li>
 
 
@@ -282,13 +282,13 @@ const Footer2 = () => {
         //             </h2>
         //             <ul className="font-mono">
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">About Us</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">About Us</a></Link>
         //                 </li>
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">Contact Us</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">Contact Us</a></Link>
         //                 </li>
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">FAQs</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">FAQs</a></Link>
         //                 </li>
 
         //             </ul>
@@ -300,13 +300,13 @@ const Footer2 = () => {
         //             </h2>
         //             <ul className="font-mono">
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">Privacy Policy</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">Privacy Policy</a></Link>
         //                 </li>
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">Terms and Conditions</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">Terms and Conditions</a></Link>
         //                 </li>
         //                 <li>
-        //                    <Link href=""><a className="text-white hover:text-gray-400">Return Policy</a></Link>
+        //                    <Link legacyBehavior href=""><a className="text-white hover:text-gray-400">Return Policy</a></Link>
         //                 </li>
 
         //             </ul>
@@ -392,7 +392,7 @@ const Footer2 = () => {
         //         <div className="container mx-auto pt-4 px-5 flex flex-wrap flex-col sm:flex-row justify-between">
         //             <div>
         //                 <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start items-center gap-3">
-        //                    <Link href=""><a>
+        //                    <Link legacyBehavior href=""><a>
         //                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
         //                             width="36" height="36"
         //                             className="text-white fill-current"
@@ -400,7 +400,7 @@ const Footer2 = () => {
         //                             <path d="M 3.5 1 C 2.1250151 1 1 2.1250151 1 3.5 L 1 11.5 C 1 12.874985 2.1250151 14 3.5 14 L 11.5 14 C 12.874985 14 14 12.874985 14 11.5 L 14 3.5 C 14 2.1250151 12.874985 1 11.5 1 L 3.5 1 z M 3.5 2 L 11.5 2 C 12.335015 2 13 2.6649849 13 3.5 L 13 11.5 C 13 12.335015 12.335015 13 11.5 13 L 9.9042969 13 L 9.9042969 8.9667969 L 11.300781 8.9667969 L 11.509766 7.3574219 L 9.9042969 7.3574219 L 9.9042969 6.3320312 C 9.9042969 5.8660312 10.034031 5.5488281 10.707031 5.5488281 L 11.566406 5.5488281 L 11.566406 4.109375 C 11.417406 4.089375 10.907453 4.046875 10.314453 4.046875 C 9.0764531 4.046875 8.2304688 4.795875 8.2304688 6.171875 L 8.2304688 7.3574219 L 7 7.3535156 L 7 8.9628906 L 8.2304688 8.9667969 L 8.2304688 13 L 3.5 13 C 2.6649849 13 2 12.335015 2 11.5 L 2 3.5 C 2 2.6649849 2.6649849 2 3.5 2 z"></path>
         //                         </svg>
         //                     </a></Link>
-        //                    <Link href=""><a>
+        //                    <Link legacyBehavior href=""><a>
         //                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
         //                             width="36" height="36"
         //                             className="text-white fill-current"
@@ -409,7 +409,7 @@ const Footer2 = () => {
         //                             <path d="M 15 3.296875 C 14.476563 3.523438 13.949219 3.691406 13.367188 3.746094 C 13.949219 3.410156 14.417969 2.84375 14.648438 2.226563 C 14.066406 2.5625 13.484375 2.789063 12.84375 2.902344 C 12.257813 2.339844 11.5 2 10.683594 2 C 9.109375 2 7.824219 3.242188 7.824219 4.765625 C 7.824219 4.988281 7.824219 5.214844 7.882813 5.386719 C 4.875 5.386719 2.8125 3.691406 1.414063 2 C 1.121094 2.394531 1.003906 2.902344 1.003906 3.410156 C 1.003906 4.367188 1.53125 5.214844 2.289063 5.722656 C 1.820313 5.667969 1.355469 5.554688 1.003906 5.386719 C 1.003906 5.386719 1.003906 5.386719 1.003906 5.441406 C 1.003906 6.796875 1.996094 7.921875 3.28125 8.148438 C 3.046875 8.203125 2.8125 8.261719 2.519531 8.261719 C 2.347656 8.261719 2.171875 8.261719 1.996094 8.207031 C 2.347656 9.335938 3.976563 10.632813 5.257813 10.632813 C 4.265625 11.363281 3.34375 12 1.5 12 C 1.265625 12 1.453125 12 1 12 C 2.28125 12.789063 3.800781 13 5.375 13 C 10.683594 13 13.542969 8.769531 13.542969 5.101563 C 13.542969 4.988281 13.542969 4.878906 13.542969 4.765625 C 14.125 4.367188 14.59375 3.863281 15 3.296875"></path>
         //                         </svg>
         //                     </a></Link>
-        //                    <Link href=""><a>
+        //                    <Link legacyBehavior href=""><a>
         //                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
         //                             width="36" height="36"
         //                             className="text-white fill-current"
@@ -418,7 +418,7 @@ const Footer2 = () => {
         //                             <path d="M 4.773438 1 C 2.695313 1 1 2.695313 1 4.773438 L 1 10.230469 C 1 12.304688 2.695313 14 4.773438 14 L 10.230469 14 C 12.304688 14 14 12.304688 14 10.226563 L 14 4.773438 C 14 2.695313 12.304688 1 10.226563 1 Z M 4.773438 2 L 10.226563 2 C 11.765625 2 13 3.234375 13 4.773438 L 13 10.226563 C 13 11.765625 11.765625 13 10.230469 13 L 4.773438 13 C 3.234375 13 2 11.765625 2 10.230469 L 2 4.773438 C 2 3.234375 3.234375 2 4.773438 2 Z M 11.5 3 C 11.222656 3 11 3.222656 11 3.5 C 11 3.777344 11.222656 4 11.5 4 C 11.777344 4 12 3.777344 12 3.5 C 12 3.222656 11.777344 3 11.5 3 Z M 7.5 4 C 5.574219 4 4 5.574219 4 7.5 C 4 9.425781 5.574219 11 7.5 11 C 9.425781 11 11 9.425781 11 7.5 C 11 5.574219 9.425781 4 7.5 4 Z M 7.5 5 C 8.886719 5 10 6.113281 10 7.5 C 10 8.886719 8.886719 10 7.5 10 C 6.113281 10 5 8.886719 5 7.5 C 5 6.113281 6.113281 5 7.5 5 Z"></path>
         //                         </svg>
         //                     </a></Link>
-        //                    <Link href=""><a>
+        //                    <Link legacyBehavior href=""><a>
         //                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
         //                             width="36" height="36"
         //                             className="text-white fill-current"

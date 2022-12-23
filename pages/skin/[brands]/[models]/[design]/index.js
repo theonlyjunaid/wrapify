@@ -324,7 +324,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                 {/* <h2 className="text-sm title-font text-gray-500 tracking-widest">
                     {product.category}
                 </h2> */}
-                {size === 'Choose' && <div><Link href={destinationback}><a ><div className='p-auto  mb-5 hidden md:flex font-extralight'><svg
+                {size === 'Choose' && <div><Link legacyBehavior href={destinationback}><a ><div className='p-auto  mb-5 hidden md:flex font-extralight'><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={24}
                     height={24}
@@ -346,7 +346,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                         </div>
                         <div className='my-6 md:my-0 md:w-[70%] flex justify-around px-5 items-center'>
                             <button className='px-8  text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button>
-                            <Link href={destination}><a><button className='px-8 text-lg font-extralight py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl'>ll Customize</button></a></Link>
+                            <Link legacyBehavior href={destination}><a><button className='px-8 text-lg font-extralight py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl'>ll Customize</button></a></Link>
                         </div>
                     </div>
                 </div>}
@@ -389,7 +389,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                         </div>
 
 
-                        {size !== 'Choosing' && size !== 'Choose' && <Link href="/cart"><a><div className='w-full flex justify-around px-5 items-center'>
+                        {size !== 'Choosing' && size !== 'Choose' && <Link legacyBehavior href="/cart"><a><div className='w-full flex justify-around px-5 items-center'>
                             {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
                             <button className='px-8 text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(product.slug + "-"+size, 1, product.price, product.name + " (" + product.color+"/"+size+")",size, product.color, product.img) }}>Add to Cart</button>
                         </div></a></Link>}

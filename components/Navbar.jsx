@@ -37,15 +37,15 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
             <div className='text-3xl cursor-pointer flex' >
                 <span onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}> {dropdown && <div className='absolute top-10 right-10 px-7 bg-black text-white p-2 rounded-md text-lg z-20'>
                     <ul>
-                        <li> <Link href='/myaccount'><a>Profile</a></Link></li>
-                        <li> <Link href='/orders'><a>Orders</a></Link></li>
+                        <li> <Link legacyBehavior href='/myaccount'><a>Profile</a></Link></li>
+                        <li> <Link legacyBehavior href='/orders'><a>Orders</a></Link></li>
                         <li onClick={logout} className='cursor-pointer'> Logout</li>
                     </ul>
 
                 </div>}
                     {user.value && <FaUserCircle className='mx-3 cursor-pointer' onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)} />}</span>
-                {!user.value && <Link href='/login'><a className='mx-3 text-xl'>Login</a></Link>}
-               <Link href="/cart"><a><AiOutlineShoppingCart /></a></Link> 
+                {!user.value && <Link legacyBehavior href='/login'><a className='mx-3 text-xl'>Login</a></Link>}
+               <Link legacyBehavior href="/cart"><a><AiOutlineShoppingCart /></a></Link> 
                 {/* <AiOutlineShoppingCart onClick={toggleCart} /> */}
             </div >
 
@@ -67,7 +67,7 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
                     })}
                 </ol>
                 <div className='flex gap-5 text-lg'>
-                    <Link href="/checkout"><a >    <button disabled={Object.keys(cart).length ==0} className="disabled:bg-indigo-400 disabled:cursor-not-allowed text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-md">Checkout</button></a></Link>
+                    <Link legacyBehavior href="/checkout"><a >    <button disabled={Object.keys(cart).length ==0} className="disabled:bg-indigo-400 disabled:cursor-not-allowed text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-md">Checkout</button></a></Link>
                     <button disabled={Object.keys(cart).length ==0}  className="disabled:bg-indigo-400 disabled:cursor-not-allowed text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-300 rounded text-md" onClick={clearCart}>Clear Cart</button>
                 </div>
             </div> */}

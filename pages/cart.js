@@ -85,7 +85,7 @@ function CartItem({cart, item,subTotal ,addToCart,removeFromCart}) {
                         <p className='font-mono'>{subTotal}</p>
                     </div>
                     <div>
-                        <Link href="/checkout"><a><button className={`bg-black hover:bg-gray-800 text-white w-full py-5 mt-5 rounded-[40px]`} onClick={item}>Checkout</button></a></Link>
+                        <Link legacyBehavior href="/checkout"><a><button className={`bg-black hover:bg-gray-800 text-white w-full py-5 mt-5 rounded-[40px]`} onClick={item}>Checkout</button></a></Link>
                     </div>
                 </div>
             </div>

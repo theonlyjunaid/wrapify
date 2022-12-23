@@ -113,7 +113,7 @@ export default function Example() {
                             className="border-2 border-gray-300 p-2 rounded-lg"
                             placeholder="Password"
                         />
-                        <Link href="/forgot"><a><p className="text-sm text-gray-500 flex justify-end cursor-pointer hover:text-gray-800">forgot password?</p></a></Link>
+                        <Link legacyBehavior href="/forgot"><a><p className="text-sm text-gray-500 flex justify-end cursor-pointer hover:text-gray-800">forgot password?</p></a></Link>
                         <button
                             type="submit"
                             className="bg-black text-white p-2 rounded-lg hover:text-gray-300 hover:bg-gray-800"
@@ -122,7 +122,7 @@ export default function Example() {
                         </button>
                     </form>
                     <div>
-                        <p className="text-sm text-gray-500">Don't have an account? <Link href="/signup"><a><span className="text-black cursor-pointer hover:text-gray-800">Sign up</span></a></Link></p>
+                        <p className="text-sm text-gray-500">Don't have an account? <Link legacyBehavior href="/signup"><a><span className="text-black cursor-pointer hover:text-gray-800">Sign up</span></a></Link></p>
                     </div>
 
                 </div>
