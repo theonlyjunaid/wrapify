@@ -36,7 +36,7 @@ console.log(products)
                         <Link href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
                             onMouseEnter={() => setShow(product.slug)}
                             onMouseLeave={() => setShow('')}
-                        ><Image src={product.img} alt="" className=' my-2 absolute hover:scale-[103%] transition-all ease-in-out duration-300' width={280} height={400} />
+                        ><Image src={product.img} alt="" className=' my-2  hover:scale-[103%] transition-all ease-in-out duration-300' width={280} height={400} />
                         
                         </div>
                             <div className={`text-sm md:text-base  w-[100%] bottom-0   font-mono font-light py-1 sm:py-2 md:py-3 md:${show === product.slug ? '' : 'hiden'} `}>
