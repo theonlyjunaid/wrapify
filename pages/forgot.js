@@ -94,7 +94,7 @@ export default function Example() {
                             placeholder="Email address"
                         />
                       
-                        <Link href="/login"><p className="text-sm text-gray-500 flex justify-end cursor-pointer hover:text-gray-800">Sign in</p></Link>
+                        <Link href="/login"><a><p className="text-sm text-gray-500 flex justify-end cursor-pointer hover:text-gray-800">Sign in</p></a></Link>
                         <button
                             type="submit"
                             className="bg-black text-white p-2 rounded-lg hover:text-gray-300 hover:bg-gray-800"
@@ -103,7 +103,7 @@ export default function Example() {
                         </button>
                     </form>
                     <div>
-                        <p className="text-sm text-gray-500">Don't have an account? <Link href="/signup"><span className="text-black cursor-pointer hover:text-gray-800">Sign up</span></Link></p>
+                        <p className="text-sm text-gray-500">Don't have an account? <Link href="/signup"><a><span className="text-black cursor-pointer hover:text-gray-800">Sign up</span></a></Link></p>
                     </div>
 
                 </div>

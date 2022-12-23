@@ -56,7 +56,7 @@ if (req.method === "POST") {
                                                                                                                             <a href="#"
                                                                                                                                 style="color: #666363; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: left !important; font-weight: bold;">
                                                                                                                              ${productData[item].name}
-                                                                                                                            
+                                                                                                                            </a>
                                                                                                                             <br>
                                                                                                                             <span
                                                                                                                                 class="muted"
@@ -532,7 +532,7 @@ ${productData[item].varient}
                                                                             <img src="https://mzartimages.sgp1.cdn.digitaloceanspaces.com/logo/logo_email.png"
                                                                                 class="logo " width="96" border="0"
                                                                                 style="width: 96px; height: auto !important; display: block; text-align: center; margin: auto;">
-                                                                        
+                                                                        </a>
                                                                         <!-- Logo : END -->
                                                                     </th>
                                                                 </tr>
@@ -862,7 +862,7 @@ ${productHtml}
                                                                                             target="_blank"
                                                                                             style="color: #bdbdbd; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; letter-spacing: 1px;">
                                                                                             Shop
-                                                                                        
+                                                                                        </a>
                                                                                     </th>
                                                                                     <th class="menu_bar_item"
                                                                                         style="width: 33%; mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; color: #bdbdbd; border-right-color: #dadada; border-right-style: solid; border-left-color: #dadada; border-left-style: solid; letter-spacing: 1px; border: 0;"
@@ -872,7 +872,7 @@ ${productHtml}
                                                                                             target="_blank"
                                                                                             style="color: #bdbdbd; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; letter-spacing: 1px;">
                                                                                             About Us
-                                                                                        
+                                                                                        </a>
                                                                                     </th>
                                                                                     <th class="menu_bar_item last"
                                                                                         style="width: 33%; mso-line-height-rule: exactly; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; color: #bdbdbd; border-right-color: #dadada; border-right-style: none; border-left-color: #dadada; border-left-style: solid; letter-spacing: 1px; border: 0;"
@@ -882,7 +882,7 @@ ${productHtml}
                                                                                             target="_blank"
                                                                                             style="color: #bdbdbd; text-decoration: none !important; text-underline: none; word-wrap: break-word; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,'Karla'; font-size: 16px; font-weight: 400; line-height: 26px; text-transform: uppercase; letter-spacing: 1px;">
                                                                                             Contact
-                                                                                        
+                                                                                        </a>
                                                                                     </th>
                                                                                 </tr>
                                                                             </tbody>
@@ -966,7 +966,7 @@ ${productHtml}
                                                                                                                 alt="Facebook"
                                                                                                                 src="https://orderlyemails.com/facebook_3.png"
                                                                                                                 style="width: 32px; height: auto !important; vertical-align: middle; text-align: center; padding: 6px 6px 0 0px;">
-                                                                                                        
+                                                                                                        </a>
                                                                                                         <a class="social-link"
                                                                                                             href="https://twitter.com/mzart_in"
                                                                                                             target="_blank"
@@ -977,7 +977,7 @@ ${productHtml}
                                                                                                                 alt="Twitter"
                                                                                                                 src="https://orderlyemails.com/twitter_3.png"
                                                                                                                 style="width: 32px; height: auto !important; vertical-align: middle; text-align: center; padding: 6px 6px 0;">
-                                                                                                        
+                                                                                                        </a>
                                                                                                         <a class="social-link"
                                                                                                             href="https://www.instagram.com/mzart.in/"
                                                                                                             target="_blank"
@@ -988,7 +988,7 @@ ${productHtml}
                                                                                                                 alt="Instagram"
                                                                                                                 src="https://orderlyemails.com/instagram_3.png"
                                                                                                                 style="width: 32px; height: auto !important; vertical-align: middle; text-align: center; padding: 6px 6px 0;">
-                                                                                                        
+                                                                                                        </a>
                                                                                                         <a class="social-link"
                                                                                                             href="https://www.youtube.com/@mzartin"
                                                                                                             target="_blank"
@@ -999,7 +999,7 @@ ${productHtml}
                                                                                                                 alt="YouTube"
                                                                                                                 src="https://orderlyemails.com/youtube_3.png"
                                                                                                                 style="width: 32px; height: auto !important; vertical-align: middle; text-align: center; padding: 6px 0px 0 6px;">
-                                                                                                        
+                                                                                                        </a>
                                                                                                     </th>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -1073,7 +1073,7 @@ ${productHtml}
                                                                                         <a href="https://mzart.in"
                                                                                             target="_blank"
                                                                                             data-key="section_shop_block1"
-                                                                                            style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; font-weight: 400; text-transform: none;">mzart.in
+                                                                                            style="color: #ecba78; text-decoration: none !important; text-underline: none; font-size: 14px; font-weight: 400; text-transform: none;">mzart.in</a>
                                                                                     </th>
                                                                                 </tr>
                                                                                 <!-- Store Website : END -->

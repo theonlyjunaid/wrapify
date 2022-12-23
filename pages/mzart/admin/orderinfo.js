@@ -117,17 +117,15 @@ const Authenticate = (e) => {
             </h2>
             <div className="grid grid-cols-4">
 <div></div>
-              <div className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
+              <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
                 Description
-                </div>
-              
-              <div className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
+              </a>
+              <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
                 Quantity
-                </div>
-              
-              <div className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
+              </a>
+              <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
                 Price
-              </div>
+              </a>
             </div>
       {Object.keys(orders.products).map((item,index) => {
 // console.log(orders.products[item])

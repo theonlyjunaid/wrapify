@@ -178,7 +178,7 @@
 //                                     >
 //                                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
 //                                     </svg>
-//                                 
+//                                 </a>
 //                                 <a className="text-gray-500">
 //                                     <svg
 //                                         fill="currentColor"
@@ -190,7 +190,7 @@
 //                                     >
 //                                         <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
 //                                     </svg>
-//                                 
+//                                 </a>
 //                                 <a className="text-gray-500">
 //                                     <svg
 //                                         fill="currentColor"
@@ -202,7 +202,7 @@
 //                                     >
 //                                         <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
 //                                     </svg>
-//                                 
+//                                 </a>
 //                             </span>
 //                         </div> */}
 //                         <p className="leading-relaxed">
@@ -324,7 +324,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                 {/* <h2 className="text-sm title-font text-gray-500 tracking-widest">
                     {product.category}
                 </h2> */}
-                {size === 'Choose' && <div><Link href={destinationback}><div className='p-auto  mb-5 hidden md:flex font-extralight'><svg
+                {size === 'Choose' && <div><Link href={destinationback}><a ><div className='p-auto  mb-5 hidden md:flex font-extralight'><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={24}
                     height={24}
@@ -333,7 +333,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                 >
                     <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z" />
                 </svg>
-                    Back to All Skins</div></Link>
+                    Back to All Skins</div></a></Link>
                     <h1 className="text-sm md:text-2xl title-font text-gray-500 tracking-widest">
                         {product.name}
                     </h1>
@@ -346,7 +346,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                         </div>
                         <div className='my-6 md:my-0 md:w-[70%] flex justify-around px-5 items-center'>
                             <button className='px-8  text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button>
-                            <Link href={destination}><button className='px-8 text-lg font-extralight py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl'>ll Customize</button></Link>
+                            <Link href={destination}><a><button className='px-8 text-lg font-extralight py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl'>ll Customize</button></a></Link>
                         </div>
                     </div>
                 </div>}
@@ -389,10 +389,10 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                         </div>
 
 
-                        {size !== 'Choosing' && size !== 'Choose' && <Link href="/cart"><div className='w-full flex justify-around px-5 items-center'>
+                        {size !== 'Choosing' && size !== 'Choose' && <Link href="/cart"><a><div className='w-full flex justify-around px-5 items-center'>
                             {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
                             <button className='px-8 text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(product.slug + "-"+size, 1, product.price, product.name + " (" + product.color+"/"+size+")",size, product.color, product.img) }}>Add to Cart</button>
-                        </div></Link>}
+                        </div></a></Link>}
 
 
 
