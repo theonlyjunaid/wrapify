@@ -300,7 +300,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
     useEffect(() => {
         setSize('Choose')
     }, [])
-    const destination = "/skin/" + product?.brand + "/" + product.name.split(" ").join("-").toLowerCase() + "/customize";
+    const destination = "/skin/" + product?.brand + "/" + product?.name.split(" ").join("-").toLowerCase() + "/customize";
     const destinationback = "/skin/" + product?.brand + "/" + product?.name.split(" ").join("-").toLowerCase();
 
     return (
