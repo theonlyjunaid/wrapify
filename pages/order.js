@@ -11,7 +11,7 @@ const order = ({ order }) => {
 // console.log(order)
     const router = useRouter()
     const sendmail = async () => {
-        const data = await fetch("/api/mailapi", {
+        const data = await fetch("https://mzart.in/api/mailapi", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
