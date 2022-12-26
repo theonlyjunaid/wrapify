@@ -70,7 +70,7 @@ console.log(e.target.value)
     <div className='w-full '>
       <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-xl border border-b-2 border-black'>
         <div className='w-[30%]'>
-          <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer font-mono'>Wrap</h1></a></Link>
+          <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer font-mono'>MZ Art</h1></a></Link>
         </div>
 
 
