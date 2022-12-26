@@ -7,7 +7,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-american",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/amarican.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/amarican.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/amarican.png",
                         "brand": "apple",
                         "category": "skin",
@@ -22,7 +22,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-arabiansea",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/arabiansea.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/arabiansea.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/arabiansea.png",
                         "brand": "apple",
                         "category": "skin",
@@ -37,7 +37,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-brain",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/brain.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/brain.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/brain.png",
 
 
@@ -54,7 +54,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-circuit",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/circuit.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/circuit.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/circuit.png",
                         "brand": "apple",
                         "category": "skin",
@@ -69,7 +69,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-earthmoon",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/earthmoon.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/earthmoon.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/earthmoon.png",
                         "brand": "apple",
                         "category": "skin",
@@ -84,7 +84,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-gadgets",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/gadgets.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/gadgets.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/gadgets.png",
                         "brand": "apple",
                         "category": "skin",
@@ -99,7 +99,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-random",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/random.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/random.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/random.png",
                         "brand": "apple",
                         "category": "skin",
@@ -114,7 +114,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-seapirate",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/seapirate.jpg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/seapirate.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/seapirate.png",
                         "brand": "apple",
                         "category": "skin",
@@ -130,7 +130,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-settle",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/settle.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/settle.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/settle.png",
                         "brand": "apple",
                         "category": "skin",
@@ -145,7 +145,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-space",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/space.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/space.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/space.png",
 
                         "brand": "apple",
@@ -161,7 +161,7 @@ export const products = {
                     {
                         "name": "iphone 14",
                         "slug": "iphone-14-thanos",
-                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/thanos.jpeg",
+                        "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/thanos.webp",
                         "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/thanos.png",
                         "brand": "apple",
                         "category": "skin",

@@ -219,7 +219,7 @@ const Footer2 = () => {
                     </div>
                     <div className="">
 
-                        <img src="icons/pay.png" alt="payment methods" className="max-w-[400px] w-full " />
+                        <img src="https://mzart.sgp1.cdn.digitaloceanspaces.com/icons/payment.png" alt="payment methods" className="max-w-[400px] w-full " />
 
 
                     </div>
