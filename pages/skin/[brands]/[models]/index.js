@@ -63,7 +63,7 @@ console.log(products)
                         
                         </Link>
                     )
-                })}
+                }).reverse()}
             </div>
         </div>
     )
