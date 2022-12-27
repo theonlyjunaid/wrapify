@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import Link from 'next/link'
 import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlineSearch, AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineMenu } from 'react-icons/ai'
 import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
+import NavdropMobile from './NavdropMobile'
 // import Product from '../../../model/Product';
 // import Link from 'next/link'
 // import mongoose from 'mongoose';
@@ -10,6 +11,7 @@ import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
 
 const Navbar2 = ({ user, logout }) => {
   const [dropdown, setDropdown] = useState('hidden')
+  const [down, setDown] = useState(false)
   const [search, setSearch] = useState(false)
   const [searchItems, setSearchItems] = useState({})
   const [searchItem, setSearchItem] = useState([])
@@ -20,26 +22,27 @@ const Navbar2 = ({ user, logout }) => {
       setDropdown('hidden')
     }
   }
-  const searchProduct = () => {
+//   const searchProduct = () => {
 
-fetch('/api/getproducts', {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-}).then(res => res.json())
-.then(data => {
-  // console.log(data.Skins.filter("iphone 14"))
-  // console.log(data.Skins?.find(item => item === "iphone 14"))
-  // console.log(data.Skins)
-  setSearchItems(data.Skins)
-  setSearchItem(Object.keys(searchItems))
-}
-)
-}
-console.log(searchItems)
+
+// }
+// )
+// }
+
 useEffect(() => {
-  console.log(searchItem)
+  fetch('/api/getproducts', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(res => res.json())
+    .then(data => {
+      // console.log(data.Skins.filter("iphone 14"))
+      // console.log(data.Skins?.find(item => item === "iphone 14"))
+      // console.log(data.Skins)
+      setSearchItems(data.Skins)
+      setSearchItem(Object.keys(searchItems))
+    })
 
 }, [searchItems])
 
@@ -63,11 +66,18 @@ console.log(e.target.value)
   }
 
 }
-
+if (typeof window !== "undefined") {
+  document.getElementsByTagName("body")[0].addEventListener("click", function (e) {
+    if (e.target.id !== "search" && e.target.id !== "searchIcon") {
+      setSearch(false)
+    }
+  })
+}
 
 
   return (
     <div className='w-full '>
+      <NavdropMobile down={down} setDown={setDown}/>
       <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-xl border border-b-2 border-black'>
         <div className='w-[30%]'>
           <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer font-mono'>MZ Art</h1></a></Link>
@@ -77,7 +87,7 @@ console.log(e.target.value)
         <div className='flex items-center text-2xl gap-6 lg:hidden'>
           <Link legacyBehavior href="/cart"><a><AiOutlineShoppingCart className='cursor-pointer' /></a></Link>
           <AiOutlineSearch className='cursor-pointer' />
-          <AiOutlineMenu className='cursor-pointer' onClick={toggleDropdown} />
+          <AiOutlineMenu className='cursor-pointer' onClick={() => { setDown(true)}} />
         </div>
         <div className='hidden lg:flex w-[40%] justify-center items-center text-2xl gap-10 font-mono'>
           <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer'>Home</h1></a></Link>
@@ -87,11 +97,11 @@ console.log(e.target.value)
         </div>
         <div className='hidden w-[30%] lg:flex items-center ml-auto justify-end relative gap-4 text-2xl'>
 <div className='  '>
-            <div className='flex items-center'>
+            <div className='flex items-center' >
 
 
-          <AiOutlineSearch className='cursor-pointer absolute ml-3 text-2xl ' />
-            <input type="text" className={`border flex items-center rounded-[100px] py-2 px-[48px] ${search ? 'w-[300px]' : 'w-[180px]'} cursor-text h-10 bg-[#f5f5f5] text-lg text-gray-600`} placeholder='Search' onClick={() => { setSearch(true); searchProduct() }} onChange={(e)=>List(e)} />
+          <AiOutlineSearch className='cursor-pointer absolute ml-3 text-2xl ' id="searchIcon" />
+            <input id='search' type="text" className={`border flex items-center rounded-[100px] py-2 px-[48px] ${search ? 'w-[300px]' : 'w-[180px]'} cursor-text h-10 bg-[#f5f5f5] text-lg text-gray-600`} placeholder='Search' onClick={() => { setSearch(true) }} onChange={(e)=>List(e)} />
             </div>
 
 
@@ -106,12 +116,12 @@ console.log(e.target.value)
 
       </nav>
 {search && 
-      <ul className='absolute z-50 w-[270px] right-20 mr-8 top-14 border' id='myUL'>
+        <ul className={`absolute z-50 ${search ? 'w-[300px]' : 'w-[180px]'}  right-20 mr-6 top-14 px-4 bg-white rounded-2xl border divide-y py-1`} id='myUL'>
         {
           searchItem.map((item, index) => {
             console.log(item)
             return (
-              <li key={index} className='bg-white  z-50 border-t'>
+              <li key={index} className='bg-white  z-50  '>
                
                 <Link legacyBehavior href={`/skin/${searchItems[item].brand}/${item}`}><a>{item}</a></Link>
               </li>
