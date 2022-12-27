@@ -10,10 +10,49 @@ import 'react-toastify/dist/ReactToastify.css';
 // import Theme from '../../../../../../components/Item/Theme'
 
 export default function Slug({ products,  addToCart, buyNow, cart, size, setSize }) {
+    console.log(products)
     useEffect(() => {
         setSize('Choose')
     }, [])
     const theme = {
+        'Space':[{
+            name: 'space',
+            URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/space.png'
+        },
+        {
+            name: 'settle',
+            URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/settle.png'
+        },
+        {
+            name: 'earthmoon',
+            URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/earthmoon.png'
+        },
+    ],
+    'Tufani':[{    
+        name: 'arabian sea',
+        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/arabiansea.png'
+    },
+    {
+        name: 'seapirate',
+        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/seapirate.png'
+    },
+    {
+        name: 'american red',
+        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/america.png'
+    },
+  
+],
+    'Electric': [{
+        name: 'circuit',
+        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/circuit.png'
+    },
+    {
+        name: 'gadgets',
+        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/gadgets.png'
+    },
+    
+]
+    ,
         'PLain Colours': [{
             name: 'green',
             URL: 'https://dictionary.cambridge.org/images/thumb/green_noun_001_07350.jpg?version=5.0.252'
@@ -21,7 +60,9 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
         {
             name: 'gray',
             URL: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSDxIVFRUVFRUVFRUVFRUVFRUVFRcXFxUVFRUYHSggGB0lHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZFRkrKy0tKy0rKzc3LS0tKzctLTctKy0rLTctLTctLTc3Ny03Ny0tLSstLTctLSstKys3Lf/AABEIAOEA4QMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EABgQAQEBAQEAAAAAAAAAAAAAAAABEQJB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD0+mqiKpKEEKkWmAkBcAoAoCiCKgKigIEASgAWhQVBUEIqKCJ01WaCYGAOiKgoqRRFRUFAWCIRcQFUSAAAWpVMBCFICCpAAAEVICgoIzW2egZ0AHSpjSAAQAKAogAoARUAVNWsgoSlBLQUEDVBEVKAGgAQBWeliUGRcAbpVqUEUUEABQgAJVAFQFQKCAAAAAAgAItEBdIRQQWpQZwAHRAAWoAUgQBQAIQBQAEtAECoDSEUBKtQEgACLqAsWJABOqtZoAAN0EBYRFAFQBTABUABUAqKkARUAxpItBNRYAYlCggKBqxnFBWbGkBEQB0qVamAsNDAILgACwEAAhRQZo1jIBixMAihQGVTAAoCAAKkWArNrVYoAgDoCCqqKAigioKCCgAIBUDQNLQ0FQ0gAAIAAQAIrMUCs1pKDIaA6VFoArKgACrFSAgtqAAJQRQBFoABDQEwoAi6gL1UACCyIC6z1VrPVBAUV1qLUESgAoAKIAoQgCKgBSJQVABUUBDSoAqAKhQFtQAGK1UoJougOvTK1AVIAKIAsIEACgKhCgkABRADQABUAQAEFoEMF0GUqs0EUAdUqpQA0ABRRLQEUQBSoAAAAAiiAKgAACKlUBDTQKy1WaAMqDshUqKLEFFKICiRQCAIqVUACJQUQAoABRQRFATBUBFRQRlaAyoIOqU1BVIzaoKIAsWIqogAqwTTQVFKCACCACiKCaUqUF00xAC0qaAlKgINCK2IAAALEAaiACNRBQABaUAKgIACoU8AU9UASoAiJQAqAKAIj//Z'
-        }]
+        }
+
+    ]
         
 
     }
@@ -54,7 +95,7 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
                 <div className='w-[100%]  md:h-screen  flex justify-center items-center'>
                     <div className="w-[85%] h-[80%]">
                         <div className='w-[100%] h-[100%] relative flex justify-center items-center '>
-                            <img src={mobile[0].img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
+                            <img src={mobile[0]?.img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
                         </div>
                     </div>
                 </div>
