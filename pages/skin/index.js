@@ -12,7 +12,11 @@ export default function Popular({ products }) {
     let samsung = products.filter((item) => {
         return item.brand === 'samsung'
     })
-    console.log(apple)
+    // console.log(apple)
+//     let mobile = products.filter((item) => {
+//         return item.name.includes('s22')
+//     })
+// console.log(mobile)
     let mobileBrand = [apple, samsung]
 
     return (

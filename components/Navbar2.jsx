@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlineSearch, AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineMenu } from 'react-icons/ai'
 import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
 import NavdropMobile from './NavdropMobile'
+import Search from './Search'
 // import Product from '../../../model/Product';
 // import Link from 'next/link'
 // import mongoose from 'mongoose';
@@ -77,6 +78,7 @@ if (typeof window !== "undefined") {
 
   return (
     <div className='w-full '>
+      {/* <Search search={search} setSearch={setSearch}/> */}
       <NavdropMobile down={down} setDown={setDown}/>
       <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-xl border border-b-2 border-black'>
         <div className='w-[30%]'>
@@ -86,7 +88,7 @@ if (typeof window !== "undefined") {
 
         <div className='flex items-center text-2xl gap-6 lg:hidden'>
           <Link legacyBehavior href="/cart"><a><AiOutlineShoppingCart className='cursor-pointer' /></a></Link>
-          <AiOutlineSearch className='cursor-pointer' />
+          <AiOutlineSearch className='cursor-pointer' onClick={()=>setSearch(true)} />
           <AiOutlineMenu className='cursor-pointer' onClick={() => { setDown(true)}} />
         </div>
         <div className='hidden lg:flex w-[40%] justify-center items-center text-2xl gap-10 font-mono'>

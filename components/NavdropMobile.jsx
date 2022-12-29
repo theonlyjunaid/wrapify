@@ -8,6 +8,7 @@ import Link from 'next/link'
 const NavdropMobile = ({down,setDown}) => {
 
     const [rotate, setRotate] = useState(false)
+
 let router  = useRouter()
 
     useEffect(() => {

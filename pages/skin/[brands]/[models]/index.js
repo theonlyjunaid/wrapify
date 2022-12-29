@@ -14,7 +14,7 @@ function Index({ products }) {
 console.log(products)
 
     return (
-        <div>
+        <div className=''>
             <div className='m-3 level3:mx-5 sm:m-12 md:m-16 text-center level3:text-start lg:m-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10'>
 
           

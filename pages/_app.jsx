@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 function MyApp({ Component, pageProps }) {
+
     const [size, setSize] = useState('Choose')
   const [progress, setProgress] = useState(0)
   const [user, setUser] = useState({ value: null })
@@ -117,3 +118,7 @@ console.log(itemCode)
 }
 
 export default MyApp
+
+
+
+

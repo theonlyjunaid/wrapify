@@ -7,6 +7,7 @@ const Footer2 = () => {
         setEmail(e.target.value);
     };
     const emailHandler = async () => {
+        
         const res = await fetch("/api/newsletter", {
             method: "POST",
             body: JSON.stringify({ email }),
