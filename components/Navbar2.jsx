@@ -77,10 +77,10 @@ if (typeof window !== "undefined") {
 
 
   return (
-    <div className='w-full '>
+    <div className='w-full bg-white shadow-md  border border-b-2 border-black  '>
       {/* <Search search={search} setSearch={setSearch}/> */}
       <NavdropMobile down={down} setDown={setDown}/>
-      <nav className='flex justify-between w-full  align-middle items-center px-5 pl-7 h-[64px] bg-white shadow-xl border border-b-2 border-black'>
+      <nav className='flex justify-between w-full max-w-[80rem] align-middle items-center px-5 pl-7 h-[64px]  mx-auto'>
         <div className='w-[30%]'>
           <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer font-mono'>MZ Art</h1></a></Link>
         </div>
@@ -119,7 +119,7 @@ if (typeof window !== "undefined") {
 
       </nav>
 {search && 
-        <ul className={`absolute z-50 ${search ? 'w-[300px]' : 'w-[180px]'}  right-20 mr-6 top-14 px-4 bg-white rounded-2xl border divide-y py-1`} id='myUL'>
+        <ul className={`absolute z-50 ${search ? 'w-[280px]' : 'w-[180px]'}  right-40 mr-6 top-14 px-4 bg-white rounded-2xl border divide-y py-1`} id='myUL'>
         {
           searchItem.map((item, index) => {
             console.log(item)
