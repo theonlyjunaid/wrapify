@@ -27,7 +27,7 @@ const [brand, setBrand] = useState('apple')
           <div className='flex justify-end pb-2 p-5'>
 
           <div className='flex items-center text-white cursor-pointer hover:bg-gray-200 w-max p-[0.5px] rounded-full duration-300 '
-          onClick={()=>setDrop('translate-x-full')}
+              onClick={() => setDrop('hidden translate-x-full')}
           >
           <img src="/icons/cross.svg" alt="" />
             </div>
