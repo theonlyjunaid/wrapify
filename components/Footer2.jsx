@@ -27,26 +27,26 @@ const Footer2 = () => {
 
     return (
         <footer className=" body-font shadow-xl  border-t-2 border-black ">
-            <div className="container  px-5 py-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap justify-between flex-wrap flex-col">
-                <div>
-                    <h2 className="tracking-widest font-mono text-2xl">
+            <div className="max-w-full level2:container   px-5 py-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap justify-between flex-wrap flex-col">
+                <div >
+                    <h2 className="tracking-widest font-mono text-2xl flex justify-center my-1  sm:justify-start">
                         SUBSCRIBE
                     </h2>
-                    <form onSubmit={submitHandler} className="level4:flex items-center gap-2  mt-3">
-                        <div>
-                            <input type="email" value={email} onChange={changeHandler} name="email" id="email" placeholder="Enter your email" className="w-full  rounded border-[1.7px] border-black  focus:outline-none focus:border-indigo-500 text-base mb-2 level4:mb-0 px-4 py-2" />
+                    <form onSubmit={submitHandler} className="sm:flex items-center gap-2  mt-3">
+                        <div className="flex justify-center my-1">
+                            <input type="email" value={email} onChange={changeHandler} name="email" id="email" placeholder="Enter your email" className="w-full max-w-[400px] rounded border-[1.7px] border-black  focus:outline-none focus:border-indigo-500 text-base mb-2 level4:mb-0 px-4 py-2" />
                         </div>
-                        <div className="flex justify-center">
-                            <button className="text-white w-full level4:w-fit border-0 py-2 px-8 focus:outline-none bg-black rounded text-lg">
+                        <div className="flex justify-center mt-1">
+                            <button className="text-white w-full max-w-[400px]  sm:w-fit border-0 py-2 px-8 focus:outline-none bg-black rounded text-lg">
                                 SUBMIT    </button>
 
                         </div>
                     </form>
-                    <p className="mt-2 text-gray-600 text-[8.5px]">
+                    <p className="mt-2 text-gray-600 text-[8.5px] flex justify-center  sm:justify-start">
                         Subscribe to our newsletter to get the latest updates on our products and services.
                     </p>
                 </div>
-                <div className="text-center level4:text-start my-2 mt-4" >
+                <div className="text-center sm:text-start my-2 mt-4" >
                     <h2 className="tracking-wider font-mono text-sm text-gray-600">
                         Customer
                     </h2>
@@ -64,7 +64,7 @@ const Footer2 = () => {
 
                     </ul>
                 </div>
-                <div className="text-center level4:text-start my-2" >
+                <div className="text-center sm:text-start my-2" >
 
                     <h2 className="tracking-wider font-mono text-sm text-gray-600">
                         Company
@@ -83,7 +83,7 @@ const Footer2 = () => {
                     </ul>
                 </div>
 
-                <div className="text-center level4:text-start my-2" >
+                <div className="text-center sm:text-start my-2" >
 
                     <h2 className="tracking-wider font-mono text-sm text-gray-600">
                         Help

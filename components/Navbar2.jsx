@@ -94,6 +94,7 @@ if (typeof window !== "undefined") {
         <div className='hidden lg:flex w-[40%] justify-center items-center text-2xl gap-10 font-mono'>
           <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer'>Home</h1></a></Link>
           <Link legacyBehavior href="/skin"><a><h1 className='text-xl cursor-pointer'>Skin</h1></a></Link>
+          <Link legacyBehavior href="/collection"><a><h1 className='text-xl cursor-pointer'>Collection</h1></a></Link>
           <Link legacyBehavior href="/about"><a><h1 className='text-xl cursor-pointer'>About</h1></a></Link>
 
         </div>
