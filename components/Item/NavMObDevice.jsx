@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlineSearch, AiOutlinePlu
 import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
 import {mobile2} from '../../data/mobile'
 const NavDevice = () => {
-const [drop, setDrop] = useState('translate-x-full')
+const [drop, setDrop] = useState('hidden translate-x-full')
 const [slide, setSlide] = useState('mainMenu')
 const [brand, setBrand] = useState('apple')
 
@@ -21,7 +21,7 @@ const [brand, setBrand] = useState('apple')
           <AiOutlineSearch className='cursor-pointer  ' id="searchIcon" />
           <AiOutlineMenu className='cursor-pointer' onClick={()=>setDrop('')}/>
         </div>
-        <div className={`w-[280px] min-h-screen right-0 bg-white absolute top-0 z-40 overflow-y-scroll ${drop}  transform duration-300 border-black border `}
+        <div className={`w-[280px] min-h-screen right-0 bg-white absolute top-0 z-40 overflow-y-scroll   ${drop}  transform duration-300 border-black border `}
         // onMouseLeave={()=>setDrop('translate-x-full')}
         >
           <div className='flex justify-end pb-2 p-5'>
