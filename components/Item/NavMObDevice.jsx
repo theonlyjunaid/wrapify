@@ -40,7 +40,7 @@ const [brand, setBrand] = useState('apple')
                 <img src="/icons/rightarraw.svg" alt="" className='mt-2' />
               </li>
 
-              <li className='cursor-pointer w-full border-black flex justify-between  mx-auto font-sans  bg-white text-[24px] font-[500]  py-1  items-center'>
+              <li className='cursor-pointer w-full border-black flex justify-between  mx-auto font-sans  bg-white text-[24px] font-[500]  py-1  items-center' onClick={()=>setSlide('collection')}>
                 Collections
                 <img src="/icons/rightarraw.svg" alt="" className='mt-2' />
               </li>
@@ -111,7 +111,7 @@ const [brand, setBrand] = useState('apple')
                 </ul>
   </div>
   </div>
-          <div className={`${slide === 'selectModel' ? 'translate-x-0' : 'translate-x-full'} transform duration-300`}
+          <div className={`${slide === 'selectModel' ? 'translate-x-0' : 'absolute translate-x-[200%]'} transform duration-300`}
 
           >
             <div onClick={() => setSlide('selectDevice')}>
@@ -132,6 +132,27 @@ const [brand, setBrand] = useState('apple')
 
 
 
+
+              </ul>
+            </div>
+          </div>
+          <div className={`${slide === 'collection' ? ' translate-x-0' : 'absolute translate-x-[200%]'} transform duration-300`}
+
+          >
+            <div onClick={() => setSlide('mainMenu')}>
+              <img src="/icons/rightarraw.svg" alt="" className='mt-2 rotate-180 mx-5 mb-2' />
+
+            </div>
+            <div className='px-5'>
+              <ul className='w-full '>
+
+             
+               <Link href='/collection/plain color'><li className='cursor-pointer w-full border-black flex justify-between  mx-auto font-sans  bg-white text-[20px] font-[500]  py-1  items-center' onClick={() => { setSlide('collection') }}>
+                  Plain Colour
+                </li></Link> 
+
+                <Link href='/collection/testured'><li className='cursor-pointer w-full border-black flex justify-between  mx-auto font-sans  bg-white text-[20px] font-[500]  py-1  items-center' onClick={() => { setSlide('collection') }}>
+Textured                </li></Link>
 
               </ul>
             </div>

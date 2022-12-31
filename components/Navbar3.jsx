@@ -10,6 +10,8 @@ const Navbar3 = ({ user, logout }) => {
     const [device, setDevice] = useState('hidden')
     const [device2, setDevice2] = useState('hidden')
     const [device3, setDevice3] = useState('hidden')
+    const [collection, setCollection] = useState('hidden')
+    const [collection2, setCollection2] = useState('hidden')
     const [userdrop, setUserdrop] = useState('hidden')
     const [userdrop2, setUserdrop2] = useState('hidden')
     const [brand, setBrand] = useState('apple')
@@ -156,10 +158,30 @@ duration-500 ease-in-out transform
                         </ul>
                     </div>}
                 </div>
-                <div className='hover:bg-gray-10 py-3 flex' >
+                    <div className='bg-0 py-4 items-center cursor-pointer flex hover:bg-gray-10 ' 
+
+                        onMouseLeave={() => setCollection('hidden')}
+                        onMouseOver={() => setCollection('')}
+                >
                     <Link href='/collection' className='hover:text-gray-600' >Collections</Link>
                     <img src="/icons/rightarraw.svg" alt="" className='rotate-90 mb-1' />
+                        <div className={`absolute z-40  w-max bg-white rounded-md border-black border-2  top-[8vh] ${collection === 'hidden' && collection2 === 'hidden' ? ' hidden' : ""}
+duration-500 ease-in-out transform  
 
+`}
+                            onMouseLeave={() => setCollection2('hidden')}
+                            onMouseOver={() => setCollection('')}
+                        >
+                            <ul className='px-5 divide-y py- '>
+                                <Link href='/collection/plain color'><li className='hover:text-gray-400 flex items-center' >
+                                    Plain Colour
+                                </li></Link>
+
+                                <Link href='/collection/testured'><li className='hover:text-gray-400 flex items-center' >
+                                    Textured                </li></Link>
+
+                            </ul>
+                        </div>
                 </div>
                 <div className='hover:bg-gray-10 py-3'>
                     <Link href='/faqs' className='hover:text-gray-600'>FAQs</Link>
