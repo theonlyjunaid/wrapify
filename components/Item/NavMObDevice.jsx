@@ -3,14 +3,14 @@ import Link from 'next/link'
 import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlineSearch, AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineMenu } from 'react-icons/ai'
 import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
 import {mobile2} from '../../data/mobile'
-const NavDevice = () => {
+const NavDevice = ({search , setSearch}) => {
 const [drop, setDrop] = useState('hidden translate-x-full')
 const [slide, setSlide] = useState('mainMenu')
 const [brand, setBrand] = useState('apple')
 
 
   return (
-    <div className='w-full md:hidden' >
+    <div className={`w-full md:hidden ${search==='hidden'?'':'-translate-x-[400%] absolute hidden'} duration-500`} >
       <div className='flex items-center justify-between w-full'>
         <Link href='/'><div
           className='text-2xl font-semibold '>
@@ -18,7 +18,7 @@ const [brand, setBrand] = useState('apple')
         </div></Link>
         <div className='flex text-2xl gap-5'>
           <Link href="/cart"><AiOutlineShoppingCart className='cursor-pointer ' /></Link>
-          <AiOutlineSearch className='cursor-pointer  ' id="searchIcon" />
+          <AiOutlineSearch className='cursor-pointer  ' id="searchIcon"  onClick={()=>setSearch('')}/>
           <AiOutlineMenu className='cursor-pointer' onClick={()=>setDrop('')}/>
         </div>
         <div className={`w-[280px] min-h-screen right-0 bg-white absolute top-0 z-40 overflow-y-scroll   ${drop}  transform duration-300 border-black border `}
@@ -43,17 +43,12 @@ const [brand, setBrand] = useState('apple')
               <li className='cursor-pointer w-full border-black flex justify-between  mx-auto font-sans  bg-white text-[24px] font-[500]  py-1  items-center'>
                 Collections
                 <img src="/icons/rightarraw.svg" alt="" className='mt-2' />
-
               </li>
-
               <Link href='/faqs'><li className='cursor-pointer w-full border-black flex justify-between  mx-auto font-sans  bg-white text-[24px] font-[500]  py-1 items-center'>
                 FAQs
-
               </li></Link>
               <Link href='/devicenotfound'><li className='cursor-pointer w-full border-black flex justify-between  mx-auto font-sans  bg-white text-[24px] font-[500]  py-1 items-center'>
                 Device not Found ?
-
-
               </li></Link>
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Link from 'next/link'
 import { mobile2 } from '../data/mobile'
 import NavMObDevice from './Item/NavMObDevice'
@@ -13,11 +13,81 @@ const Navbar3 = ({ user, logout }) => {
     const [userdrop, setUserdrop] = useState('hidden')
     const [userdrop2, setUserdrop2] = useState('hidden')
     const [brand, setBrand] = useState('apple')
+    const [search, setSearch] = useState('hidden')
+  const [searchItem, setSearchItem] = useState([])
+    const [searchItems, setSearchItems] = useState({})
+    useEffect(() => {
+        fetch('/api/getproducts', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .then(data => {
+                // console.log(data.Skins.filter("iphone 14"))
+                // console.log(data.Skins?.find(item => item === "iphone 14"))
+                // console.log(data.Skins)
+                setSearchItems(data.Skins)
+                setSearchItem(Object.keys(searchItems))
+            })
+
+    }, [searchItems])
+
+    const List = (e) => {
+        console.log(e.target.value)
+        let input, filter, ul, li, a, i, txtValue;
+        input = e.target.value;
+        filter = input.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+
+    }
+    if (typeof window !== "undefined") {
+        document.getElementsByTagName("body")[0].addEventListener("click", function (e) {
+            if (e.target.id !== "search" && e.target.id !== "searchIcon") {
+                // setSearch(false)
+            }
+        })
+    }
 
     return (
         <div className='w-full bg-white shadow-md px-5 flex justify-center items-center border border-b-2 border-black h-[65px] '>
-            <NavMObDevice/>
-            <div className='hidden md:flex justify-around w-full max-w-[1280px] items-center '>
+            <NavMObDevice search={search} setSearch={setSearch}/>
+          <div className={`${search==='hidden'?' translate-x-[400%] absolute hidden':'translate-x-0'} duration-500 flex items-center justify-center md:justify-around w-full max-w-[1280px]`}>
+ <Link href='/'><div
+                  className='text-2xl hidden md:flex font-semibold w-max lg:w-[180px] xl:w-[280px]'>
+                  MZ Art
+              </div></Link>
+
+             
+              <div className='flex items-center xl:mr-6 w-full sm:w-[400px] md:w-[550px] xl:w-[720px] ' >
+
+
+                  <AiOutlineSearch className='cursor-pointer absolute ml-2 xl:ml-3 text-2xl ' id="searchIcon" />
+                  <input id='search' type="text" className={`border flex items-center rounded-[100px]  pl-[34px]  xl:px-[48px] w-full  sm:w-[400px] md:w-[550px] xl:w-[720px] cursor-text h-12 bg-[#eeeded] focus:bg-[#e4e3e3] text-base xl:text-lg text-gray-600`} placeholder='Search' onChange={(e) => List(e)} />
+             
+              </div>
+               
+
+              <div className='text-xl font-base text-center w-max hidden md:flex lg:w-[180px] xl:w-[280px] cursor-pointer' onClick={()=>setSearch('hidden')}>
+    Cancel
+</div>
+<div className='md:hidden absolute right-5' onClick={()=>setSearch('hidden')}>
+          <img src="/icons/cross.svg" alt="" />
+
+</div>
+          </div>
+
+            <div className={`hidden md:flex justify-around w-full max-w-[1280px] items-center ${search==='hidden'?" ":' absolute -translate-x-[400%] hidden'}  duration-500`}>
             <Link href='/'><div
                 className='text-2xl font-semibold w-max lg:w-[180px] xl:w-[280px]'>
 MZ Art
@@ -103,7 +173,7 @@ duration-500 ease-in-out transform
 
 
                     <AiOutlineSearch className='cursor-pointer absolute ml-2 xl:ml-3 text-2xl ' id="searchIcon" />
-                    <input id='search' type="text" className={`border flex items-center rounded-[100px] py-1 xl:py-2 pl-[34px]  xl:px-[48px] w-[130px] xl:w-[180px] cursor-text h-10 bg-[#f5f5f5] text-base xl:text-lg text-gray-600`} placeholder='Search' />
+                    <input id='search' type="text" className={`border flex items-center rounded-[100px] py-1 xl:py-2 pl-[34px]  xl:px-[48px] w-[130px] xl:w-[180px] cursor-text h-10 bg-[#f5f5f5] text-base xl:text-lg text-gray-600`} placeholder='Search' onClick={()=>setSearch('')} />
                 </div>
                 <div className='cursor-pointer' onMouseOver={()=>{setUserdrop('')}}
                     onMouseLeave={()=>{setUserdrop('hidden')}}
@@ -131,6 +201,27 @@ duration-500 ease-in-out transform  text-base px-2 -translate-x-[40px]
                 <Link  href="/cart"><AiOutlineShoppingCart className='cursor-pointer' /></Link>
 
                 </div></div>
+
+
+
+   {search===''&& <div className='absolute z-40 top-[65px] w-full bg-white h-max  flex justify-center'>
+                      <ul id='myUL' className='text-base sm:text-lg md:text-xl w-4/5  sm:w-[380px] md:w-[520px] xl:w-[700px] px-5'>
+                          {
+                              searchItem.map((item, index) => {
+                                  return (
+                                      <li key={index} className='bg-white my-1'>
+
+                                          <Link legacyBehavior href={`/skin/${searchItems[item].brand}/${item}`}><a>{item.toUpperCase()}</a></Link>
+                                      </li>
+                                  )
+                              }
+                              )
+                          }
+                      </ul>
+                  </div>}
+
+
+
         </div>
     )
 }
