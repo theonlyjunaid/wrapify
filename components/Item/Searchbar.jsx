@@ -69,7 +69,7 @@ const Searchbar = ({setSearch,search}) => {
                   <input id='search' type="text" className={`border flex items-center rounded-[100px]  pl-[34px]  xl:px-[48px] w-[130px] xl:w-[720px] cursor-text h-12 bg-[#eeeded] focus:bg-[#e4e3e3] text-base xl:text-lg text-gray-600`} placeholder='Search' onChange={(e) => List(e)} />
              
               </div>
-                  <div className='absolute z-100'>
+                  {/* <div className='absolute z-100'>
                       <ul id='myUL'>
                           {
                               searchItem.map((item, index) => {
@@ -83,7 +83,7 @@ const Searchbar = ({setSearch,search}) => {
                               )
                           }
                       </ul>
-                  </div>
+                  </div> */}
               </div>
               <div className='text-xl font-base text-center w-max lg:w-[180px] xl:w-[280px] cursor-pointer' onClick={()=>setSearch('hidden')}>
     Cancel

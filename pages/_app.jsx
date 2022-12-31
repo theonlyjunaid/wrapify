@@ -58,12 +58,12 @@ function MyApp({ Component, pageProps }) {
     console.log(subt)
     // console.log(cart)
   }
-  const addToCart = (itemCode, qty, price, name, size, varient,img) => {
+  const addToCart = (itemCode, qty, price, name, size, varient,img,brand,desc,desc2) => {
     let newCart = cart
     if (itemCode in cart) {
       newCart[itemCode].qty = cart[itemCode].qty + qty
     } else {
-      newCart[itemCode] = { qty: 1, price, name, size, varient ,img}
+      newCart[itemCode] = { qty: 1, price, name, size, varient ,img,brand,desc,desc2}
     }
 console.log(itemCode)
 
