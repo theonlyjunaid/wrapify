@@ -1,0 +1,101 @@
+"filename", "language", "JavaScript", "JavaScript React", "JSON", "JSON with Comments", "Markdown", "XML", "CSS", "HTML", "comment", "blank", "total"
+"/Users/junaid./Documents/GitHub/wrapify/README.md", "Markdown", 0, 0, 0, 0, 18, 0, 0, 0, 0, 11, 29
+"/Users/junaid./Documents/GitHub/wrapify/components/Footer.jsx", "JavaScript React", 0, 44, 0, 0, 0, 0, 0, 0, 0, 5, 49
+"/Users/junaid./Documents/GitHub/wrapify/components/Footer2.jsx", "JavaScript React", 0, 154, 0, 0, 0, 0, 0, 0, 279, 37, 470
+"/Users/junaid./Documents/GitHub/wrapify/components/Item/ItemComponent.jsx", "JavaScript React", 0, 9, 0, 0, 0, 0, 0, 0, 39, 3, 51
+"/Users/junaid./Documents/GitHub/wrapify/components/Item/NavDesDevice.jsx", "JavaScript React", 0, 7, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"/Users/junaid./Documents/GitHub/wrapify/components/Item/NavMObDevice.jsx", "JavaScript React", 0, 133, 0, 0, 0, 0, 0, 0, 1, 34, 168
+"/Users/junaid./Documents/GitHub/wrapify/components/Item/Searchbar.jsx", "JavaScript React", 0, 61, 0, 0, 0, 0, 0, 0, 19, 17, 97
+"/Users/junaid./Documents/GitHub/wrapify/components/Item/Theme.jsx", "JavaScript React", 0, 13, 0, 0, 0, 0, 0, 0, 95, 2, 110
+"/Users/junaid./Documents/GitHub/wrapify/components/Navbar.jsx", "JavaScript React", 0, 49, 0, 0, 0, 0, 0, 0, 22, 7, 78
+"/Users/junaid./Documents/GitHub/wrapify/components/Navbar2.jsx", "JavaScript React", 0, 122, 0, 0, 0, 0, 0, 0, 15, 25, 162
+"/Users/junaid./Documents/GitHub/wrapify/components/Navbar3.jsx", "JavaScript React", 0, 208, 0, 0, 0, 0, 0, 0, 4, 40, 252
+"/Users/junaid./Documents/GitHub/wrapify/components/NavdropMobile.jsx", "JavaScript React", 0, 73, 0, 0, 0, 0, 0, 0, 1, 25, 99
+"/Users/junaid./Documents/GitHub/wrapify/components/Search.jsx", "JavaScript React", 0, 7, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"/Users/junaid./Documents/GitHub/wrapify/components/admin/Order.jsx", "JavaScript React", 0, 66, 0, 0, 0, 0, 0, 0, 1, 6, 73
+"/Users/junaid./Documents/GitHub/wrapify/components/home/FeaturedPosts.jsx", "JavaScript React", 0, 59, 0, 0, 0, 0, 0, 0, 43, 24, 126
+"/Users/junaid./Documents/GitHub/wrapify/components/home/Popular.jsx", "JavaScript React", 0, 27, 0, 0, 0, 0, 0, 0, 0, 4, 31
+"/Users/junaid./Documents/GitHub/wrapify/data/mobile.js", "JavaScript", 99, 0, 0, 0, 0, 0, 0, 0, 0, 10, 109
+"/Users/junaid./Documents/GitHub/wrapify/data/offers.js", "JavaScript", 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47
+"/Users/junaid./Documents/GitHub/wrapify/data/products.js", "JavaScript", 684, 0, 0, 0, 0, 0, 0, 0, 0, 24, 708
+"/Users/junaid./Documents/GitHub/wrapify/middleware/mongoose.js", "JavaScript", 9, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10
+"/Users/junaid./Documents/GitHub/wrapify/mobile.json", "JSON", 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 44
+"/Users/junaid./Documents/GitHub/wrapify/model/Contact.js", "JavaScript", 8, 0, 0, 0, 0, 0, 0, 0, 0, 2, 10
+"/Users/junaid./Documents/GitHub/wrapify/model/Newsletter.js", "JavaScript", 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/junaid./Documents/GitHub/wrapify/model/Order.js", "JavaScript", 22, 0, 0, 0, 0, 0, 0, 0, 0, 1, 23
+"/Users/junaid./Documents/GitHub/wrapify/model/Pincodes.js", "JavaScript", 11, 0, 0, 0, 0, 0, 0, 0, 0, 2, 13
+"/Users/junaid./Documents/GitHub/wrapify/model/Product.js", "JavaScript", 21, 0, 0, 0, 0, 0, 0, 0, 0, 2, 23
+"/Users/junaid./Documents/GitHub/wrapify/model/User.js", "JavaScript", 15, 0, 0, 0, 0, 0, 0, 0, 0, 2, 17
+"/Users/junaid./Documents/GitHub/wrapify/next.config.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 1, 1, 16
+"/Users/junaid./Documents/GitHub/wrapify/package-lock.json", "JSON", 0, 0, 2379, 0, 0, 0, 0, 0, 0, 1, 2380
+"/Users/junaid./Documents/GitHub/wrapify/package.json", "JSON", 0, 0, 42, 0, 0, 0, 0, 0, 0, 1, 43
+"/Users/junaid./Documents/GitHub/wrapify/pages/_app.jsx", "JavaScript React", 0, 106, 0, 0, 0, 0, 0, 0, 4, 15, 125
+"/Users/junaid./Documents/GitHub/wrapify/pages/_document.js", "JavaScript", 12, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13
+"/Users/junaid./Documents/GitHub/wrapify/pages/about.js", "JavaScript", 45, 0, 0, 0, 0, 0, 0, 0, 0, 6, 51
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/addproducts.js", "JavaScript", 40, 0, 0, 0, 0, 0, 0, 0, 20, 5, 65
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/contactus.js", "JavaScript", 26, 0, 0, 0, 0, 0, 0, 0, 0, 5, 31
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/forgotpassword.js", "JavaScript", 19, 0, 0, 0, 0, 0, 0, 0, 0, 4, 23
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/getproducts.js", "JavaScript", 25, 0, 0, 0, 0, 0, 0, 0, 0, 5, 30
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/getuser.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 4, 8, 26
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/hello.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/invoice.js", "JavaScript", 52, 0, 0, 0, 0, 0, 0, 0, 36, 14, 102
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/login.js", "JavaScript", 27, 0, 0, 0, 0, 0, 0, 0, 3, 3, 33
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/mailapi.js", "JavaScript", 988, 0, 0, 0, 0, 0, 0, 0, 46, 102, 1136
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/mobile.js", "JavaScript", 4, 0, 0, 0, 0, 0, 0, 0, 12, 3, 19
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/myorders.js", "JavaScript", 15, 0, 0, 0, 0, 0, 0, 0, 1, 4, 20
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/newsletter.js", "JavaScript", 27, 0, 0, 0, 0, 0, 0, 0, 0, 5, 32
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/paymentverify.js", "JavaScript", 25, 0, 0, 0, 0, 0, 0, 0, 2, 9, 36
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/pincode.js", "JavaScript", 8, 0, 0, 0, 0, 0, 0, 0, 3, 3, 14
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/posttransaction.js", "JavaScript", 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/pretransaction.js", "JavaScript", 48, 0, 0, 0, 0, 0, 0, 0, 13, 14, 75
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/razorpay.js", "JavaScript", 97, 0, 0, 0, 0, 0, 0, 0, 20, 16, 133
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/shiprocket.js", "JavaScript", 25, 0, 0, 0, 0, 0, 0, 0, 1, 9, 35
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/shiprockorderplace.js", "JavaScript", 18, 0, 0, 0, 0, 0, 0, 0, 1, 4, 23
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/signup.js", "JavaScript", 20, 0, 0, 0, 0, 0, 0, 0, 2, 3, 25
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/time.js", "JavaScript", 10, 0, 0, 0, 0, 0, 0, 0, 0, 8, 18
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/updateorder.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 6, 4, 24
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/updatepassword.js", "JavaScript", 25, 0, 0, 0, 0, 0, 0, 0, 0, 3, 28
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/updateproducts.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 4, 3, 21
+"/Users/junaid./Documents/GitHub/wrapify/pages/api/updateuser.js", "JavaScript", 20, 0, 0, 0, 0, 0, 0, 0, 2, 3, 25
+"/Users/junaid./Documents/GitHub/wrapify/pages/cart.js", "JavaScript", 72, 0, 0, 0, 0, 0, 0, 0, 9, 15, 96
+"/Users/junaid./Documents/GitHub/wrapify/pages/checkout.js", "JavaScript", 391, 0, 0, 0, 0, 0, 0, 0, 78, 60, 529
+"/Users/junaid./Documents/GitHub/wrapify/pages/collection/[design]/index.js", "JavaScript", 65, 0, 0, 0, 0, 0, 0, 0, 15, 14, 94
+"/Users/junaid./Documents/GitHub/wrapify/pages/collection/color.js", "JavaScript", 109, 0, 0, 0, 0, 0, 0, 0, 5, 26, 140
+"/Users/junaid./Documents/GitHub/wrapify/pages/collection/index.js", "JavaScript", 62, 0, 0, 0, 0, 0, 0, 0, 15, 13, 90
+"/Users/junaid./Documents/GitHub/wrapify/pages/contact.js", "JavaScript", 69, 0, 0, 0, 0, 0, 0, 0, 0, 5, 74
+"/Users/junaid./Documents/GitHub/wrapify/pages/faqs.js", "JavaScript", 7, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"/Users/junaid./Documents/GitHub/wrapify/pages/forgot.js", "JavaScript", 103, 0, 0, 0, 0, 0, 0, 0, 0, 11, 114
+"/Users/junaid./Documents/GitHub/wrapify/pages/index.js", "JavaScript", 25, 0, 0, 0, 0, 0, 0, 0, 1, 5, 31
+"/Users/junaid./Documents/GitHub/wrapify/pages/login.js", "JavaScript", 120, 0, 0, 0, 0, 0, 0, 0, 0, 13, 133
+"/Users/junaid./Documents/GitHub/wrapify/pages/myaccount.js", "JavaScript", 252, 0, 0, 0, 0, 0, 0, 0, 42, 41, 335
+"/Users/junaid./Documents/GitHub/wrapify/pages/mzart/admin/firozandjunaid.js", "JavaScript", 25, 0, 0, 0, 0, 0, 0, 0, 2, 8, 35
+"/Users/junaid./Documents/GitHub/wrapify/pages/mzart/admin/orderinfo.js", "JavaScript", 181, 0, 0, 0, 0, 0, 0, 0, 4, 23, 208
+"/Users/junaid./Documents/GitHub/wrapify/pages/order.js", "JavaScript", 182, 0, 0, 0, 0, 0, 0, 0, 2, 17, 201
+"/Users/junaid./Documents/GitHub/wrapify/pages/orders.js", "JavaScript", 107, 0, 0, 0, 0, 0, 0, 0, 3, 32, 142
+"/Users/junaid./Documents/GitHub/wrapify/pages/privacy_policy.js", "JavaScript", 488, 0, 0, 0, 0, 0, 0, 0, 0, 3, 491
+"/Users/junaid./Documents/GitHub/wrapify/pages/products/[slug].js", "JavaScript", 152, 0, 0, 0, 0, 0, 0, 0, 109, 11, 272
+"/Users/junaid./Documents/GitHub/wrapify/pages/refund_return_policy.js", "JavaScript", 102, 0, 0, 0, 0, 0, 0, 0, 0, 4, 106
+"/Users/junaid./Documents/GitHub/wrapify/pages/signup.js", "JavaScript", 133, 0, 0, 0, 0, 0, 0, 0, 1, 8, 142
+"/Users/junaid./Documents/GitHub/wrapify/pages/skin/[brands]/[models]/[design]/index.js", "JavaScript", 113, 0, 0, 0, 0, 0, 0, 0, 286, 34, 433
+"/Users/junaid./Documents/GitHub/wrapify/pages/skin/[brands]/[models]/customize.js", "JavaScript", 169, 0, 0, 0, 0, 0, 0, 0, 50, 41, 260
+"/Users/junaid./Documents/GitHub/wrapify/pages/skin/[brands]/[models]/dadu/customize.js", "JavaScript", 7, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"/Users/junaid./Documents/GitHub/wrapify/pages/skin/[brands]/[models]/dadu/index.js", "JavaScript", 10, 0, 0, 0, 0, 0, 0, 0, 0, 3, 13
+"/Users/junaid./Documents/GitHub/wrapify/pages/skin/[brands]/[models]/index.js", "JavaScript", 74, 0, 0, 0, 0, 0, 0, 0, 1, 11, 86
+"/Users/junaid./Documents/GitHub/wrapify/pages/skin/[brands]/index.js", "JavaScript", 49, 0, 0, 0, 0, 0, 0, 0, 70, 16, 135
+"/Users/junaid./Documents/GitHub/wrapify/pages/skin/index.js", "JavaScript", 73, 0, 0, 0, 0, 0, 0, 0, 5, 16, 94
+"/Users/junaid./Documents/GitHub/wrapify/pages/skins.js", "JavaScript", 22, 0, 0, 0, 0, 0, 0, 0, 24, 16, 62
+"/Users/junaid./Documents/GitHub/wrapify/pages/terms_and_condition.js", "JavaScript", 271, 0, 0, 0, 0, 0, 0, 0, 0, 3, 274
+"/Users/junaid./Documents/GitHub/wrapify/pages/trackorder.js", "JavaScript", 7, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"/Users/junaid./Documents/GitHub/wrapify/pincode.json", "JSON", 0, 0, 381994, 0, 0, 0, 0, 0, 0, 18, 382012
+"/Users/junaid./Documents/GitHub/wrapify/postcss.config.js", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"/Users/junaid./Documents/GitHub/wrapify/public/icons/Internet.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"/Users/junaid./Documents/GitHub/wrapify/public/icons/bag.svg", "XML", 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2
+"/Users/junaid./Documents/GitHub/wrapify/public/icons/cross.svg", "XML", 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5
+"/Users/junaid./Documents/GitHub/wrapify/public/icons/payment.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"/Users/junaid./Documents/GitHub/wrapify/public/icons/rightarraw.svg", "XML", 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5
+"/Users/junaid./Documents/GitHub/wrapify/public/vercel.svg", "XML", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4
+"/Users/junaid./Documents/GitHub/wrapify/styles/globals.css", "CSS", 0, 0, 0, 0, 0, 0, 7, 0, 0, 5, 12
+"/Users/junaid./Documents/GitHub/wrapify/tailwind.config.js", "JavaScript", 31, 0, 0, 0, 0, 0, 0, 0, 4, 6, 41
+"/Users/junaid./Documents/GitHub/wrapify/template/index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 1165, 48, 122, 1335
+"/Users/junaid./Documents/GitHub/wrapify/tsconfig.json", "JSON with Comments", 0, 0, 0, 20, 0, 0, 0, 0, 0, 1, 21
+"Total", "-", 6033, 1138, 384459, 20, 18, 18, 7, 1165, 1474, 1160, 395492
