@@ -54,7 +54,7 @@ if (typeof window !== "undefined") {
               <Link legacyBehavior href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
                 onMouseEnter={() => setShow(product?.slug)}
                 onMouseLeave={() => setShow('')}
-              >{<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75
+              >{<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75 bg-gray-100
               ${isLoading
                   ? 'scale-110 blur-[2px] grayscale'
                   : 'scale-100 blur-0 grayscale-0'}`} width={280} height={400} onLoadingComplete={() => {

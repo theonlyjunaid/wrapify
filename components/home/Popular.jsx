@@ -13,13 +13,13 @@ export default function Popular() {
             <div className='grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4  relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10 '>
 
                 <Link legacyBehavior href='/skin/apple'><a> <div className=" grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
-                    <Image src="https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14promax/plain.webp" alt="" className=' -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' width={280} height={400} />
+                        <Image src="https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14promax/plain.webp" alt="" className=' -top-0 hover:scale-[103%] transition-all ease-in-out duration-300 bg-gray-100' width={280} height={400} />
                     <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl transition-all ease-in-out duration-300 `}>
                         <div className='text-mono font-semibold'>Apple</div>
                     </div>
                 </div></a></Link>
                 <Link legacyBehavior href='/skin/samsung'><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
-                    <Image src='https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/note22series/note22ultra/plain.webp' className=' -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' alt="" width={280} height={400} />
+                        <Image src='https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/note22series/note22ultra/plain.webp' className=' -top-0 hover:scale-[103%] transition-all ease-in-out duration-300 bg-gray-100' alt="" width={280} height={400} />
                     <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl transition-all ease-in-out duration-300 `}>
                         <div className='text-mono font-semibold'>Samsung</div>
                     </div>
