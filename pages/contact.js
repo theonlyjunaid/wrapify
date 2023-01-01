@@ -1,4 +1,6 @@
 import React,{useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const contact = () => {
     const [email, setEmail] = useState('')
@@ -32,7 +34,30 @@ if(e.target.name === 'message'){
                 message: message
             }),
         }).then((r) => r.json()).then((data) => {
-            console.log(data)
+            // console.log(data)
+            if (data) {
+                toast.success(data.message, {
+                    position: "top-left",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            } else {
+                toast.error(data.message, {
+                    position: "top-left",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            }
         })
     }
     const submitHandler = (e) => {
@@ -42,6 +67,18 @@ if(e.target.name === 'message'){
 
     return (
         <div className='flex justify-center '>
+            <ToastContainer
+                position="bottom-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
             <div className='mx-2 my-6 md:w-1/2 '>
                 <h2 className="tracking-widest text-center font-mono text-3xl">
 Contact Us               

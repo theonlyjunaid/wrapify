@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 
 
-const NavdropMobile = ({down,setDown}) => {
+const NavdropMobile = ({down,setDown,user,logout}) => {
 
     const [rotate, setRotate] = useState(false)
 
@@ -63,21 +63,25 @@ let router  = useRouter()
         </div>
 </div>
 
-<div className='flex  gap-5 mb-5 justify-center'>
+{user&&<div className='flex  gap-5 mb-5 justify-center'>
    <Link href='/signup'><div className='px-[20px] cursor-pointer py-[6px] bg-black text-white text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
         Join Us
                   </div></Link> 
                   <Link href='/login'><div className='px-[20px] cursor-pointer py-[6px] bg-white  text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
         Sign in
                   </div></Link>
-</div>
+</div>}
+{!user&&<div className='flex  gap-5 mb-5 justify-center'>
+                  <div onClick={() => logout()} className='px-[20px] cursor-pointer py-[6px] bg-black text-white text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
+Logout                  </div>
+                  <Link href='/login'><div className='px-[20px] cursor-pointer py-[6px] bg-white  text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
+Orders                  </div></Link>
+</div>}
 <ul className='w-full mb-20 over overflow-y-scroll'>
                   <Link href='/cart'><li className='border-black  flex justify-start   font-sans  bg-white text-[18px] font-[500]  py-2'>
-Bag                      
+Cart                      
                   </li></Link>
-                  <Link href='/orders'><li className='border-black  flex justify-start   font-sans  bg-white text-[18px] font-[500]  py-2'>
-orders                
-                  </li></Link>
+               
                   <Link href='/'><li className='border-black  flex justify-start   font-sans  bg-white text-[18px] font-[500]  py-2'>
 track order                   
                   </li></Link>

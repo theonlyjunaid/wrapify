@@ -63,7 +63,7 @@ const Navbar3 = ({ user, logout }) => {
 
     return (
         <div className='w-full bg-white shadow-md px-5 flex justify-center items-center border border-b-2 border-black h-[65px] '>
-            <NavMObDevice search={search} setSearch={setSearch}/>
+            <NavMObDevice search={search} setSearch={setSearch} user={user} logout={logout} />
           <div className={`${search==='hidden'?' translate-x-[400%] absolute hidden':'translate-x-0'} duration-500 flex items-center justify-center md:justify-around w-full max-w-[1280px]`}>
  <Link href='/'><div
                   className='text-2xl hidden md:flex font-semibold w-max lg:w-[180px] xl:w-[280px]'>
@@ -226,12 +226,12 @@ duration-500 ease-in-out transform  text-base px-2 -translate-x-[40px]
 
 
 
-   {search===''&& <div className='absolute z-40 top-[65px] w-full bg-white h-max  flex justify-center'>
+   {search===''&& <div className='absolute z-40 top-[65px] w-full bg-white h-max shadow-2xl  flex justify-center'>
                       <ul id='myUL' className='text-base sm:text-lg md:text-xl w-4/5  sm:w-[380px] md:w-[520px] xl:w-[700px] px-5'>
                           {
                               searchItem.map((item, index) => {
                                   return (
-                                      <li key={index} className='bg-white my-1'>
+                                      <li key={index+item} className='bg-white my-1'>
 
                                           <Link legacyBehavior href={`/skin/${searchItems[item].brand}/${item}`}><a>{item.toUpperCase()}</a></Link>
                                       </li>

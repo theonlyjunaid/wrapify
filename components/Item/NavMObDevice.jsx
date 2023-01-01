@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { AiOutlineShoppingCart, AiFillCloseCircle, AiOutlineSearch, AiOutlinePlusCircle, AiOutlineMinusCircle, AiOutlineMenu } from 'react-icons/ai'
 import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
 import {mobile2} from '../../data/mobile'
-const NavDevice = ({search , setSearch}) => {
+const NavDevice = ({search , setSearch,logout,user}) => {
 const [drop, setDrop] = useState('hidden translate-x-full')
 const [slide, setSlide] = useState('mainMenu')
 const [brand, setBrand] = useState('apple')
@@ -59,21 +59,28 @@ const [brand, setBrand] = useState('apple')
               </div>
             </div>
 
-            <div className='flex  gap-5 mb-5 justify-center'>
+           {!user.value && <div className='flex  gap-5 mb-5 justify-center'>
               <Link href='/signup'><div className='px-[20px] cursor-pointer py-[6px] bg-black text-white text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
                 Join Us
               </div></Link>
               <Link href='/login'><div className='px-[20px] cursor-pointer py-[6px] bg-white  text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
                 Sign in
               </div></Link>
-            </div>
+            </div>}
+           {user.value && <div className='flex  gap-5 mb-5 justify-center'>
+             <div onClick={()=>logout()} className='px-[20px] cursor-pointer py-[6px] bg-black text-white text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
+                Logout
+              </div>
+              <Link href='/orders'><div className='px-[20px] cursor-pointer py-[6px] bg-white  text-[16px] rounded-[30px] hover:bg-gray-600 border border-black'>
+Orders              </div></Link>
+            </div>}
             <ul className='w-full mb-20 over overflow-y-scroll'>
               <Link href='/cart'><li className='border-black  flex justify-start   font-sans  bg-white text-[18px] font-[500]  py-2'>
-                Bag
+                Cart
               </li></Link>
-              <Link href='/orders'><li className='border-black  flex justify-start   font-sans  bg-white text-[18px] font-[500]  py-2'>
-                orders
-              </li></Link>
+              {user.value &&<Link href='/myaccount'><li className='border-black  flex justify-start   font-sans  bg-white text-[18px] font-[500]  py-2'>
+                profile
+              </li></Link>}
               <Link href='/'><li className='border-black  flex justify-start   font-sans  bg-white text-[18px] font-[500]  py-2'>
                 track order
               </li></Link>

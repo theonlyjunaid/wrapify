@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Link from "next/link";
 const Footer2 = () => {
     const [email, setEmail] = useState("");
@@ -17,16 +18,52 @@ const Footer2 = () => {
         });
         const data = await res.json();
         console.log(data);
+        if (data) {
+            toast.success(data.message, {
+                position: "top-left",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        } else {
+            toast.error(data.message, {
+                position: "top-left",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+     
     };
     const submitHandler = (e) => {
         e.preventDefault();
         emailHandler()
-        console.log(email);
+        // console.log(email);
     };
 
 
     return (
         <footer className=" body-font shadow-xl  border-t-2 border-black ">
+            <ToastContainer
+                position="bottom-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
             <div className="max-w-full level2:container   px-5 py-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap justify-between flex-wrap flex-col">
                 <div >
                     <h2 className="tracking-widest font-mono text-2xl flex justify-center my-1  sm:justify-start">

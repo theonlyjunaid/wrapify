@@ -31,7 +31,7 @@ export default function Example() {
             body: JSON.stringify(data)
         })
         const json = await fetching.json()
-        console.log(json)
+        // console.log(json)
         if (json.success) {
             toast.success(json.message, {
                 position: "top-left",

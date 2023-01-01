@@ -16,7 +16,7 @@ const handler = async (req, res) => {
                 message: message,
             });
             await contact.save();
-            res.status(201).json({ message: 'User created' });
+            res.status(201).json({ message: 'we have recieved your query our team will contact you shortly' });
         } catch (error) {
             res.status(500).json({ message: 'Something went wrong' });
         }

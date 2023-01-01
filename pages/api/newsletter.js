@@ -11,13 +11,13 @@ const handler = async (req, res) => {
         try {
             const existingUser = await Newsletter.findOne({ email: email });
             if (existingUser) {
-                return res.status(422).json({ message: 'User already exists' });
+                return res.status(422).json({ message: 'you are already close to us' });
             }
             const user = new Newsletter({
                 email: email,
             });
             await user.save();
-            res.status(201).json({ message: 'User created' });
+            res.status(201).json({ message: 'Thanks for making us smile' });
         } catch (error) {
             res.status(500).json({ message: 'Something went wrong' });
         }
