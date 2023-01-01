@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Link from 'next/link';
 
 
 
@@ -62,18 +63,24 @@ const FeaturedPosts = () => {
 
             >
 
-                <div className="bg-[url('/sale/11.webp')] md:bg-[url('/sale/1.png')] h-[100px] level1:h-[150px] level2:h-[360px] level3:h-[360px] level5:h-[440px]   md:h-[400px] lg:h-[500px] xl:h-[650px] 2xl-[720px] bg-cover">
-                    <div className="text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute right-[15%] overflow-y-hidden  items-center align-middle top-[40%] ">
+                <div className=" w-screen bg-cover">
+                    <img src="/sale/1.webp" alt="" className='w-full hidden md:flex'/>
+                    <img src="/sale/11.webp" alt="" className='w-full  md:hidden'/>
+
+
+                    <div className="text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute right-[12%] overflow-y-hidden  items-center align-middle top-[40%] ">
                         <h2 className='overflow-y-hidden'> Now Its Your Turn </h2>
-                        <h2 className='overflow-y-hidden flex'>To <h2 className='bg-[#bcffbc] px-3 text-md mx-2  overflow-y-hidden   rounded-xl' > Convert</h2></h2>
+                        <div className='overflow-y-hidden flex'>To <Link href='/collection/color?subCategory=plain%20color&color=gray'><div className='bg-[#bcffbc] px-3 text-md mx-2  overflow-y-hidden   rounded-xl' > Convert</div></Link></div>
                     </div>
                 </div>
 
-                <div className="bg-[url('/sale/12.webp')] md:bg-[url('/sale/2.png')] h-[100px] level1:h-[150px] level2:h-[360px] level3:h-[360px] level5:h-[440px]  md:h-[400px] lg:h-[500px] xl:h-[650px] 2xl-[720px] bg-cover">
-                    <div className='text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute left-[15%]  items-center align-middle top-[40%]'>
+                <div className="w-screen bg-cover">
+                    <img src="/sale/2.webp" alt=""  className='w-full hidden md:flex'/>
+                    <img src="/sale/12.webp" alt=""  className='w-full  md:hidden'/>
+                    <div className='text-xl sm:text-2xl  md:text-3xl lg:text-4xl xl:text-6xl text-left hidden md:block md:absolute left-[12%]  items-center align-middle top-[40%]'>
 
                         <h2 className='overflow-y-hidden'>Now Its Your Turn </h2>
-                        <h2 className='overflow-y-hidden flex'>To <h2 className='bg-[#7d927d] px-3 text-md mx-2 overflow-y-hidden  rounded-xl'> Convert</h2></h2>
+                        <div className='overflow-y-hidden flex'>To  <Link href='/collection/color?subCategory=plain%20color&color=green'><div className='bg-[#7d927d] px-3 text-md mx-2 overflow-y-hidden  rounded-xl'> Convert</div></Link> </div>
                     </div>
                 </div>
 
