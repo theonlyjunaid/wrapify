@@ -1,11 +1,12 @@
 import React ,{useState,useEffect}from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import mongoose from 'mongoose'
 import Product from '../../model/Product'
 import {mobile} from '../../data/mobile'
 
-const color = ({products}) => {
+const color = ({products, addToCart}) => {
     // console.log(mobile)
 const [brand, setBrand] = useState('apple')
 const [model, setModel] = useState('iphone 14')
@@ -115,10 +116,12 @@ defaultValue={defaultModel.name}
                   </div>
               </div>
 
+              <Link legacyBehavior href="/cart"><a><div className='w-full flex justify-center md:justify-start px-5 items-center'>
+                  {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
+                  <button className='px-4 level3:px-8 text-2xl level3:text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(item.slug + "-" + size, 1, item.price, item.name + " (" + item?.color + "/" + size + ")", size, item?.color, item?.img, item?.brand, item?.desc, item?.desc2) }}>Add to Cart</button>
+              </div></a></Link>
 
 </div>
-
-
     </div>
   )
 }
