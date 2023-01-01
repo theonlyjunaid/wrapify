@@ -15,7 +15,7 @@ module.exports = {
     screens: {
       'level1': '120px',
       'level2': '240px',
-      'level3': '360px',
+      'level3': '370px',
       'level6': '300px',
 
       'level4': '480px',
