@@ -25,11 +25,13 @@ if (typeof window !== "undefined") {
   return (
     <div>
       <Head>
-        <title>wrap</title>
+        <title>mzart</title>
+        <meta name="description" content="change the way you see your mobile, Apply mzart skin to give a new look to your loved mobile" />
+        <link rel="icon" href="https://mzart.sgp1.cdn.digitaloceanspaces.com/icons/Screenshot 2023-01-02 at 8.22.38 AM.png" /> 
       </Head>
       <FeaturedPosts />
   
-      <div className='mb-10'>
+      <div className='mb-10'> 
         <div className='m-3 level3:mx-5 sm:m-12 text-center level3:text-start  mb-3 '>
 
 

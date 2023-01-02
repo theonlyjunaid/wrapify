@@ -80,9 +80,11 @@ const order = ({ order }) => {
               
                 <div className="flex justify-center flex-col items-start w-full lg:w-9/12 xl:w-full ">
                     <h3 className="text-3xl xl:text-4xl font-semibold py-1 w-full  md:text-left text-gray-800">Order Summary</h3>
-                    <p className="text-base -none mt-4 text-gray-800">
-                        Paid using credit card ending with <span className="font-semibold">8822</span>
-                    </p>
+                    <div>
+                        <button onClick={() => downloadInvoice()} className="flex justify-center items-center mx-2 mr-10 px-2 hover:bg-gray-300 bg-gray-100 ">
+                           Download invoice
+                        </button>
+                    </div>
                     <div className="flex justify-center items-center w-full mt-8  flex-col space-y-4 ">
                         
                      {Object.keys(order.products).map((item) => {
@@ -119,11 +121,7 @@ const order = ({ order }) => {
                                         <div className="flex mt-4 md:mt-0 md:justify-end items-center w-full ">
                                                              <p className="text-xl lg:text-2xl font-semibold -5 lg:-6 text-gray-800">₹ {price}</p>
                                         </div>
-                                        <div>
-                                                        <button onClick={() => downloadInvoice() } className="flex justify-center items-center mx-2 mr-10 px-1 hover:bg-gray-300 bg-gray-100 ">
-invoice
-</button>
-                                        </div>
+                                        
                                     </div>
                                     </div>
                                     )
@@ -137,16 +135,13 @@ invoice
                       
                     </div>
                     <div className="flex flex-col justify-start items-start mt-8 xl:mt-10 space-y-10 w-full">
-                        <div className="flex justify-start items-start flex-col md:flex-row  w-full md:w-auto space-y-8 md:space-y-0 md:space-x-14 xl:space-x-8  lg:w-full">
+                        <div className="flex justify-between items-start flex-col md:flex-row  w-full md:w-auto space-y-8 md:space-y-0 md:space-x-14 xl:space-x-8  lg:w-full">
                             <div className="flex jusitfy-start items-start flex-col space-y-2">
                                 <p className="text-base font-semibold   text-gray-800">Billing Address</p>
-                                <p className="text-sm -5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
+                                <p className="text-sm -5 text-gray-600">{order.address}</p>
                             </div>
-                            <div className="flex jusitfy-start items-start flex-col space-y-2">
-                                <p className="text-base font-semibold   text-gray-800">Shipping Address</p>
-                                <p className="text-sm -5 text-gray-600">180 North King Street, Northhampton MA 1060</p>
-                            </div>
-                            <div className="flex jusitfy-start items-start flex-col space-y-2">
+                         
+                            <div className="flex jusitfy-between items-start flex-col space-y-2">
                                 <p className="text-base font-semibold   text-gray-800">Shipping Method</p>
                                 <p className="text-sm -5 text-gray-600">DHL - Takes up to 3 working days</p>
                             </div>
