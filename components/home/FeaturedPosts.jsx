@@ -58,8 +58,9 @@ const FeaturedPosts = () => {
 
     return (
         <div className=" mb-8    w-full">
-            <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemclassName="px-4" autoPlay={true} autoPlaySpeed={3000}
+            <Carousel infinite  responsive={responsive} itemclassName="px-4" autoPlay={true} autoPlaySpeed={3000}
                 keyBoardControl={true}
+                 showDots={true}
 
             >
 

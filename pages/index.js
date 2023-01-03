@@ -35,7 +35,7 @@ if (typeof window !== "undefined") {
         <div className='m-3 level3:mx-5 sm:m-12 text-center level3:text-start  mb-3 '>
 
 
-          <div className='text-black text-xl level3:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold   md:mx-10 level4:py-2'>
+          <div className='text-black text-xl level3:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold   md:mx-10 py-3 level4:py-4'>
             {/* {products[0]?.name} Skins Designs */}
             Select by Design
           </div>
@@ -87,7 +87,7 @@ if (typeof window !== "undefined") {
             )
           }).reverse()}
         </div>
-        <Link legacyBehavior href="/collection"><a><div className='bg-gray-200 rounded-3xl m-3 hover:bg-gray-50 px-6 absolute right-5 cursor-pointer text-xl p-3 hover:text-gray-500'>See More ...</div></a></Link> 
+        <Link legacyBehavior href="/collection"><a><div className='bg-gray-200 rounded-3xl m-3 mb-6 hover:bg-gray-50 px-6 absolute right-5 cursor-pointer text-xl p-3 hover:text-gray-500'>See More ...</div></a></Link> 
       </div>
       <Popular />
     </div>

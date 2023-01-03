@@ -219,7 +219,7 @@ const Footer2 = () => {
                 <div className="container mx-auto pt-4 px-5 flex flex-wrap w-full flex-col sm:flex-row justify-center items-center level4:items-start level4:justify-between">
                     <div>
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start items-center gap-3">
-                            <Link legacyBehavior href=""><a>
+                            <Link legacyBehavior href="https://www.facebook.com/mzartwala/"><a>
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                     width="36" height="36"
                                     className="fill-current text-white"
