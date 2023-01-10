@@ -119,7 +119,9 @@ if (typeof window !== "undefined") {
 
       </nav>
 {search && 
-        <ul className={`absolute z-50 ${search ? 'w-[280px]' : 'w-[180px]'}  right-40 mr-6 top-14 px-4 bg-white rounded-2xl border divide-y py-1`} id='myUL'>
+       <div>
+
+       <ul className={`absolute z-50 ${search ? 'w-[280px]' : 'w-[180px]'}  right-40 mr-6 top-14 px-4 bg-white rounded-2xl border divide-y py-1`} id='myUL'>
         {
           searchItem.map((item, index) => {
             console.log(item)
@@ -132,7 +134,7 @@ if (typeof window !== "undefined") {
           }
           )
         }
-      </ul>}
+          </ul></div>}
 
       {!user.value && <div className={`right-14 absolute bg-white shadow-xl border rounded-md top-10  z-20 ${dropdown}`} onMouseEnter={() => { setDropdown('') }} onMouseLeave={() => { setDropdown('hidden') }}>
         <Link legacyBehavior href="/login"><a><div className='px-5 py-1 border-b border-gray-200 cursor-pointer hover:bg-gray-300 transition-all duration-200'>

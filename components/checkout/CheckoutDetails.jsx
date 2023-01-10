@@ -159,7 +159,7 @@ const CheckoutDetails = ({ info, setInfo, handleChange, makePayment ,user}) => {
           </div>
           <div className='mt-4'>
               <h2>Delivery type</h2>
-              <div className="md:flex gap-2 px-2">
+              <div className="md:flex gap-2 px-2"> 
                   <div className="flex border py-2 cursor-pointer w-full  px-2 items-center rounded-md" onClick={() => { setInfo({ ...info, delivery: 'standard' }) }}>
 
                       {info.delivery === 'standard' ? <BsCheck2Circle className='scale-150 ml-2' /> : <BsCircle className='ml-2' />}

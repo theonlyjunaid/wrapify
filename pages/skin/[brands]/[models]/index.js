@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+
 function Index({ products }) {
     const [isLoading, setLoading] = useState(true)
 

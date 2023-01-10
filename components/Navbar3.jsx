@@ -145,7 +145,7 @@ duration-500 ease-in-out transform
                             {
                                 mobile2[brand] && Object.keys(mobile2[brand].models).map((item, index) => {
                                     return (
-                                        <li key={item} 
+                                        <li key={item+index} 
                                             className='hover:text-gray-400'
                                         >
                                             <Link href={`/skin/${brand}/${item}`}>{mobile2[brand].models[item].name}</Link>
