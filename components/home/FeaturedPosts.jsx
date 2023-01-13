@@ -41,7 +41,7 @@ const FeaturedPosts = () => {
     //     , [windowsize.innerWidth])
 
     const customLeftArrow = (
-        <div className="absolute arrow-btn hidden md:flex left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
+        <div className="absolute arrow-btn ml-5 bg-grayish-500 px-3 hover:bg-grayish-900 duration-300 hidden md:flex left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
@@ -49,7 +49,7 @@ const FeaturedPosts = () => {
     );
 
     const customRightArrow = (
-        <div className="absolute arrow-btn right-0 hidden md:flex text-center py-3 cursor-pointer bg-pink-600 rounded-full">
+        <div className="absolute arrow-btn mr-5 bg-grayish-500 px-3 hover:bg-grayish-900 duration-300 right-0 hidden md:flex text-center py-3 cursor-pointer bg-pink-600 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -61,7 +61,9 @@ const FeaturedPosts = () => {
             <Carousel infinite  responsive={responsive} itemclassName="px-4" autoPlay={true} autoPlaySpeed={3000}
                 keyBoardControl={true}
                  showDots={true}
-
+            customLeftArrow={customLeftArrow}
+            customRightArrow={customRightArrow}
+swipeable={true}
             >
 
                 <div className=" w-screen bg-cover">
