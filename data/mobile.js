@@ -105,4 +105,13 @@ export const mobile2 = {
             },
         }
     },
+    nothing: {
+        name: 'nothing',
+        models: {
+            "nothing phone 1": {
+                name: 'nothing phone 1',
+                URL: '/skin/nothing/nothing-phone-1',
+            },
+        }
+    },
 }

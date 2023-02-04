@@ -1,0 +1,1307 @@
+[{
+  "_id": {
+    "$oid": "635acc428d271efa874365bd"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-green",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14promax/green.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 13432,
+  "color": "green",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669375004523"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365bb"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-gray",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14promax/gray.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 178,
+  "color": "gray"
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365be"
+  },
+  "name": "note 20 ultra",
+  "slug": "samsung-note-20-ultra-green",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/note22series/note22ultra/green.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 13436,
+  "color": "green",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669375004523"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365c2"
+  },
+  "name": "s22 ultra",
+  "slug": "samsung-s22-ultra-plain",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/s22series/s22ultra/plain.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 333,
+  "color": "plain"
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365c3"
+  },
+  "name": "s22 ultra",
+  "slug": "samsung-s22-ultra-green",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/s22series/s22ultra/green.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 13434,
+  "color": "green",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669375004523"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365b9"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-green",
+  "img": "https://v2ecommerce.vercel.app/mobile/skin/Apple/14series/14/green.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 13426,
+  "color": "green",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669375004523"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365ba"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-gray",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14/gray.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 224,
+  "color": "gray"
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365bf"
+  },
+  "name": "note 20 ultra",
+  "slug": "samsung-note-20-ultra-gray",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/note22series/note22ultra/gray.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 444424,
+  "color": "gray"
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365c0"
+  },
+  "name": "note 20 ultra",
+  "slug": "samsung-note-20-ultra-plain",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/note22series/note22ultra/plain.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 1033,
+  "color": "plain"
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365b8"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-plain",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14/plain.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 1033,
+  "color": "plain"
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365bc"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-plain",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/apple/14series/14promax/plain.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 1033,
+  "color": "plain"
+},{
+  "_id": {
+    "$oid": "635acc428d271efa874365c1"
+  },
+  "name": "s22 ultra",
+  "slug": "samsung-s22-ultra-gray",
+  "img": "https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/s22series/s22ultra/gray.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "plain color",
+  "desc": "Plain is something which never get uot of trend",
+  "price": 299,
+  "availableQty": 730,
+  "color": "gray"
+},{
+  "_id": {
+    "$oid": "63a90c04b9e2d636cecc7a6c"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-arabiansea",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/arabiansea.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "arabian sea is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "arabian sea",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023044846"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023044846"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c18b9e2d636cecc7a6f"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-brain",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/brain.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "brain is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 99,
+  "color": "brain",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023064425"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023064425"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c23b9e2d636cecc7a72"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-circuit",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/circuit.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "circuit is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "circuit",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023075140"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023075140"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c30b9e2d636cecc7a75"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-earthmoon",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/earthmoon.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "earthmoon is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "earthmoon",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023088697"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023088697"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c3db9e2d636cecc7a78"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-gadgets",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/gadgets.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "gadgets is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "gadgets",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023101489"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023101489"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c49b9e2d636cecc7a7b"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-random",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/random.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "random is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "random",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023113320"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023113320"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c54b9e2d636cecc7a7e"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-seapirate",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/seapirate.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "seapirate is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "seapirate",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023124859"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023124859"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c5fb9e2d636cecc7a81"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-settle",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/settle.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "settle is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "settle",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023135472"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023135472"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90c6bb9e2d636cecc7a84"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-space",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/space.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "space is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "space",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023147738"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023147738"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a90f8fb9e2d636cecc7a87"
+  },
+  "name": "iphone 14",
+  "slug": "iphone-14-american",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14/american.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "american is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 88,
+  "color": "american red",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672023951621"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672023951621"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9295e64386ec33c4f262b"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-american",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/america.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "american is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "american red",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030558764"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030558764"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9296e64386ec33c4f262f"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-arabiansea",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/arabiansea.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "arabian sea is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "arabian sea",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030574923"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030574923"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9297d64386ec33c4f2632"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-brain",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/brain.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "brain is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "brain",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030589312"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030589312"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9298b64386ec33c4f2635"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-circuit",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/circuit.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "circuit is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "circuit",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030603190"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030603190"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9299764386ec33c4f2638"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-earthmoon",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/earthmoon.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "earthmoon is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 98,
+  "color": "earthmoon",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030615816"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030615816"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a929a364386ec33c4f263b"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-gadgets",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/gadgets.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "gadgets is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "gadgets",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030627969"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030627969"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a929af64386ec33c4f263e"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-random",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/random.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "random is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 99,
+  "color": "random",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030639263"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030639263"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a929ba64386ec33c4f2641"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-seapirate",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/seapirate.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "seapirate is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "seapirate",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030650982"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030650982"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a929c564386ec33c4f2644"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-settle",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/settle.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "settle is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 98,
+  "color": "settle",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030661448"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030661448"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a929d264386ec33c4f2647"
+  },
+  "name": "iphone 14 pro max",
+  "slug": "iphone-14-pro-max-space",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/apple/14series/14promax/space.webp",
+  "brand": "apple",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "space is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "space",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672030674219"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672030674219"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93626388e486d7ab6b3f9"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-american",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/america.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "american is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "american red",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033830224"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033830224"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93626388e486d7ab6b3fd"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-arabiansea",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/arabiansea.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "arabian sea is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "arabian sea",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033830398"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033830398"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9363f388e486d7ab6b401"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-brain",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/brain.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "brain is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "brain",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033855732"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033855732"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9363f388e486d7ab6b404"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-circuit",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/circuit.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "circuit is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "circuit",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033855899"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033855899"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93653388e486d7ab6b407"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-earthmoon",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/earthmoon.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "earthmoon is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "earthmoon",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033875876"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033875876"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93654388e486d7ab6b40a"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-gadgets",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/gadgets.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "gadgets is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 99,
+  "color": "gadgets",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033876036"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033876036"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9365c388e486d7ab6b40d"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-random",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/random.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "random is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "random",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033884131"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033884131"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9365c388e486d7ab6b410"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-seapirate",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/seapirate.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "seapirate is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "seapirate",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033884329"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033884329"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93663388e486d7ab6b413"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-settle",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/settle.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "settle is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 100,
+  "color": "settle",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033891711"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033891711"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93663388e486d7ab6b416"
+  },
+  "name": "s22 ultra",
+  "slug": "s22-ultra-space",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/s22series/s22ultra/space.webp",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "space is something which never get out of trend",
+  "desc2": " ",
+  "price": 299,
+  "availableQty": 99,
+  "color": "space",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672033891883"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672033891883"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93829388e486d7ab6b419"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-american",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/america.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/amarican.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "american is something which never get out of trend",
+  "desc2": "american is something which never get out of trend",
+  "price": 299,
+  "availableQty": 99,
+  "color": "american red",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034345952"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034345952"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9382a388e486d7ab6b41d"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-arabiansea",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/arabiansea.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/arabiansea.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "arabian sea is something which never get out of trend",
+  "desc2": "arabian sea is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "arabian sea",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034346114"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034346114"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9384c388e486d7ab6b420"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-brain",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/brain.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/brain.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "brain is something which never get out of trend",
+  "desc2": "brain is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "brain",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034380684"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034380684"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9384c388e486d7ab6b423"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-circuit",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/circuit.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/circuit.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "circuit is something which never get out of trend",
+  "desc2": "circuit is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "circuit",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034380851"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034380851"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93857388e486d7ab6b426"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-earthmoon",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/earthmoon.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/earthmoon.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "earthmoon is something which never get out of trend",
+  "desc2": "earthmoon is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "earthmoon",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034391573"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034391573"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93857388e486d7ab6b429"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-gadgets",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/gadgets.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/gadgets.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "gadgets is something which never get out of trend",
+  "desc2": "gadgets is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "gadgets",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034391763"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034391763"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93864388e486d7ab6b42c"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-random",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/random.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/random.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "random is something which never get out of trend",
+  "desc2": "random is something which never get out of trend",
+  "price": 299,
+  "availableQty": 99,
+  "color": "random",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034404667"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034404667"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93864388e486d7ab6b42f"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-seapirate",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/seapirate.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/seapirate.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "seapirate is something which never get out of trend",
+  "desc2": "seapirate is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "seapirate",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034404814"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034404814"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9386b388e486d7ab6b432"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-settle",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/settle.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/settle.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "settle is something which never get out of trend",
+  "desc2": "settle is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "settle",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034411862"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034411862"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a9386c388e486d7ab6b435"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-space",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/space.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/space.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "testured",
+  "for": "mobile",
+  "desc": "space is something which never get out of trend",
+  "desc2": "space is something which never get out of trend",
+  "price": 299,
+  "availableQty": 97,
+  "color": "space",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034412026"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034412026"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a93872388e486d7ab6b438"
+  },
+  "name": "note 20 ultra",
+  "slug": "note-20-ultra-thanos",
+  "img": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/thanos.webp",
+  "img2": "https://mzart.sgp1.cdn.digitaloceanspaces.com/mobiles/samsung/note20series/note20ultra/thanos.png",
+  "brand": "samsung",
+  "category": "skin",
+  "subCategory": "textured",
+  "for": "mobile",
+  "desc": "thanos is something which never get out of trend",
+  "desc2": "thanos is something which never get out of trend",
+  "price": 299,
+  "availableQty": 100,
+  "color": "thanos",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672034418161"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672034418161"
+    }
+  },
+  "__v": 0
+}]
