@@ -25,7 +25,7 @@ let products = [];
                 //     "template": "SGVsbG8gd29ybGQh" // Must be base64 encoded html. This example contains 'Hello World!' in base64
                 // },
                 images: {
-                logo: 'https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/s22series/s22ultra/green.webp'
+                logo: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/icons%2FScreenshot%202023-01-02%20at%208.22.38%20AM.png'
                 },
                 sender: {
                     company: 'MZ Art',
