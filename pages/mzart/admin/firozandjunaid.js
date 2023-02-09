@@ -1,17 +1,36 @@
-import React from 'react'
+import React ,{useState,useEffect}from 'react'
 import mongoose from 'mongoose'
 import Orders from '../../../components/admin/Order'
-// import Image from 'next/image'
-import Product from '../../../model/Product'
-import User from '../../../model/User'
 import Order from '../../../model/Order'
+import Router from 'next/router'
+var jwt = require('jsonwebtoken');
 
 
-const firozandjunaid = ({ products ,users,orders}) => {
+
+const firozandjunaid = ({orders}) => {
+
+  const router = Router
+const [userAdmin, setUserAdmin] = useState(false)
+  useEffect(() => {
+    const token = localStorage.getItem('admin')
+    if (token) {
+    let decoded = jwt.verify(JSON.parse(token).token, process.env.NEXT_PUBLIC_JWT);
+    if (decoded.password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
+      setUserAdmin(true)
+    } 
+  }
+  }, [])
+
+
     // console.log(products)
   return (
     <div className='w-full justify-center flex'>
-      <Orders orders={orders}/>
+      {userAdmin && <Orders orders={orders}/>}
+      {!userAdmin && <div className='w-full flex justify-center items-center'>
+        <div className='w-1/2 flex flex-col justify-center items-center'>
+          <h1 className='text-3xl font-bold'>Login kro bro</h1>
+          </div>
+      </div>}
     </div>
   )
 }
@@ -22,12 +41,11 @@ export async function getServerSideProps(context) {
         await mongoose.connect(process.env.MONGODB_URI);
     
     }
-    let products = await Product.find({}).lean();
-    let users = await User.find({}).lean();
+
     let orders = await Order.find({}).lean();
     
     return {
-        props: { products: JSON.parse(JSON.stringify(products)) , users: JSON.parse(JSON.stringify(users)), orders: JSON.parse(JSON.stringify(orders))},
+        props: { orders: JSON.parse(JSON.stringify(orders))},
     }
     }
 

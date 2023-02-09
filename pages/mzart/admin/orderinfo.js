@@ -173,10 +173,10 @@ const { name, price, quantity,img,size,varient,qty} = orders.products[item]
               <span className="title-font font-medium text-2xl text-gray-900">
                 ₹{orders.amount}
               </span>
-                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" onClick={Authenticate}>
+                <button className="flex ml-auto text- bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" onClick={Authenticate}>
                 Authenticate
               </button>
-              <button className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded" onClick={bookShipment}>
+              <button className="flex ml-auto text-whte bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded" onClick={bookShipment}>
                 Book Shipping
               </button>
      
