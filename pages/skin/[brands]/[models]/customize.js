@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import { useRouter } from 'next/router'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Themes from '../../../../components/Item/Themes';
 
 // import { theme } from '../../data/theme'
 // import Theme from '../../../../../../components/Item/Theme'
@@ -91,6 +92,7 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
     return (
 
         <section className='md:flex items-stretch w-full outline-none min-h-[93vh]'>
+       
             <div className='w-full md:w-1/2 overflow-y-auto flex justify-self-stretch h-[70vh] md:h-screen md:max-h-[200vh] my-0 mx-auto bg-white'>
                 <div className='w-[100%]  md:h-screen  flex justify-center items-center'>
                     <div className="w-[85%] h-[80%]">
@@ -107,37 +109,8 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
                     {size == 'Choose' && <div>
                     <h2 className='font-semibold text-xl mt-7'>DESIGN</h2>
                     <h3 className='md:hidden'>{color.toUpperCase()}</h3>
-                <div className='h-[300px]  overflow-y-scroll -ml-5'>
-
-                        {
-                            Object.keys(theme).map((key, index) => {
-                                // console.log(key)
-                                return (
-                                    <div key={index} className=' justify-center items-center '>
-                                        <h2 className='flex justify-start mx-6 py-2'>{key}</h2>
-                                        <div className='grid grid-cols-4   mb-3  '>
-                                            {
-                                                theme[key].map((item, index) => {
-                                                    return (
-                                                        <div key={index} onClick={() => setColor(item.name)} className='text-center mb-3 flex justify-center'>
-                                                            <div >
-
-                                                            <img src={item.URL} alt="" className='w-[50px] md:w-[100px] h-[50px] rounded-full' />
-                                                            <p className='text-[12px] flex justify-center'>{item.name.toUpperCase()}</p>
-                                                            </div>
-                                                        </div>
-                                                    )
-                                                }
-                                                )
-                                            }
-                                        </div>
-                                    </div>
-                                )
-                            }
-                            )
-                        }
-                    </div>
-
+            
+<Themes theme={theme} setColor={setColor} />
                 <div className="md:flex  justify-center items-center md:justify-between my-5 md:mt-10">
                     <div className=''> <span className='text-lg md:text-xl font-mono line-through mx-1'>₹{200 + mobile[0].price}</span><span className='text-2xl md:text-3xl font-semibold py-2'> ₹{mobile[0].price}</span>
                     </div>

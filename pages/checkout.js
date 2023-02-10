@@ -46,7 +46,7 @@ let pincodeList = []
 
             }
             if(subTotal === 0){
-                router.push('/')
+                // router.push('/')
 
             }
         }
@@ -102,7 +102,11 @@ let pincodeList = []
                         console.log(pin.State)
                         setInfo({ ...info, city: pin.City, state: pin.State, pincode: e.target.value })
                     }
+                }else{
+                    console.log("pincode")
+                    return
                 }
+
             })
           
 
@@ -199,7 +203,7 @@ let pincodeList = []
         if (data.success) {
             var options = {
                 key: process.env.RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
-                name: "Wrapify",
+                name: "mzart",
                 currency: data.currency,
                 amount: data.amount,
                 order_id: data.id,
@@ -246,7 +250,7 @@ let pincodeList = []
     };
 
     return (
-        <div className='container m-auto ' >
+        <div className='' >
             <Head>
                 <title>Checkout</title>
                 <meta name='description' content='Checkout Page' />
@@ -265,8 +269,8 @@ let pincodeList = []
             />
 
 
-            <h1 className='font-bold text-3xl text-center mt-8 mb-3'>Checkout</h1>
-            <div className='md:flex  mb-10 pr-5'>
+            {/* <h1 className='font-bold text-3xl text-center mt-8 mb-3'>Checkout</h1> */}
+            <div className='md:flex  '>
              <CheckoutDetails info={info} setInfo={setInfo} handleChange={handleChange} makePayment={makePayment} user={user} />
               
     <ProductReview cart={cart} subTotal={subTotal}/>
