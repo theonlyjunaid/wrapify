@@ -15,7 +15,7 @@ const ProductSchema = new mongoose.Schema({
     originalPrice: { type: Number, required: true, default: 499 },
     availableQty: { type: Number, required: true },
     color: { type: String, required: true },
-    size: { type: String, required: true }
+    size: { type: String }
 }, { timestamps: true });
 
 mongoose.models = {};

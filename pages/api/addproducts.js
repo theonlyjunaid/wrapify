@@ -28,7 +28,8 @@ const handler = async (req, res) => {
                     numReviews: req.body[i].numReviews
                 });
                 const newProduct = await product.save();
-                res.status(201).json(newProduct);
+                // res.status(201).json(newProduct);
+                console.log(newProduct);
             } catch (error) {
                 res.status(400).json({ message: error.message });
             }
@@ -54,11 +55,12 @@ const handler = async (req, res) => {
 
         // }
         // res.status(200).json({ message: 'Products added successfully' });
+       
     }}
     else {
         res.status(400).json({ message: 'This method is not allowed' });
     }
-
+    res.status(200).json({ message: 'Products added successfully' });
 }
 
 export default connectDB(handler);

@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['res.cloudinary.com', 'v2ecommerce.vercel.app', 'raw.githubusercontent.com','mzart.sgp1.cdn.digitaloceanspaces.com'],
+    domains: ['res.cloudinary.com', 'v2ecommerce.vercel.app', 'raw.githubusercontent.com', 'mzart.sgp1.cdn.digitaloceanspaces.com','ik.imagekit.io'],
   },
   env: {
     SECRET_KEY: 'process.env.SECRET_KEY',

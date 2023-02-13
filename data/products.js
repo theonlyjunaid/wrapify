@@ -720,7 +720,7 @@ export const products = {
                         "desc2": "Whether it's the result of climate change or a nuclear winter, all-year snowfall is just around the corner. When that day comes, you'll need Arctic Camo if you want to continue hiding from your responsibilities.",
                         "price": 299,
                         "availableQty": 100,
-                        "color": "beach"
+                        "color": "astro"
                     },
                     {
                         "name": "nothing phone 1",
