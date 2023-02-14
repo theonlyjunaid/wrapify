@@ -18,10 +18,16 @@ export default function Popular() {
                         <div className='text-mono font-semibold'>Apple</div>
                     </div>
                 </div></a></Link>
-                <Link legacyBehavior href='/skin/samsung'><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
+                {/* <Link legacyBehavior href='/skin/samsung'><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
                         <Image src='https://raw.githubusercontent.com/theonlyjunaid/wrap/main/public/mobile/skin/samsung/note22series/note22ultra/plain.webp' className=' -top-0 hover:scale-[103%] transition-all ease-in-out duration-300 bg-gray-100' alt="" width={280} height={400} />
                     <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl transition-all ease-in-out duration-300 `}>
                         <div className='text-mono font-semibold'>Samsung</div>
+                    </div>
+                </div> </a></Link> */}
+                <Link legacyBehavior href='/skin/oneplus'><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
+                        <Image src='https://ik.imagekit.io/wrapmydevice1/shopping.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676373586352' className=' -top-0 hover:scale-[103%] transition-all ease-in-out duration-300 bg-gray-100' alt="" width={280} height={400} />
+                    <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-4 text-xl transition-all ease-in-out duration-300 `}>
+                        <div className='text-mono font-semibold'>Oneplus</div>
                     </div>
                 </div> </a></Link>
                 <Link legacyBehavior href='/skin/nothing'><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative  ">
