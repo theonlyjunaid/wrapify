@@ -50,8 +50,8 @@ mobileBrand.map((item, index) => {
                         return (
                             <div>
                                 <div className='text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold    level4:py-2 m-3 level3:mx-5 sm:mx-12 md:mx-16  lg:mx-20 mb-2 sm:mb-4 md:mb-5  '>
-                                    <p className='overflow-y-hidden'>{item[0].brand.split("")[0].toUpperCase() + 
-item[0].brand.split("").slice(1).join("")
+                                    <p className='overflow-y-hidden'>{item[0]?.brand.split("")[0].toUpperCase() + 
+item[0]?.brand.split("").slice(1).join("")
                                     }</p>
                                 </div>
                                 <div className='grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-6 md:gap-8 pb-4 relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10'>

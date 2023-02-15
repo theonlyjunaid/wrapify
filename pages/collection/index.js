@@ -81,7 +81,7 @@ export async function getServerSideProps(context) {
 
     }
   
-    let products = await Product.find({ brand: 'samsung', name: 's22 ultra', color: { $ne: 'plain' } }).lean();
+    let products = await Product.find({ brand: 'apple', name: 'iphone 14', color: { $ne: 'plain' } }).lean();
 
     return {
         props: { products: JSON.parse(JSON.stringify(products)) },

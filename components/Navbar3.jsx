@@ -226,7 +226,7 @@ duration-500 ease-in-out transform  text-base px-2 -translate-x-[40px]
 
 
 
-   {search===''&& <div className='absolute z-40 top-[65px] w-full bg-white h-max shadow-2xl  flex justify-center'>
+   {search===''&& <div className='absolute z-40 top-[65px]   w-full bg-white h-max max-h-[40vh] pb-10 shadow-2xl  flex justify-center'>
                       <ul id='myUL' className='text-base sm:text-lg md:text-xl w-4/5  sm:w-[380px] md:w-[520px] xl:w-[700px] px-5'>
                           {
                               searchItem.map((item, index) => {

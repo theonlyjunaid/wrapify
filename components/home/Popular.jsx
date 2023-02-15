@@ -37,7 +37,7 @@ export default function Popular() {
                     </div>
                 </div> </a></Link>
             </div>
-           <Link legacyBehavior  href="/skin"><a><div className='bg-gray-200 rounded-3xl m-3 hover:bg-gray-50 px-6 absolute right-5 cursor-pointer text-xl p-3 hover:text-gray-500'>See More ...</div></a></Link> 
+           {/* <Link legacyBehavior  href="/skin"><a><div className='bg-gray-200 rounded-3xl m-3 hover:bg-gray-50 px-6 absolute right-5 cursor-pointer text-xl p-3 hover:text-gray-500'>See More ...</div></a></Link>  */}
             </div >
             </div>
     )
