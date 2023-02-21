@@ -67,7 +67,7 @@ const Navbar3 = ({ user, logout }) => {
           <div className={`${search==='hidden'?' translate-x-[400%] absolute hidden':'translate-x-0'} duration-500 flex items-center justify-center md:justify-around w-full max-w-[1280px]`}>
  <Link href='/'><div
                   className='text-2xl hidden md:flex font-semibold w-max lg:w-[180px] xl:w-[280px]'>
-                  MZ Art
+Wrap My Device
               </div></Link>
 
              
@@ -92,7 +92,7 @@ const Navbar3 = ({ user, logout }) => {
             <div className={`hidden md:flex justify-around w-full max-w-[1280px] items-center ${search==='hidden'?" ":' absolute -translate-x-[400%] hidden'}  duration-500`}>
             <Link href='/'><div
                 className='text-2xl font-semibold w-max lg:w-[180px] xl:w-[280px]'>
-MZ Art
+Wrap My Device
             </div></Link>
             <div className='w-max lg:w-[500px] xl:w-[640px]   flex gap-4 lg:gap-8 text-xl font-base jus justify-center items-center'>
                 <div className='bg-0 py-4 items-center cursor-pointer flex hover:bg-gray-10 ' 

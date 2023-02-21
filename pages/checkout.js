@@ -29,7 +29,7 @@ let pincodeList = []
         state: '',
         pincode: '',
         delivery: 'standard',
-        disbled: false
+        disabled: false
     })
     // console.log(info)
     useEffect(() => {
