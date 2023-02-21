@@ -255,9 +255,9 @@ const Footer2 = () => {
                         </span>
 
                     </div>
-                    <div className="">
+                    <div className="flex justify-end">
 
-                        <img src="https://mzart.sgp1.cdn.digitaloceanspaces.com/icons/payment.png" alt="payment methods" className="max-w-[400px] w-full " />
+                        <img src="/icons/payment.webp" alt="payment methods" className="max-w-[400px] w-full  sm:w-3/4 md:w-full " />
 
 
                     </div>

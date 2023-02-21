@@ -14,7 +14,7 @@ const [brand, setBrand] = useState('apple')
       <div className='flex items-center justify-between w-full'>
         <Link href='/'><div
           className='text-2xl font-semibold '>
-          MZ Art
+Wrap My Device
         </div></Link>
         <div className='flex text-2xl gap-5'>
           <Link href="/cart"><AiOutlineShoppingCart className='cursor-pointer ' /></Link>

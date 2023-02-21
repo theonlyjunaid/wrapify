@@ -17,39 +17,35 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
     }, [])
     const theme = {
         'Space':[{
-            name: 'space',
-            URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/space.png'
+            name: 'astro',
+            URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/astro.webp'
         },
         {
-            name: 'settle',
-            URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/settle.png'
-        },
-        {
-            name: 'earthmoon',
-            URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/earthmoon.png'
-        },
+            name: 'galaxy',
+            URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/galaxy.webp'
+        }
     ],
-    'Tufani':[{    
-        name: 'arabian sea',
-        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/arabiansea.png'
+    'Super':[{    
+        name: 'venom',
+        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/venom.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310472431'
     },
     {
-        name: 'seapirate',
-        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/seapirate.png'
-    },
-    {
-        name: 'american red',
-        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/america.png'
-    },
+        name: 'tony',
+        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/tony.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310472215'
+    }
   
 ],
     'Electric': [{
         name: 'circuit',
-        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/circuit.png'
+        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/circuit.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310469106'
     },
     {
-        name: 'gadgets',
-        URL: 'https://mzart.sgp1.cdn.digitaloceanspaces.com/designs/gadgets.png'
+        name: 'blueblack',
+        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/blueblack.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310469520'
+    },
+    {
+        name: 'greenblack',
+        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/greenblack.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310469524&tr=w-180%2Ch-180'
     },
     
 ]
@@ -57,10 +53,6 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
         'PLain Colours': [{
             name: 'green',
             URL: 'https://dictionary.cambridge.org/images/thumb/green_noun_001_07350.jpg?version=5.0.252'
-        },
-        {
-            name: 'gray',
-            URL: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSDxIVFRUVFRUVFRUVFRUVFRUVFRcXFxUVFRUYHSggGB0lHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZFRkrKy0tKy0rKzc3LS0tKzctLTctKy0rLTctLTctLTc3Ny03Ny0tLSstLTctLSstKys3Lf/AABEIAOEA4QMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EABgQAQEBAQEAAAAAAAAAAAAAAAABEQJB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD0+mqiKpKEEKkWmAkBcAoAoCiCKgKigIEASgAWhQVBUEIqKCJ01WaCYGAOiKgoqRRFRUFAWCIRcQFUSAAAWpVMBCFICCpAAAEVICgoIzW2egZ0AHSpjSAAQAKAogAoARUAVNWsgoSlBLQUEDVBEVKAGgAQBWeliUGRcAbpVqUEUUEABQgAJVAFQFQKCAAAAAAgAItEBdIRQQWpQZwAHRAAWoAUgQBQAIQBQAEtAECoDSEUBKtQEgACLqAsWJABOqtZoAAN0EBYRFAFQBTABUABUAqKkARUAxpItBNRYAYlCggKBqxnFBWbGkBEQB0qVamAsNDAILgACwEAAhRQZo1jIBixMAihQGVTAAoCAAKkWArNrVYoAgDoCCqqKAigioKCCgAIBUDQNLQ0FQ0gAAIAAQAIrMUCs1pKDIaA6VFoArKgACrFSAgtqAAJQRQBFoABDQEwoAi6gL1UACCyIC6z1VrPVBAUV1qLUESgAoAKIAoQgCKgBSJQVABUUBDSoAqAKhQFtQAGK1UoJougOvTK1AVIAKIAsIEACgKhCgkABRADQABUAQAEFoEMF0GUqs0EUAdUqpQA0ABRRLQEUQBSoAAAAAiiAKgAACKlUBDTQKy1WaAMqDshUqKLEFFKICiRQCAIqVUACJQUQAoABRQRFATBUBFRQRlaAyoIOqU1BVIzaoKIAsWIqogAqwTTQVFKCACCACiKCaUqUF00xAC0qaAlKgINCK2IAAALEAaiACNRBQABaUAKgIACoU8AU9UASoAiJQAqAKAIj//Z'
         }
 
     ]

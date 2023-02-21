@@ -82,7 +82,7 @@ if (typeof window !== "undefined") {
       <NavdropMobile down={down} setDown={setDown}/>
       <nav className='flex justify-between w-full max-w-[80rem] align-middle items-center px-5 pl-7 h-[64px]  mx-auto'>
         <div className='w-[30%]'>
-          <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer font-mono'>MZ Art</h1></a></Link>
+          <Link legacyBehavior href="/"><a><h1 className='text-xl cursor-pointer font-mono'>Wrap My Device</h1></a></Link>
         </div>
 
 
