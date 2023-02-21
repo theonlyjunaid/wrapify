@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import pincode from '../pincode.json'
-import { ProductReview } from '../components/checkout/ProductReview'
+import { ProductReview2, ProductReview1 } from '../components/checkout/ProductReview'
 import CheckoutDetails from '../components/checkout/CheckoutDetails'
 // import mongoose from 'mongoose'
 // import Pincodes from '../model/Pincodes'
@@ -270,10 +270,12 @@ let pincodeList = []
 
 
             {/* <h1 className='font-bold text-3xl text-center mt-8 mb-3'>Checkout</h1> */}
+            <ProductReview2 cart={cart} subTotal={subTotal} />
+
             <div className='md:flex  '>
              <CheckoutDetails info={info} setInfo={setInfo} handleChange={handleChange} makePayment={makePayment} user={user} />
               
-    <ProductReview cart={cart} subTotal={subTotal}/>
+                <ProductReview1 cart={cart} subTotal={subTotal}/>
      
             </div>
 

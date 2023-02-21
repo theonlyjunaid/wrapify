@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const CheckoutDetails = ({ info, setInfo, handleChange, makePayment ,user}) => {
   return (
-      <div className='md:w-[55%] lg:p-10 lg:pl-40 min-h-screen'>
+      <div className='p-8 md:w-[55%] lg:p-10 lg:pl-40 min-h-screen'>
           <h2> Contact Info</h2>
           <div className="mx-auto md:flex border-b bo">
               <div className="px-2 md:w-1/2">

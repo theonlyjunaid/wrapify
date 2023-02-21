@@ -216,7 +216,7 @@ const Footer2 = () => {
                 </div> */}
             </div>
             <div className="border-t-2 border-b-2 border-black bg-black text-white">
-                <div className="container mx-auto pt-4 px-5 flex flex-wrap w-full flex-col sm:flex-row justify-center items-center level4:items-start level4:justify-between">
+                <div className="container mx-auto pt-4 px-5 flex flex-wrap w-full flex-col sm:flex-row justify-center items-center sm:items-start level4:justify-between">
                     <div>
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start items-center gap-3">
                             <Link legacyBehavior href="https://www.facebook.com/mzartwala/"><a>
