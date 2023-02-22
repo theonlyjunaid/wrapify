@@ -15,11 +15,20 @@ module.exports = {
       keyframes: {
         big: {
           '0%': {width : '260px'},
+          '50%': {width : '460px'},
+          '70%': {width : '560px'},
           '100%': {width : '720px'}
-        }  
+        }  ,
+        small:{
+             '100%': {width : '260px'},
+          '70%': {width : '460px'},
+          '50%': {width : '560px'},
+          '0%': {width : '720px'}
+        }
       },
       animation: {
         'new': 'big 0.5s ease-in-out 1',
+        'old': 'small 0.3s ease-out 1'
       }
     },
     screens: {

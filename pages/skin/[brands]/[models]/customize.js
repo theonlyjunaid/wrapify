@@ -16,48 +16,67 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
         setSize('Choose')
     }, [])
     const theme = {
-        'Space':[{
+        'Premium':[{
             name: 'astro',
-            URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/astro.webp'
+            URL: '/design/astro.webp'
+        },
+        {
+            name: 'black',
+            URL: '/design/black.webp'
+        },
+        {
+            name: 'blue',
+            URL: '/design/blue.webp'
+        },
+        {
+            name: 'green',
+            URL: '/design/green.webp'
+        },
+        {
+            name: 'greenblack',
+            URL: '/design/greenblack.webp'
+        },
+        {
+            name: 'blueblack',
+            URL: '/design/blueblack.webp'
+        },
+        {
+            name: 'white',
+            URL: '/design/white.webp'
+        },
+        {
+            name: 'tony',
+            URL: '/design/tony.webp'
+        },
+        {
+            name: 'mountain',
+            URL: '/design/mountain.webp'
+        },
+        {
+            name: 'peak',
+            URL: '/design/peak.webp'
         },
         {
             name: 'galaxy',
-            URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/galaxy.webp'
-        }
+            URL: '/design/galaxy.webp'
+        },
+        {
+            name: 'venom',
+            URL: '/design/venom.webp'
+        },
+        {
+            name: 'cube',
+            URL: '/design/cube.webp'
+        },
+        {
+            name: 'circuit',
+            URL: '/design/circuit.webp'
+        },
+        {
+            name: 'beach',
+            URL: '/design/beach.webp'
+        },
     ],
-    'Super':[{    
-        name: 'venom',
-        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/venom.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310472431'
-    },
-    {
-        name: 'tony',
-        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/tony.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310472215'
-    }
-  
-],
-    'Electric': [{
-        name: 'circuit',
-        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/circuit.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310469106'
-    },
-    {
-        name: 'blueblack',
-        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/blueblack.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310469520'
-    },
-    {
-        name: 'greenblack',
-        URL: 'https://ik.imagekit.io/wrapmydevice1/mobile/apple/13series/13mini/greenblack.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676310469524&tr=w-180%2Ch-180'
-    },
-    
-]
-    ,
-        'PLain Colours': [{
-            name: 'green',
-            URL: 'https://dictionary.cambridge.org/images/thumb/green_noun_001_07350.jpg?version=5.0.252'
-        }
-
-    ]
-        
-
     }
 
     const [color, setColor] = useState('plain')
