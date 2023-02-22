@@ -11,7 +11,17 @@ module.exports = {
       'mono': ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
 
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        big: {
+          '0%': {width : '260px'},
+          '100%': {width : '720px'}
+        }  
+      },
+      animation: {
+        'new': 'big 0.5s ease-in-out 1',
+      }
+    },
     screens: {
       'level1': '120px',
       'level2': '240px',
