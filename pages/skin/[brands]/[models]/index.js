@@ -7,13 +7,13 @@ import { useRouter } from 'next/router';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
-function Index({ products }) {
+function Index({ products,prop }) {
     const [isLoading, setLoading] = useState(true)
 
     const [show, setShow] = useState('hidden')
     const router = useRouter();
     const { brands, models } = router.query;
-console.log(products)
+console.log(prop)
 
     return (
         <div className=''>
@@ -40,7 +40,7 @@ console.log(products)
                         <Link legacyBehavior href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
                             onMouseEnter={() => setShow(product?.slug)}
                             onMouseLeave={() => setShow('')}
-                        >{<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75
+                        >{<Image src={product?.img ? product.img:prop[index].img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75
               ${isLoading
                                 ? 'scale-110 blur-[2px] grayscale'
                                 : 'scale-100 blur-0 grayscale-0'}`} width={280} height={400} onLoadingComplete={() => {setLoading(false);
@@ -78,10 +78,11 @@ export async function getServerSideProps(context) {
     if (!mongoose.connections[0].readyState) {
         await mongoose.connect(process.env.MONGODB_URI);
     }
+    let prop = await Product.find({ name: 'iphone 14' }).lean();
     let model = context.query.models.split('-').join(' ')
     let brand = context.query.brands
     let products = await Product.find({ name: model, brand: brand, color: { $ne: 'plain' } }).lean();
     return {
-        props: { products: JSON.parse(JSON.stringify(products)) },
+        props: { products: JSON.parse(JSON.stringify(products)) ,prop:JSON.parse(JSON.stringify(prop))},
     }
 }

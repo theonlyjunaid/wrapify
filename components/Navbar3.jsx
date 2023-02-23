@@ -19,7 +19,7 @@ const Navbar3 = ({ user, logout }) => {
   const [searchItem, setSearchItem] = useState([])
     const [searchItems, setSearchItems] = useState({})
     useEffect(() => {
-        fetch('/api/getproducts', {
+ fetch('/api/getproducts', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const Navbar3 = ({ user, logout }) => {
                 setSearchItem(Object.keys(searchItems))
             })
 
-    }, [searchItems])
+    }, [])
 
     const List = (e) => {
         console.log(e.target.value)

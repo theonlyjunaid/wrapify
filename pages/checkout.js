@@ -4,8 +4,10 @@ import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import pincode from '../pincode.json'
+import { pincode as pincode1 } from '../data/pins'
 import { ProductReview2, ProductReview1 } from '../components/checkout/ProductReview'
 import CheckoutDetails from '../components/checkout/CheckoutDetails'
+
 // import mongoose from 'mongoose'
 // import Pincodes from '../model/Pincodes'
 
@@ -14,8 +16,8 @@ const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, u
     // console.log(pincode.includes(110001))
 //checkif pincode is valid
 const router = useRouter()
+const [avail, setAvail] = useState(false)
 
-  
 const [pincheck, setPincheck] = useState(2000)
 let pincodeList = []
 
@@ -89,19 +91,23 @@ let pincodeList = []
      
         if (e.target.name === 'pincode') {
           if(e.target.value >100000&&e.target.value<999999){   
-            pincode.map((pin,index) => {
-              pincodeList.push(pin.Pincode)
+            pincode1.map((pin,index) => {
+            //   pincodeList.push(pin.Pincode)
                 
-                if (pin.Pincode == e.target.value) {
+                if (pin == e.target.value) {
                     console.log(pin)
-                    console.log(pin.Pincode)
-                    setPincheck(pin.Pincode)
+setAvail(true)
+console.log(avail)
 
-                    if(city!=pin.City || state!=pin.State){
-                        console.log(pin.City)
-                        console.log(pin.State)
-                        setInfo({ ...info, city: pin.City, state: pin.State, pincode: e.target.value })
-                    }
+                    // return pin
+                    // // console.log(pin.Pincode)
+                    // // setPincheck(pin.Pincode)
+
+                    // // if(city!=pin.City || state!=pin.State){
+                    // //     console.log(pin.City)
+                    // //     console.log(pin.State)
+                    // //     setInfo({ ...info, city: pin.City, state: pin.State, pincode: e.target.value })
+                    // // }
                 }else{
                     console.log("pincode")
                     return
@@ -179,6 +185,10 @@ let pincodeList = []
     const makePayment = async () => {
 
         // console.log("here...");
+        if (!avail) {
+         alert("pincode not available")   
+         return
+        }
         const res = await initializeRazorpay();
         let oid = Math.floor(Math.random() * Date.now());
         if (!res) {

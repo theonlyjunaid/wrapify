@@ -296,7 +296,7 @@ import { useRouter } from 'next/router'
 import ItemComponent from '../../../../../components/Item/ItemComponent';
 
 
-export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
+export default function Slug({ product, addToCart, buyNow,cart,size,setSize,prop }) {
     useEffect(() => {
         setSize('Choose')
     }, [])
@@ -310,7 +310,8 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize }) {
                 <div className='w-[100%]  md:h-screen  flex justify-center items-center'>
                     <div className="w-[85%] h-[80%]">
                         <div className='w-[100%] h-[100%] relative flex justify-center items-center '>
-                            <img src={product.img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
+                            <img src={product.img?pro
+                                .img : prop?.img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
                         </div>
                     </div>
                 </div>
@@ -421,9 +422,11 @@ export async function getServerSideProps(context) {
     let brand = context.query.brands
     let design = context.query.design
     let product = await Product.findOne({ name: model, brand: brand, color: design }).lean();
+    let prop = await Product.findOne({ name: 'iphone 14', brand: 'apple', color: design }).lean();
+ 
 
     return {
-        props: { product: JSON.parse(JSON.stringify(product)) },
+        props: { product: JSON.parse(JSON.stringify(product)),prop:JSON.parse(JSON.stringify(prop)) },
     }
 }
 
