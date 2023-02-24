@@ -58,7 +58,7 @@ item[0]?.brand.split("").slice(1).join("")
                                 {
                                     item.map((item, index) => {
                                         return (
-                                            <Link legacyBehavior href={`/skin/${item.brand}/${item.name}`}><a>  <div className="grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative ">
+                                            <Link legacyBehavior href={`/skin/${item.brand}/${item.name}`}><a>  <div className="grid grid-cols-1  place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative ">
                                                 <Image src={item.img} className=' -top-0 hover:scale-[103%] transition-all ease-in-out duration-300' alt="" width={140} height={200} />
                                                 <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-2  level3:text-xl transition-all ease-in-out duration-300 `}>
                                                     <div className='text-mono font-semibold'>{item.brand}</div>
