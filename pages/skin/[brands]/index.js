@@ -48,7 +48,7 @@ console.log(products)
 
 
                     <AiOutlineSearch className='cursor-pointer absolute ml-2 xl:ml-3 text-2xl ' id="searchIcon" />
-                    <input id='search' type="text" className={`border  flex items-center rounded-[100px]  pl-[34px]  xl:px-[48px] w-full  sm:w-[240px] md:w-[350px] cursor-text h-12 bg-[#eeeeeec7] focus:bg-[#e4e3e3] text-base xl:text-lg text-gray-600`} placeholder='Search' onChange={(e) => List(e)} />
+                    <input type="text" className={`border  flex items-center rounded-[100px]  pl-[34px]  xl:px-[48px] w-full  sm:w-[240px] md:w-[350px] cursor-text h-12 bg-[#eeeeeec7] focus:bg-[#e4e3e3] text-base xl:text-lg text-gray-600`} placeholder='Search' onChange={(e) => List(e)} />
 
                 </div>
             </div>
