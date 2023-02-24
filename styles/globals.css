@@ -11,7 +11,11 @@
 
 }
 .shad {
-    background: linear-gradient(133.21deg, #F7F7F7 -2.44%, #F9F9F9 135.62%);
-    box-shadow: -6px -6px 8px rgb(255 255 255 / 80%), -2px -1px 8px #ffffff, 2px 2px 10px rgb(255 255 255 / 25%), -4px -4px 20px rgb(255 255 255 / 80%), 1px 1px 5px rgb(185 185 185 / 60%), 4px 4px 15px rgb(0 0 0 / 10%);
+    /* background: linear-gradient(133.21deg, #F7F7F7 -2.44%, #F9F9F9 135.62%); */
+    /* box-shadow: -6px -6px 8px rgb(255 255 255 / 80%), -2px -1px 8px #ffffff, 2px 2px 10px rgb(255 255 255 / 25%), -4px -4px 20px rgb(255 255 255 / 80%), 1px 1px 5px rgb(185 185 185 / 60%), 4px 4px 15px rgb(0 0 0 / 10%); */
+
     border-radius: 15px;
+    box-shadow: rgba(24, 24, 24, 0.201) 0px 2px 20px;
+
+
 }

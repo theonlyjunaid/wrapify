@@ -23,14 +23,14 @@ console.log(products)
     return (
         <div className='pb-20'>
             <div className='text-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold    level4:py-2 m-3 level3:mt-5 sm:mt-12 md:mt-16  lg:mt-20 level3:mx-5 sm:mx-12 md:mx-16  lg:mx-20 mb-3 sm:mb-6 md:mb-8 '>{brand?.split("")[0]?.toUpperCase() + brand?.split("").splice(1).join("")} Models</div>
-            <div className='grid level6:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-3 sm:gap-6 md:gap-8 pb-4 relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10 '>
+            {/* <div className='grid level6:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-3 sm:gap-6 md:gap-8 pb-4 relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10 '>
 
                 {
                     products.map((product, index) => {
                         const destination = '/skin/' + product.brand + '/' + product.name.split(" ").join("-")
 
                         return (
-                            <Link legacyBehavior href={destination} key={index}><a><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md pt-1 hover:shadow-2xl transition-all ease-in-out relative '
+                            <Link  href={destination} key={index}><div className='relative flex  justify-center'
                                 onMouseEnter={() => setShow(product.slug)}
                                 onMouseLeave={() => setShow('')}
                             >
@@ -40,7 +40,7 @@ console.log(products)
                                     <div className='text-mono font-semibold'>{product.brand.split("")[0].toUpperCase() +
                                         product.brand.split("").slice(1).join("")}</div>
                                     <div>{product.name}</div>
-                                    </div></> : <div className={` bg-slate-100 bg-opacity-50 w-[100%] bottom-0 grid grid-cols-1 place-items-center py-2  level3:text-lg transition-all ease-in-out duration-300 `}>
+                                    </div></> : <div className={`relative  bg-white px-6 pt-10 pb-8 m-5 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10`}>
 
                                     <div className='text-mono font-semibold'>{product.brand.split("")[0].toUpperCase() +
                                         product.brand.split("").slice(1).join("")}</div>
@@ -48,11 +48,12 @@ console.log(products)
                                 </div>
 
                                 }
-                            </div></a></Link>
+                            </div></Link>
                         )
                     })
                 }
-            </div>
+
+            </div> */}
             {/* <Navbar /> */}
             {/* <div className='text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold p-4 sm:p-10'>{mobile[rola]?.name} Models</div>
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4   '>
@@ -77,6 +78,24 @@ console.log(products)
                     )
                 }
             </div> */}
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg- px-10 sm:px-10 lg:px-20 xl:px-40 py-5 gap-10">
+                {/* <div class="block w-full shad link-dark py-6 ring-white text-center text-gray-900 bg-white relative overflow-hidden text-decoration-none">Google</div>
+                <div class="block w-full shad link-dark py-6 text-center text-gray-900 bg-white relative overflow-hidden text-decoration-none">Google</div>
+                <div class="block w-full shad link-dark py-6 text-center text-gray-900 bg-white relative overflow-hidden text-decoration-none">Google</div>
+                <div class="block w-full shad link-dark py-6 text-center text-gray-900 bg-white relative overflow-hidden text-decoration-none">Google</div>
+                <div class="block w-full shad link-dark py-6 text-center text-gray-900 bg-white relative overflow-hidden text-decoration-none">Google</div>
+                <div class="block w-full shad link-dark py-6 text-center text-gray-900 bg-white relative overflow-hidden text-decoration-none">Google</div> */}
+                {
+                    products.map((product, index) => {
+                        const destination = '/skin/' + product.brand + '/' + product.name.split(" ").join("-")
+
+                        return (
+                            <Link href={destination} key={index} class="block w-full shad link-dark py-6 px-2 text-center text-gray-900 bg-white relative overflow-hidden text-decoration-none">{product.name}</Link>
+
+                        )})}
+            </div>
+
         </div>
     )
 }
