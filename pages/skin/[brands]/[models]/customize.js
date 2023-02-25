@@ -10,7 +10,7 @@ import Themes from '../../../../components/Item/Themes';
 // import { theme } from '../../data/theme'
 // import Theme from '../../../../../../components/Item/Theme'
 
-export default function Slug({ products,  addToCart, buyNow, cart, size, setSize }) {
+export default function Slug({ products, appleprod, addToCart, buyNow, cart, size, setSize }) {
     console.log(products)
     useEffect(() => {
         setSize('Choose')
@@ -82,6 +82,8 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
     const [color, setColor] = useState('plain')
     // console.log(products)
     let mobile = products.filter(product => product.color === color)
+    let apple = appleprod.filter(product => product.color === color)
+    console.log(mobile)
     // for (let i = 0; i < products.length; i++) {
     //     console.log(products[i].name)
     // }
@@ -108,7 +110,7 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
                 <div className='w-[100%]  md:h-screen  flex justify-center items-center'>
                     <div className="w-[85%] h-[80%]">
                         <div className='w-[100%] h-[100%] relative flex justify-center items-center '>
-                            <img src={mobile[0]?.img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
+                            <img src={mobile[0]?.img ? mobile[0]?.img :apple[0].img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
                         </div>
                     </div>
                 </div>
@@ -123,7 +125,7 @@ export default function Slug({ products,  addToCart, buyNow, cart, size, setSize
             
 <Themes theme={theme} setColor={setColor} />
                 <div className="md:flex  justify-center items-center md:justify-between my-5 md:mt-10">
-                    <div className=''> <span className='text-lg md:text-xl font-mono line-through mx-1'>₹{200 + mobile[0].price}</span><span className='text-2xl md:text-3xl font-semibold py-2'> ₹{mobile[0].price}</span>
+                    <div className=''> <span className='text-lg md:text-xl font-mono line-through mx-1'>₹{200 + mobile[0]?.price}</span><span className='text-2xl md:text-3xl font-semibold py-2'> ₹{mobile[0]?.price}</span>
                     </div>
                         {color !== 'plain' && <div className='my-6 md:my-0 flex justify-around px-5 items-center'>
                         <button className='px-8  text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl md:w-[200px]' onClick={() => setSize('Choosing')}>Buy Now</button>
@@ -237,8 +239,13 @@ export async function getServerSideProps(context) {
     }
     let model = context.query.models.split('-').join(' ')
     let brand = context.query.brands
+
     let products = await Product.find({ name: model, brand: brand }).lean();
+    let appleprod = await Product.find({
+        name: 'iphone 14',
+        brand: 'apple',
+    }).lean();
     return {
-        props: { products: JSON.parse(JSON.stringify(products)) },
+        props: { products: JSON.parse(JSON.stringify(products)), appleprod: JSON.parse(JSON.stringify(appleprod)) },
     }
 }

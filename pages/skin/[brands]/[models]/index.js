@@ -17,6 +17,11 @@ console.log(prop)
 
     return (
         <div className=''>
+            <p className='w-full text-center m-1 text-xs md:text-base'>
+                {
+                    products[0]?.img ? "" : "shown image is of iphone 14 not of " + products[0].name
+                }
+            </p>
             <div className='m-3 level3:mx-5 sm:m-12 md:m-16 text-center level3:text-start lg:m-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10'>
 
           

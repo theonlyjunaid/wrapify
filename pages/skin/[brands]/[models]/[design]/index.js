@@ -305,8 +305,14 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize,prop
 
     return (
         <div className='md:flex items-stretch w-full outline-none min-h-[93vh] '>
+          
             {/* flex flex-col justify-center items-center */}
-            <div className='w-full md:w-1/2 overflow-y-auto flex justify-self-stretch h-[70vh] md:h-screen md:max-h-[200vh] my-0 mx-auto bg-white'>
+            <div className='w-full md:w-1/2 relative overflow-y-auto flex justify-self-stretch h-[70vh] md:h-screen md:max-h-[200vh] my-0 mx-auto bg-white'>
+                <p className='absolute w-full text-center m-1 text-xs md:text-base'>
+                    {
+                        product?.img ? "" : "shown image is of iphone 14 not of " + product.name
+                    }
+                </p>
                 <div className='w-[100%]  md:h-screen  flex justify-center items-center'>
                     <div className="w-[85%] h-[80%]">
                         <div className='w-[100%] h-[100%] relative flex justify-center items-center '>
@@ -347,7 +353,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize,prop
                         </div>
                         <div className='my-6 md:my-0 md:w-[70%] flex justify-around px-5 items-center'>
                             <button className='px-8  text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button>
-                            <Link legacyBehavior href={destination}><a><button className='px-8 text-lg font-extralight py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl'>ll Customize</button></a></Link>
+                            <Link legacyBehavior href={destination}><a><button className='px-8 text-lg font-extralight py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl'>Customize</button></a></Link>
                         </div>
                     </div>
                 </div>}

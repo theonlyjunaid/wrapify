@@ -24,16 +24,26 @@ const [size, setSize] = useState('backfit')
     let defaultModel=products.find((item)=>{
         return item.brand===brand && item.name===models[0].name
     })
-    console.log(defaultModel.name)
+    let appleitems=products.filter((item)=>{
+        return item.brand==='apple' && item.name==='iphone 14'
+    })
+    console.log(appleitems[0].img)
     useEffect(() => {
         setModel(defaultModel.name)
     }, [brand])
 
   return (
+    <>
+     <p>
+           {
+                  item?.img ? "":"shown image is of iphone 14 not of "  + model
+           } 
+        </p>
       <div className='md:flex w-full lg:w-4/5 mx-auto min-h-[600px] max-w-[1280px] py-10'>
+       
         <div className='xl:w-1/2  flex justify-center'>
 
-<Image src={item?.img} width={360} height={360} alt='image'  className='w-[220px] sm:w-auto h-auto'/>
+              <Image src={item?.img ? item?.img : appleitems[0]?.img } width={360} height={360} alt='image'  className='w-[220px] sm:w-auto h-auto'/>
         </div>
           <div className=' mx-auto md:mx-0 sm:w-4/5 md:w-1/2 px-5 md:px-2 pt-10  '>
 <div className='mx-auto md:mx-0 sm:w-full md:w-full px-5 md:px-2 pt-10    '>
@@ -123,6 +133,7 @@ defaultValue={defaultModel.name}
 
 </div>
     </div>
+      </>
   )
 }
 
