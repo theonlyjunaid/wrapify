@@ -102,7 +102,7 @@ console.log(itemCode)
     setKey(Math.random())
     router.push("/")
   }
-  return <div >
+  return <div className='bg-[#F8F8F8]'>
     <LoadingBar
       color='#f11946'
       progress={progress}

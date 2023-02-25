@@ -51,3 +51,15 @@ export const mobile2 = {
         }
     },
 }
+
+export const brands = {
+    Apple:'https://ik.imagekit.io/wrapmydevice3/brands/apple.webp',
+    Oneplus:'https://ik.imagekit.io/wrapmydevice3/brands/oneplus.webp',
+    Nothing:'https://ik.imagekit.io/wrapmydevice3/brands/nothing.webp',
+    Realme:'https://ik.imagekit.io/wrapmydevice3/brands/realme.webp',
+    Oppo:'https://ik.imagekit.io/wrapmydevice3/brands/oppo.webp',
+    Vivo:'https://ik.imagekit.io/wrapmydevice3/brands/vivo.webp',
+    Xiaomi:'https://ik.imagekit.io/wrapmydevice3/brands/xiaomi.webp',
+    Motorola:'https://ik.imagekit.io/wrapmydevice3/brands/motorola.webp',
+    Realme:'https://ik.imagekit.io/wrapmydevice3/brands/realme.webp',
+}

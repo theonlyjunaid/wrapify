@@ -35,7 +35,7 @@ if (typeof window !== "undefined") {
         <div className='m-3 level3:mx-5 sm:m-12 text-center level3:text-start  mb-3 '>
 
 
-          <div className='text-black text-xl level3:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold   md:mx-10 py-3 level4:py-4'>
+          <div className='text-black   md:mx-10 overflow-y-hidden text-5xl' >
             {/* {products[0]?.name} Skins Designs */}
             Select by Design
           </div>
@@ -49,7 +49,7 @@ if (typeof window !== "undefined") {
                     </svg></div> <Link legacyBehavior href={`/skin/${brands}/${models}/customize`}><a ><div className=''>Start the Customizer</div></a></Link>  </button>
                 </div> */}
         </div>
-        <div className='grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4 relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3  '>
+        {/* <div className='grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4 relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3  '>
           {products.slice(2, 6).map((product, index) => {
             const destination = '/collection/color?' + 'subCategory=' + product.subCategory + '&color=' + product.color
             return (
@@ -69,16 +69,7 @@ if (typeof window !== "undefined") {
               </div>
                 <div className={`text-sm md:text-base  w-[100%] bottom-0   font-mono font-light py-1 sm:py-2 md:py-3 md:${show === product?.slug ? '' : 'hiden'} `}>
                   <div>{product?.color.toUpperCase()}</div>
-                  {/* <div className=''>
-                                    <span className='md:text-lg font-semibold'>   ₹{
-                                        product?.price
-
-                                    }
-                                    </span >
-                                    <span className='text-sm md:text-base mx-2  line-through'>
-                                        ₹499
-                                    </span>
-                                </div> */}
+       
                 </div>
 
               </a>
@@ -86,7 +77,83 @@ if (typeof window !== "undefined") {
               </Link>
             )
           }).reverse()}
-        </div>
+        </div> */}
+        <ul id='myUL' className="grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4  relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10">
+
+          {products.slice(2, 6).map((product, index) => {
+            const destination = '/collection/color?' + 'subCategory=' + product.subCategory + '&color=' + product.color
+            return (
+              // <Link legacyBehavior href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
+              //   onMouseEnter={() => setShow(product?.slug)}
+              //   onMouseLeave={() => setShow('')}
+              // >{<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75 bg-gray-100
+              // ${isLoading
+              //     ? 'scale-110 blur-[2px] grayscale'
+              //     : 'scale-100 blur-0 grayscale-0'}`} width={280} height={400} onLoadingComplete={() => {
+              //       setLoading(false);
+              //       console.log(product.color)
+              //     }}
+              //   placeholder='blur'
+              //   blurDataURL='/Loading_icon.gif' />}
+
+              // </div>
+              //   <div className={`text-sm md:text-base  w-[100%] bottom-0   font-mono font-light py-1 sm:py-2 md:py-3 md:${show === product?.slug ? '' : 'hiden'} `}>
+              //     <div>{product?.color.toUpperCase()}</div>
+              //     {/* <div className=''>
+              //                       <span className='md:text-lg font-semibold'>   ₹{
+              //                           product?.price
+
+              //                       }
+              //                       </span >
+              //                       <span className='text-sm md:text-base mx-2  line-through'>
+              //                           ₹499
+              //                       </span>
+              //                   </div> */}
+              //   </div>
+
+              // </a>
+
+              // </Link>
+              <li className='p-2 ' key={index}>
+                <Link legacyBehavior href={destination}  ><a className="block   shad link-dark py-6 px-2 text-center text-gray-900 relative overflow-hidden text-decoration-none ">
+                  <div className='p-2'>
+                    {<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75 
+              ${isLoading
+                        ? 'scale-110 blur-[2px] grayscale'
+                        : 'scale-100 blur-0 grayscale-0'}`} width={280} height={400} onLoadingComplete={() => {
+                          setLoading(false);
+                          console.log(product.color)
+                        }}
+                      placeholder='blur'
+                      blurDataURL='/Loading_icon.gif' />}
+                  </div>
+                  <div className='text-mono font-semibold'>
+                    {product?.color.toUpperCase()}
+                  </div>
+                </a></Link>
+              </li>
+            )
+          }).reverse()}
+        
+          {/* <li  className='p-5'>
+                    <Link legacyBehavior href="/skin/samsung"  ><a className="block w-[110px] h-[110px] shad link-dark py-6 px-2 text-center text-gray-900 relative overflow-hidden text-decoration-none ">
+                                    <div>
+                            <Image src='/icons/samsung.svg' width={50} height={50} className='mx-auto   sc' />
+                                    </div>
+Samsung
+                                </a></Link>
+                            </li>
+                            <li  className='p-5'>
+                    <Link legacyBehavior href="/skin/samsung"  ><a className="block w-[110px] h-[110px] shad link-dark py-6 px-2 text-center text-gray-900 relative overflow-hidden text-decoration-none ">
+                                    <div>
+                            <Image src='/icons/oneplus.svg' width={50} height={50} className='mx-auto scale-50' />
+                                    </div>
+Oneplus
+                                </a></Link>
+                            </li> */}
+
+
+        </ul>
         <Link legacyBehavior href="/collection"><a><div className='bg-gray-200 rounded-3xl m-3 mb-6 hover:bg-gray-50 px-6 absolute right-5 cursor-pointer text-xl p-3 hover:text-gray-500'>See More ...</div></a></Link> 
       </div>
       <Popular />
