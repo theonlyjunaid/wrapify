@@ -35,7 +35,7 @@ if (typeof window !== "undefined") {
         <div className='m-3 level3:mx-5 sm:m-12 text-center level3:text-start  mb-3 '>
 
 
-          <div className='text-black   md:mx-10 overflow-y-hidden text-5xl' >
+          <div className='text-black   md:mx-10 overflow-y-hidden text-2xl sm:text-3xl md:text-5xl' >
             {/* {products[0]?.name} Skins Designs */}
             Select by Design
           </div>
@@ -154,7 +154,7 @@ Oneplus
 
 
         </ul>
-        <Link legacyBehavior href="/collection"><a><div className='bg-gray-200 rounded-3xl m-3 mb-6 hover:bg-gray-50 px-6 absolute right-5 cursor-pointer text-xl p-3 hover:text-gray-500'>See More ...</div></a></Link> 
+        <Link legacyBehavior href="/collection"><a><div className='bg-gray-200 rounded-3xl m-1 md:m-3 mb-6 hover:bg-gray-50 px-3 md:px-6 absolute right-5 cursor-pointer text-lg md:text-xl p-1 md:p-3 hover:text-gray-500'>See More ...</div></a></Link> 
       </div>
       <Popular />
     </div>

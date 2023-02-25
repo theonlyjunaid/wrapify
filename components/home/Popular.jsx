@@ -16,7 +16,7 @@ export default function Popular() {
             <div className='m-3 level3:mx-5 sm:m-12 text-center level3:text-start  mb-3'>
 
 
-                <div className='text-black   md:mx-10 overflow-y-hidden text-5xl' >
+                <div className='text-black   md:mx-10 overflow-y-hidden text-2xl sm:text-3xl md:text-5xl' >
                     {/* {products[0]?.name} Skins Designs */}
                     Select by Brand
                 </div>
