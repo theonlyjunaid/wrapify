@@ -316,8 +316,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize,prop
                 <div className='w-[100%]  md:h-screen  flex justify-center items-center'>
                     <div className="w-[85%] h-[80%]">
                         <div className='w-[100%] h-[100%] relative flex justify-center items-center '>
-                            <img src={product.img?pro
-                                .img : prop?.img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
+                            <img src={product.img?product.img : prop?.img} alt="" className='w-auto max-h-[100%] max-w-[100%] object-center' />
                         </div>
                     </div>
                 </div>
