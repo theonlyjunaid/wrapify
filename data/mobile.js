@@ -9,6 +9,22 @@ export const mobile = {
     nothing: {
         name: 'nothing',
     },
+    realme: {
+        name: 'Realme',
+    },
+    oppo: {
+        name: 'Oppo',
+    },
+    vivo: {
+        name: 'Vivo',
+    },
+    xiaomi: {
+        name: 'Xiaomi',
+    },
+    motorola: {
+        name: 'Motorola',
+    },
+
 
 }
 

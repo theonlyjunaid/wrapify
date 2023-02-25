@@ -72,7 +72,7 @@ console.log(prop)
             <ul id='myUL' className="grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4  relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10">
 
                 {products.map((product, index) => {
-                    const destination = '/collection/color?' + 'subCategory=' + product.subCategory + '&color=' + product.color
+                    const destination = '/skin/' + product?.brand + '/' + product?.name.split(" ").join("-") + '/' + product?.color;
                     return (
                         // <Link legacyBehavior href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
                         //   onMouseEnter={() => setShow(product?.slug)}

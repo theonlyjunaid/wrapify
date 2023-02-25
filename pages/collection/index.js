@@ -32,44 +32,82 @@ const index = ({ products }) => {
                     </svg></div> <Link legacyBehavior href={`/skin/${brands}/${models}/customize`}><a ><div className=''>Start the Customizer</div></a></Link>  </button>
                 </div> */}
             </div>
-            <div className='grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4 min-h-screen relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10 '>
+            <ul id='myUL' className="grid level6:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 pb-4  relative mx-3 level3:mx-5 sm:mx-12 md:mx-16 lg:mx-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10">
+
                 {products.map((product, index) => {
-                    const destination = '/collection/color?'+'subCategory='+product.subCategory+'&color='+product.color
+                    const destination = '/collection/color?' + 'subCategory=' + product.subCategory + '&color=' + product.color
                     return (
-                        <Link legacyBehavior href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
-                            onMouseEnter={() => setShow(product?.slug)}
-                            onMouseLeave={() => setShow('')}
-                        >{<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75
+                        // <Link legacyBehavior href={destination} key={index}><a className='h-max'><div className='grid grid-cols-1 place-items-center bg-gray-100  rounded-md py-3  relative '
+                        //   onMouseEnter={() => setShow(product?.slug)}
+                        //   onMouseLeave={() => setShow('')}
+                        // >{<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75 bg-gray-100
+                        // ${isLoading
+
+                        //     : 'scale-100 blur-0 grayscale-0'}`} width={280} height={400} onLoadingComplete={() => {
+                        //       setLoading(false);
+                        //       console.log(product.color)
+                        //     }}
+                        //   placeholder='blur'
+                        //   blurDataURL='/Loading_icon.gif' />}
+
+                        // </div>
+                        //   <div className={`text-sm md:text-base  w-[100%] bottom-0   font-mono font-light py-1 sm:py-2 md:py-3 md:${show === product?.slug ? '' : 'hiden'} `}>
+                        //     <div>{product?.color.toUpperCase()}</div>
+                        //     {/* <div className=''>
+                        //                       <span className='md:text-lg font-semibold'>   ₹{
+                        //                           product?.price
+
+                        //                       }
+                        //                       </span >
+                        //                       <span className='text-sm md:text-base mx-2  line-through'>
+                        //                           ₹499
+                        //                       </span>
+                        //                   </div> */}
+                        //   </div>
+
+                        // </a>
+
+                        // </Link>
+                        <li className='p-2 ' key={index}>
+                            <Link legacyBehavior href={destination}  ><a className="block   shad link-dark py-6 px-2 text-center text-gray-900 relative overflow-hidden text-decoration-none ">
+                                <div className='p-2'>
+                                    {<Image src={product?.img} alt="" className={` my-2  hover:scale-[103%] transition-all  duration-700 ease-in-out group-hover:opacity-75 
               ${isLoading
-                                ? 'scale-110 blur-[2px] grayscale'
-                                : 'scale-100 blur-0 grayscale-0'}`} width={280} height={400} onLoadingComplete={() => {
-                                    setLoading(false);
-                                    console.log(product.color)
-                                }}
-                            placeholder='blur'
-                            blurDataURL='/Loading_icon.gif' />}
-
-                        </div>
-                            <div className={`text-sm md:text-base  w-[100%] bottom-0   font-mono font-light py-1 sm:py-2 md:py-3 md:${show === product?.slug ? '' : 'hiden'} `}>
-                                <div>{product?.color.toUpperCase()}</div>
-                                {/* <div className=''>
-                                    <span className='md:text-lg font-semibold'>   ₹{
-                                        product?.price
-
-                                    }
-                                    </span >
-                                    <span className='text-sm md:text-base mx-2  line-through'>
-                                        ₹499
-                                    </span>
-                                </div> */}
-                            </div>
-
-                        </a>
-
-                        </Link>
+                                            ? 'scale-110 blur-[2px] grayscale'
+                                            : 'scale-100 blur-0 grayscale-0'}`} width={280} height={400} onLoadingComplete={() => {
+                                                setLoading(false);
+                                                console.log(product.color)
+                                            }}
+                                        placeholder='blur'
+                                        blurDataURL='/Loading_icon.gif' />}
+                                </div>
+                                <div className='text-mono font-semibold'>
+                                    {product?.color.toUpperCase()}
+                                </div>
+                            </a></Link>
+                        </li>
                     )
                 }).reverse()}
-            </div>
+
+                {/* <li  className='p-5'>
+                    <Link legacyBehavior href="/skin/samsung"  ><a className="block w-[110px] h-[110px] shad link-dark py-6 px-2 text-center text-gray-900 relative overflow-hidden text-decoration-none ">
+                                    <div>
+                            <Image src='/icons/samsung.svg' width={50} height={50} className='mx-auto   sc' />
+                                    </div>
+Samsung
+                                </a></Link>
+                            </li>
+                            <li  className='p-5'>
+                    <Link legacyBehavior href="/skin/samsung"  ><a className="block w-[110px] h-[110px] shad link-dark py-6 px-2 text-center text-gray-900 relative overflow-hidden text-decoration-none ">
+                                    <div>
+                            <Image src='/icons/oneplus.svg' width={50} height={50} className='mx-auto scale-50' />
+                                    </div>
+Oneplus
+                                </a></Link>
+                            </li> */}
+
+
+            </ul>
         </div>
     )
 }
