@@ -23,6 +23,7 @@ const Navbar3 = ({ user, logout }) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
+
             }
         }).then(res => res.json())
             .then(data => {
@@ -33,7 +34,8 @@ const Navbar3 = ({ user, logout }) => {
                 setSearchItem(Object.keys(searchItems))
             })
 
-    }, [])
+    }, [search])
+
 
     const List = (e) => {
         console.log(e.target.value)
@@ -55,8 +57,8 @@ const Navbar3 = ({ user, logout }) => {
     }
     if (typeof window !== "undefined") {
         document.getElementsByTagName("body")[0].addEventListener("click", function (e) {
-            if (e.target.id !== "search" && e.target.id !== "searchIcon") {
-                // setSearch(false)
+            if (e.target.id !== "search" && e.target.id !== "searchIcon" &&e.target.id!== "myUL") {
+                setSearch('hidden')
             }
         })
     }
@@ -226,7 +228,7 @@ duration-500 ease-in-out transform  text-base px-2 -translate-x-[40px]
 
 
 
-   {search===''&& <div className='absolute z-40 top-[65px]   w-full bg-white h-max max-h-[40vh] pb-10 shadow-2xl  flex justify-center'>
+   {search===''&& <div id='ss' className='absolute z-40 top-[65px]   w-full bg-white h-max max-h-[40vh] pb-10 shadow-2xl  flex justify-center'>
                       <ul id='myUL' className='text-base sm:text-lg md:text-xl w-4/5  sm:w-[380px] md:w-[520px] xl:w-[700px] px-5'>
                           {
                               searchItem.map((item, index) => {

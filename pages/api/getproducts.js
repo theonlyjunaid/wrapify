@@ -2,7 +2,9 @@ import Product from "../../model/Product";
 import connectDB from "../../middleware/mongoose";
 
 const handler = async (req, res) => {
-    let products = await Product.find();
+    let products = await Product.find({
+        color: 'plain',
+    });
     let Skins = {}
     for (let item of products) {
         if (item.name in Skins) {
