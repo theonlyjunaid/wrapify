@@ -11,7 +11,7 @@ const order = ({ order }) => {
 // console.log(order)
     const router = useRouter()
     const sendmail = async () => {
-        const data = await fetch("https://mzart.in/api/mailapi", {
+        const data = await fetch("/api/mailapi", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -57,8 +57,14 @@ const order = ({ order }) => {
         }).then((t) =>
             t.json()
         );
-        console.log(data.data)
-        download( `${order.orderId}.pdf`,data.data)
+        
+        console.log(data?.data)
+        try {
+            download(`${order?.orderId}.pdf`, data?.data)
+        } catch (error) {
+            console.log(error)
+        }
+       
 
     }
     return (

@@ -177,7 +177,7 @@ duration-500 ease-in-out transform
                                     Plain Colour
                                 </li></Link>
 
-                                <Link href='/collection/testured'><li className='hover:text-gray-400 flex items-center' >
+                                <Link href='/collection/textured'><li className='hover:text-gray-400 flex items-center' >
                                     Textured                </li></Link>
 
                             </ul>

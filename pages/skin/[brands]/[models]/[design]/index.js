@@ -397,7 +397,7 @@ export default function Slug({ product, addToCart, buyNow,cart,size,setSize,prop
 
                         {size !== 'Choosing' && size !== 'Choose' && <Link legacyBehavior href="/cart"><a><div className='w-full flex justify-around px-5 items-center'>
                             {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
-                            <button className='px-8 text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(product.slug + "-"+size, 1, product.price, product.name + " (" + product.color+"/"+size+")",size, product.color, product.img,product.brand,product.desc,product.desc2) }}>Add to Cart</button>
+                            <button className='px-8 text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(product.slug + "-" + size, 1, product.price, product.name + " (" + product.color + "/" + size + ")", size, product.color, product.img ? product.img : prop?.img,product.brand,product.desc,product.desc2) }}>Add to Cart</button>
                         </div></a></Link>}
 
 

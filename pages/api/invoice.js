@@ -92,8 +92,13 @@ let products = [];
                 // },
 
         }
-        const result = await createInvoice(body)
-        res.status(200).json({message: 'Invoice created', data: result.pdf});
+        try {
+            const result = await createInvoice(body)
+            res.status(200).json({ message: 'Invoice created', data: result.pdf });
+        } catch (error) {
+            res.status(400).json({ message: 'Something went wrong', error: error });
+        }
+       
 
     }
 }

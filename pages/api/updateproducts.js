@@ -3,10 +3,7 @@ import connectDB from "../../middleware/mongoose";
 
 
 const handler = async (req, res) => {
-    let P = await Product.deleteMany({
-        brand:'Xiaomi'
-    });
-    console.log(P);
+
 
     // if (req.method === 'GET') {
     //     // console.log(req.body);

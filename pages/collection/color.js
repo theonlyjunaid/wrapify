@@ -128,7 +128,7 @@ defaultValue={defaultModel.name}
 
               <Link legacyBehavior href="/cart"><a><div className='w-full flex justify-center md:justify-start px-5 items-center'>
                   {/* <button className='px-8 text-lg font-extralight py-2 bg-white hover:bg-slate-200 border-slate-300 border rounded-3xl' onClick={() => setSize('Choosing')}>Buy Now</button> */}
-                  <button className='px-4 level3:px-8 text-2xl level3:text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(item.slug + "-" + size, 1, item.price, item.name + " (" + item?.color + "/" + size + ")", size, item?.color, item?.img, item?.brand, item?.desc, item?.desc2) }}>Add to Cart</button>
+                      <button className='px-4 level3:px-8 text-2xl level3:text-3xl font-semibold py-2 hover:bg-[#f49f1c] bg-[#ffa825] rounded-3xl' onClick={() => { addToCart(item.slug + "-" + size, 1, item.price, item.name + " (" + item?.color + "/" + size + ")", size, item?.color, item?.img ? item?.img : appleitems[0]?.img, item?.brand, item?.desc, item?.desc2) }}>Add to Cart</button>
               </div></a></Link>
 
 </div>
