@@ -10,63 +10,63 @@ import { download } from 'easyinvoice'
 const order = ({ order }) => {
 // console.log(order)
     const router = useRouter()
-    const sendmail = async () => {
-        const data = await fetch("/api/mailapi", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ 'id': order._id }),
-        }).then((t) =>
-            t.json()        
-            );
-            console.log(data)
-        if (data.success) {
-            toast.success(data.message, {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
-        }
-        else if (data.success === false) {
-     console.log(data.message)
-        }
-    };
-    if (router.query.clearCart == 1) {
-        if (typeof window !== 'undefined') {
-            localStorage.removeItem('cart')
-        }
-        sendmail()
-    }
-    let totalQuantity = 0
+    // const sendmail = async () => {
+    //     const data = await fetch("/api/mailapi", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({ 'id': order._id }),
+    //     }).then((t) =>
+    //         t.json()        
+    //         );
+    //         console.log(data)
+    //     if (data.success) {
+    //         toast.success(data.message, {
+    //             position: "top-left",
+    //             autoClose: 5000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: true,
+    //             draggable: true,
+    //             progress: undefined,
+    //             theme: "light",
+    //         });
+    //     }
+    //     else if (data.success === false) {
+    //  console.log(data.message)
+    //     }
+    // };
+    // if (router.query.clearCart == 1) {
+    //     if (typeof window !== 'undefined') {
+    //         localStorage.removeItem('cart')
+    //     }
+    //     sendmail()
+    // }
+    // let totalQuantity = 0
 
 
-    const downloadInvoice = async () => {
-        const data = await fetch("/api/invoice", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(order),
+    // const downloadInvoice = async () => {
+    //     const data = await fetch("/api/invoice", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(order),
 
-        }).then((t) =>
-            t.json()
-        );
+    //     }).then((t) =>
+    //         t.json()
+    //     );
         
-        console.log(data?.data)
-        try {
-            download(`${order?.orderId}.pdf`, data?.data)
-        } catch (error) {
-            console.log(error)
-        }
+    //     console.log(data?.data)
+    //     try {
+    //         download(`${order?.orderId}.pdf`, data?.data)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
        
 
-    }
+    // }
     return (
 
         <div className="2xl:container 2xl:mx-auto flex mx-auto justify-center py-14 px-4 md:px-6 xl:px-20 min-h-screen">
