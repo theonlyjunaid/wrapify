@@ -43,7 +43,7 @@ const order = ({ order }) => {
     //     }
     //     sendmail()
     // }
-    // let totalQuantity = 0
+    let totalQuantity = 0
 
 
     // const downloadInvoice = async () => {
