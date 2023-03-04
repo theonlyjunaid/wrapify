@@ -4,6 +4,7 @@ import connectDB from "../../middleware/mongoose";
 import Order from "../../model/Order";
 import Product from "../../model/Product";
 import Pincodes from "../../model/Pincodes";
+
 // import pincode from '../../pincode.json'
 // import { useState } from "react";
 
@@ -37,7 +38,9 @@ const handler = async (req, res) => {
         // }
 
         // console.log(cart);
-        if (info.phone.length < 10 || info.phone.length > 10) {
+        
+        if (info.phone < 1000000000||info.phone>9999999999) {
+
             res.status(200).json({ success: false, message: 'Please enter 10 digit valid number' });
         }
         if(info.pincode.length < 6 || info.pincode.length > 6){

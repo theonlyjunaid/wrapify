@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
 import { BsTrash, BsCircle, BsCheck2Circle } from 'react-icons/bs'
 import Link from 'next/link'
+import { pincode } from '../../data/pins'
 
 const CheckoutDetails = ({ info, setInfo, handleChange, makePayment ,user}) => {
 
@@ -189,7 +190,7 @@ const CheckoutDetails = ({ info, setInfo, handleChange, makePayment ,user}) => {
 
               <div className='mt-4 px-2 w-full relative'>
                   <Link legacyBehavior href=""><a>
-                      <button disabled={info.disbled} onClick={makePayment} className="dis disabled:bg-gray-500 disabled:cursor-not-allowed cursor-pointer relative mx-auto flex justify-center   w-full   py-3  rounded-md my-5  bg-black text-white">Pay Now</button>
+                        <button disabled={info.disbled} onClick={() => { pincode.includes(Number(info.pincode)) ?makePayment():alert('pincode is not deleverable')}} className="dis disabled:bg-gray-500 disabled:cursor-not-allowed cursor-pointer relative mx-auto flex justify-center   w-full   py-3  rounded-md my-5  bg-black text-white">Pay Now</button>
                   </a></Link>
               </div>
           </div>

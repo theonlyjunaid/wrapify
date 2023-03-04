@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import pincode from '../pincode.json'
-import { pincode as pincode1 } from '../data/pins'
 import { ProductReview2, ProductReview1 } from '../components/checkout/ProductReview'
 import CheckoutDetails from '../components/checkout/CheckoutDetails'
 
-// import mongoose from 'mongoose'
-// import Pincodes from '../model/Pincodes'
 
 const checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal, qty, user, setSubTotal }) => {
-    // console.log(pincodeList)
-    // console.log(pincode.includes(110001))
-//checkif pincode is valid
-const router = useRouter()
-const [avail, setAvail] = useState(false)
 
-const [pincheck, setPincheck] = useState(2000)
-let pincodeList = []
 
     const [info, setInfo] = useState({
         name: '',
@@ -88,61 +76,62 @@ let pincodeList = []
         if (info.name && info.email && info.phone && info.address && info.pincode) {
             setInfo({ ...info, disbled: false })
         }
+      
      
-        if (e.target.name === 'pincode') {
-          if(e.target.value >100000&&e.target.value<999999){   
-            pincode1.map((pin,index) => {
-            //   pincodeList.push(pin.Pincode)
+//         if (e.target.name === 'pincode') {
+//           if(e.target.value >100000&&e.target.value<999999){   
+//             pincode1.map((pin,index) => {
+//             //   pincodeList.push(pin.Pincode)
                 
-                if (pin == e.target.value) {
-                    console.log(pin)
-setAvail(true)
-console.log(avail)
+//                 if (pin == e.target.value) {
+//                     console.log(pin)
+// setAvail(true)
+// console.log(avail)
 
-                    // return pin
-                    // // console.log(pin.Pincode)
-                    // // setPincheck(pin.Pincode)
+//                     // return pin
+//                     // // console.log(pin.Pincode)
+//                     // // setPincheck(pin.Pincode)
 
-                    // // if(city!=pin.City || state!=pin.State){
-                    // //     console.log(pin.City)
-                    // //     console.log(pin.State)
-                    // //     setInfo({ ...info, city: pin.City, state: pin.State, pincode: e.target.value })
-                    // // }
-                }else{
-                    console.log("pincode")
-                    return
-                }
+//                     // // if(city!=pin.City || state!=pin.State){
+//                     // //     console.log(pin.City)
+//                     // //     console.log(pin.State)
+//                     // //     setInfo({ ...info, city: pin.City, state: pin.State, pincode: e.target.value })
+//                     // // }
+//                 }else{
+//                     console.log("pincode")
+//                     return
+//                 }
 
-            })
+//             })
           
 
-            // console.log(pincodeList)
-            // console.log(pincodeList.includes(e.target.value))
-            // if (pincodeList.find(e.target.value)) {
-            //     console.log(e.target.value)
-            // }
+//             // console.log(pincodeList)
+//             // console.log(pincodeList.includes(e.target.value))
+//             // if (pincodeList.find(e.target.value)) {
+//             //     console.log(e.target.value)
+//             // }
          
-            // if (pincode.includes(e.target.value)) {
-            //     console.log(e.target.value)
-            // }
-                 }else if(e.target.value>999999){
-                    console.log("invalid pincode")
-                    toast.error('invalid pincode', {
-                        position: "top-left",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                    });
+//             // if (pincode.includes(e.target.value)) {
+//             //     console.log(e.target.value)
+//             // }
+//                  }else if(e.target.value>999999){
+//                     console.log("invalid pincode")
+//                     toast.error('invalid pincode', {
+//                         position: "top-left",
+//                         autoClose: 5000,
+//                         hideProgressBar: false,
+//                         closeOnClick: true,
+//                         pauseOnHover: true,
+//                         draggable: true,
+//                         progress: undefined,
+//                         theme: "light",
+//                     });
                     
-                    // setInfo({ ...info, pincode: e.target.value })
+//                     // setInfo({ ...info, pincode: e.target.value })
 
-                 }
+//                  }
                
-        }
+//         }
         // if (e.target.name === "phone") {
         //     if (e.target.value.length !== 10) {
         //         setInfo({ ...info, disbled: true })
@@ -185,10 +174,7 @@ console.log(avail)
     const makePayment = async () => {
 
         // console.log("here...");
-        if (!avail) {
-         alert("pincode not available")   
-         return
-        }
+      
         const res = await initializeRazorpay();
         let oid = Math.floor(Math.random() * Date.now());
         if (!res) {
@@ -213,11 +199,11 @@ console.log(avail)
         if (data.success) {
             var options = {
                 key: process.env.RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
-                name: "mzart",
+                name: "wrapmydevice",
                 currency: data.currency,
                 amount: data.amount,
                 order_id: data.id,
-                description: "Thankyou for your test donation",
+                description: "Thank you for your order",
                 callback_url: "/api/paymentverify",
                 prefill: {
                     name: info.name,
