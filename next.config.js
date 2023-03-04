@@ -9,7 +9,7 @@ module.exports = {
     PAYTM_HOST: 'https://securegw-stage.paytm.in',
     PAYTM_MID: 'xpGjOH09774467394480',
     PAYTM_MERCHANT_KEY: 'EDsP%U16YSmlWBUZ',
-    RAZORPAY_KEY:'rzp_test_ExY3ydUnXeYQN0',
-    RAZORPAY_SECRET:'hsz86xOTGtA5iObhlBSHapGO'
+    RAZORPAY_KEY:'rzp_live_J65TuEIWAseFIB',
+    RAZORPAY_SECRET:'DinPkIMBmgwb2leYAT4EFt2d'
   },
 }
