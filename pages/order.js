@@ -10,18 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const order = ({ order }) => {
 // console.log(order)
-    useEffect(() => {
-        const script = document.createElement('script');
-
-        script.src = "https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js";
-        script.async = true;
-
-        document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
+   
     const inv = () => {
         var element = `
        <!DOCTYPE html>
@@ -130,7 +119,7 @@ const order = ({ order }) => {
     }
     const router = useRouter()
     const sendmail = async () => {
-        const data = await fetch("/api/mailapi", {
+      const data = await fetch("https://wrapify.vercel.app/api/mailapi", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -156,14 +145,25 @@ const order = ({ order }) => {
      console.log(data.message)
         }
     };
-    if (router.query.clearCart == 1) {
-        if (typeof window !== 'undefined') {
-            localStorage.removeItem('cart')
-        }
-        sendmail()
-    }
+  
     let totalQuantity = 0
+  useEffect(() => {
+    const script = document.createElement('script');
 
+    script.src = "https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+    if (router.query.clearCart == 1) {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('cart')
+      }
+      sendmail()
+    }
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
 
     // const downloadInvoice = async () => {
     //     const data = await fetch("/api/invoice", {
