@@ -119,7 +119,7 @@ const order = ({ order }) => {
     }
     const router = useRouter()
     const sendmail = async () => {
-      const data = await fetch("https://wrapify.vercel.app/api/mailapi", {
+      const data = await fetch("/api/mailapi", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
