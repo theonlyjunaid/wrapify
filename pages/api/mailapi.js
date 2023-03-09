@@ -1,12 +1,9 @@
-import Order from "../../model/Order";
 const mailgun = require("mailgun-js")
 const DOMAIN = process.env.MAILGUN_DOMAIN
 const API = process.env.MAILGUN_API_KEY
-// const accountSid = process.env.TWILIO_ACCOUNT_SID;
-// const authToken = process.env.TWILIO_ACCOUNT_AUTH;
-// const twilio = require('twilio');
+const sdk = require('api')('@gupshup/v1.0#ezpvi10lcyl9hs6');
 
-// let client = new twilio(accountSid, authToken);
+
 export default async (req, res) => {
 const mg = mailgun({ apiKey: API, domain: DOMAIN })
 let data
@@ -17,7 +14,6 @@ if (req.method === "POST") {
         let productData = order.products
         let productHtml = ''
         for(let item in productData){
-            // productHtml +=`<div>${item.name}</div>`
             for(let i=0;i<productData[item].name.length;i++){
                 productHtml += `<tr
                                                                                                     class="row-border-bottom">
@@ -101,8 +97,6 @@ ${productData[item].varient}
                                                                                                 </tr>`
             }
         }
-    //    console.log(productHtml )
-
      data = {
         from: 'MZART<order@www.mzart.in>' ,
         to: order.email,
@@ -1118,14 +1112,19 @@ ${productHtml}
 </html>`,
     }
     mg.messages().send(data)
-    //     client.messages
-    //         .create({
-    //             body: `Hello ${order.name}, Thank you for your order. Your order id is ${order.orderId}. We will contact you soon.`,
-    //             from: 'whatsapp:+14155238886',
-    //             to: 'whatsapp:+91' +  order.phone
-    //         })
-    //         .then(message => console.log(message.sid))
-    //         .done();
+        sdk.postMsg({
+            message: `{"type":"text","text":"The status of ${order.orderId}  has been updated to Placed."}`,
+            channel: 'whatsapp',
+            source: 918799796185,
+            destination: `91${order.phone}`,
+            'src.name': 'mzartin'
+        }, {
+            accept: 'application/json',
+            apikey: process.env.GUPSHUP_KEY,
+        })
+            .then(({ data }) => console.log(data))
+            .catch(err => console.error(err));
+
     await Order.findByIdAndUpdate({ _id: req.body.id}, { ordermailsent: true });
     res.status(200).json({ success:true,message: 'Mail sent' });
     }else{

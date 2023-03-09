@@ -1,9 +1,8 @@
 const Razorpay = require("razorpay");
-const shortid = require("shortid");
 import connectDB from "../../middleware/mongoose";
 import Order from "../../model/Order";
 import Product from "../../model/Product";
-import Pincodes from "../../model/Pincodes";
+const sdk = require('api')('@gupshup/v1.0#ezpvim9lcyhvffa');
 
 // import pincode from '../../pincode.json'
 // import { useState } from "react";
@@ -14,6 +13,8 @@ const handler = async (req, res) => {
         const { subTotal, qty, cart, oid, info } = req.body;
         console.log(info)
 
+
+       
         let products = {};
         for (let key in cart) {
             let temp = key.split("-").slice(0, -1).join("-")
@@ -46,7 +47,12 @@ const handler = async (req, res) => {
         if(info.pincode.length < 6 || info.pincode.length > 6){
             res.status(200).json({ success: false, message: 'Please enter 6 digit valid pincode' });
         }
-
+        sdk.markauserasoptedIn({ user: `91${info.phone}` }, {
+            appname: 'mzartin',
+            apikey: process.env.GUPSHUP_KEY,
+        })
+            .then(({ data }) => console.log(data))
+            .catch(err => console.error(err));
 
         //check if cart is tempered
         let product, sumTotal = 0;

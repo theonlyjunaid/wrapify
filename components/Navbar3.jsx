@@ -64,7 +64,7 @@ const Navbar3 = ({ user, logout }) => {
     }
 
     return (
-        <div className='w-full bg-white shadow-md px-5 flex justify-center items-center border border-b-2 border-black h-[65px] '>
+        <div className='w-full shadow-md px-5 flex justify-center items-center  h-[65px] '>
             <NavMObDevice search={search} setSearch={setSearch} user={user} logout={logout} />
           <div className={`${search==='hidden'?' translate-x-[400%] absolute hidden':'translate-x-0'} duration-500 flex items-center justify-center md:justify-around w-full max-w-[1280px]`}>
  <Link href='/'><div

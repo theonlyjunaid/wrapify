@@ -8,7 +8,7 @@ const Orders = () => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const user = JSON.parse(localStorage.getItem('myuser'))
-
+console.log(user)
 
             fetch('/api/myorders', {
                 method: 'POST',
@@ -33,7 +33,7 @@ const Orders = () => {
                 {orderdata.map((item, index) => {
                     // console.log(item)
                     return (
-                        <div className=' border rounded-[10px] h-max  shadow-sm  mx-auto w-full max-w-[900px] my-5 mb-14' key={item}>
+                        <div className=' border rounded-[10px] h-max   shad  mx-auto w-full max-w-[900px] my-5 mb-14' key={item}>
                             <div className='sm:flex  sm:justify-between my-5 px-2 md:px-10 items-center w-full'>
 <div className='level3:flex text-center level3:text-justify  level3:justify-around gap-4 md:gap-10 w-full sm:w-auto'>
 
@@ -85,7 +85,7 @@ const Orders = () => {
                                                         <h2 className='font-[500] tracking-wide'>{item.products[key].varient.toUpperCase()}</h2>
                                                         <h3 className='text-sm text-gray-500 tracking-wide level4:mt-1 level4:my-[1px] '>Model: {item.products[key].name[0].split("(")[0].toUpperCase()}</h3>
                                                         <h3 className='text-sm text-gray-500 tracking-wide level4:my-[1px]'>
-                                                            Size:   {item.products[key].name[0].split("(")[1].split("/")[1].split(")")[0]}
+                                                            Size:   {item.products[key].name[0].split("(")[1].split("/")[1]?.split(")")[0]}
                                                         </h3>
                                                         <h3 className='text-sm text-gray-500 tracking-wide level4:my-[1px]'>
                                                             Quantity:   {item.products[key].qty}

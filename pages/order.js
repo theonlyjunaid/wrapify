@@ -5,44 +5,163 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { download } from 'easyinvoice'
+
+
 
 const order = ({ order }) => {
 // console.log(order)
+    useEffect(() => {
+        const script = document.createElement('script');
+
+        script.src = "https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js";
+        script.async = true;
+
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        }
+    }, []);
+    const inv = () => {
+        var element = `
+       <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+      <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    
+    <style>
+      .invoice {
+        margin-bottom: 15px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        background: lightblue;
+        padding: 0 17px;
+      }
+      .border {
+        border: 1px solid #e5e5e5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" id="invoice">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 border">
+          <div class="row">
+            <div class="col-md-12 invoice text-center text-primary">
+              <h2>Invoice</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-right">
+              <p><strong>Invoice No: </strong> 12345</p>
+              <p><strong>Date:</strong> 15/Jan/2020</p>
+              <p>Bangalore</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 well invoice-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Service request</td>
+                    <td>15/Jan/2020</td>
+                    <td>$1000.00</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$1000.00</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-11 text-right mt-2 mb-2">Signature</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12 text-center mb-4">
+          <button class="btn btn-warning" id="downloadPdf">
+            Generate Invoice
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    
+    document
+      .getElementById("downloadPdf")
+      .addEventListener("click", function download() {
+        const element = document.getElementById("invoice");
+        html2pdf()
+          .from(element)
+          .save();
+      });
+  </script>
+</html>
+
+        `
+        html2pdf()
+            .from(element)
+            .save();
+    }
     const router = useRouter()
-    // const sendmail = async () => {
-    //     const data = await fetch("/api/mailapi", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({ 'id': order._id }),
-    //     }).then((t) =>
-    //         t.json()        
-    //         );
-    //         console.log(data)
-    //     if (data.success) {
-    //         toast.success(data.message, {
-    //             position: "top-left",
-    //             autoClose: 5000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "light",
-    //         });
-    //     }
-    //     else if (data.success === false) {
-    //  console.log(data.message)
-    //     }
-    // };
-    // if (router.query.clearCart == 1) {
-    //     if (typeof window !== 'undefined') {
-    //         localStorage.removeItem('cart')
-    //     }
-    //     sendmail()
-    // }
+    const sendmail = async () => {
+        const data = await fetch("/api/mailapi", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ 'id': order._id }),
+        }).then((t) =>
+            t.json()        
+            );
+            console.log(data)
+        if (data.success) {
+            toast.success(data.message, {
+                position: "top-left",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        else if (data.success === false) {
+     console.log(data.message)
+        }
+    };
+    if (router.query.clearCart == 1) {
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem('cart')
+        }
+        sendmail()
+    }
     let totalQuantity = 0
 
 
@@ -82,12 +201,13 @@ const order = ({ order }) => {
                 pauseOnHover
                 theme="light"
             />
+        
             <div className="flex flex-col xl:flex-row justify-center items-center space-y-10 xl:space-y-0 xl:space-x-8">
               
-                <div className="flex justify-center flex-col items-start w-full lg:w-9/12 xl:w-full ">
+                <div className="flex justify-center flex-col items-start w-full lg:w-9/12 xl:w-full " >
                     <h3 className="text-3xl xl:text-4xl font-semibold py-1 w-full  md:text-left text-gray-800">Order Summary</h3>
                     <div>
-                        <button onClick={() => downloadInvoice()} className="flex justify-center items-center mx-2 mr-10 px-2 hover:bg-gray-300 bg-gray-100 ">
+                        <button onClick={() => inv()} className="flex justify-center items-center mx-2 mr-10 px-2 hover:bg-gray-300 bg-gray-100 ">
                            Download invoice
                         </button>
                     </div>
@@ -108,7 +228,7 @@ const order = ({ order }) => {
                                     <div key={item} className='flex md:flex-row justify-start items-start md:items-center w-full border border-gray-200'>
 
                                   
-                                    <div className="w-40 md:w-32 ">
+                                    <div className="w-40 md:w-32 " >
                                         <img  src={img} alt="girl-in-red-dress" className='h-32 py-1 md:h-32 md:py-2 md:ml-4'/>
                                         {/* <img className="md:hidden " src="https://i.ibb.co/f8pyz8q/Rectangle-8.png" alt="girl-in-red-dress" /> */}
                                     </div>

@@ -6,8 +6,7 @@ import Navbar3 from '../components/Navbar3'
 import Footer2 from '../components/Footer2'
 import { useRouter } from 'next/router'
 import LoadingBar from 'react-top-loading-bar'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 
 function MyApp({ Component, pageProps }) {

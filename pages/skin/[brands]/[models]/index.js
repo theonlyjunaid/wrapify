@@ -4,8 +4,7 @@ import Link from 'next/link'
 import mongoose from 'mongoose';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+
 
 function Index({ products,prop }) {
     const [isLoading, setLoading] = useState(true)
@@ -26,7 +25,7 @@ console.log(prop)
 
           
                 <div className='text-black text-xl level3:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold    level4:py-2'>
-                    {products[0]?.name || <Skeleton />} Skins Designs
+                    {products[0]?.name } Skins Designs
             </div>
                 <div className=' level3:flex items-center gap-1 md:gap-4 mt-3 level3:text-sm  sm:text-xl md:text-2xl lg:text-3xl font-light'>
                 <div className=' text-gray-700  md:w-contain'> Select your Design or
