@@ -154,16 +154,17 @@ const order = ({ order }) => {
     script.async = true;
 
     document.body.appendChild(script);
-    if (router.query.clearCart == 1) {
-      if (typeof window !== 'undefined') {
-        localStorage.removeItem('cart')
-      }
-      sendmail()
-    }
+  
     return () => {
       document.body.removeChild(script);
     }
   }, []);
+  if (router.query.clearCart == 1) {
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('cart')
+    }
+    sendmail()
+  }
 
     // const downloadInvoice = async () => {
     //     const data = await fetch("/api/invoice", {
