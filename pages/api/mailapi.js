@@ -1,4 +1,5 @@
 const mailgun = require("mailgun-js")
+import Order from "../../model/Order";
 const DOMAIN = process.env.MAILGUN_DOMAIN
 const API = process.env.MAILGUN_API_KEY
 const sdk = require('api')('@gupshup/v1.0#ezpvi10lcyl9hs6');
