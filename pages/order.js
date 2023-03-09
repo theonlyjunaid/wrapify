@@ -307,11 +307,10 @@ const order = ({ order }) => {
 export default order
 
 export async function getServerSideProps(context) {
-    if (!mongoose.connections[0].readyState) {
-        await mongoose.connect(process.env.MONGO_URI)
-    }
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGODB_URI);
 
-
+  }
 
     const order = await Order.findById(context.query.id);
     return {
