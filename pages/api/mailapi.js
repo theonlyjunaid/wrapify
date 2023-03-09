@@ -1113,18 +1113,18 @@ ${productHtml}
 </html>`,
     }
     mg.messages().send(data)
-        sdk.postMsg({
-            message: `{"type":"text","text":"The status of ${order.orderId}  has been updated to Placed."}`,
-            channel: 'whatsapp',
-            source: 918799796185,
-            destination: `91${order.phone}`,
-            'src.name': 'mzartin'
-        }, {
-            accept: 'application/json',
-            apikey: process.env.GUPSHUP_KEY,
-        })
-            .then(({ data }) => console.log(data))
-            .catch(err => console.error(err));
+        // sdk.postMsg({
+        //     message: `{"type":"text","text":"The status of ${order.orderId}  has been updated to Placed."}`,
+        //     channel: 'whatsapp',
+        //     source: 918799796185,
+        //     destination: `91${order.phone}`,
+        //     'src.name': 'mzartin'
+        // }, {
+        //     accept: 'application/json',
+        //     apikey: process.env.GUPSHUP_KEY,
+        // })
+        //     .then(({ data }) => console.log(data))
+        //     .catch(err => console.error(err));
 
     await Order.findByIdAndUpdate({ _id: req.body.id}, { ordermailsent: true });
     res.status(200).json({ success:true,message: 'Mail sent' });
