@@ -10,7 +10,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const order = ({ order }) => {
 // console.log(order)
-   
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = "https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
     const inv = () => {
         var element = `
        <!DOCTYPE html>
@@ -147,23 +158,16 @@ const order = ({ order }) => {
     };
   
     let totalQuantity = 0
-  useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = "https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-  
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
+ 
   if (router.query.clearCart == 1) {
     if (typeof window !== 'undefined') {
       localStorage.removeItem('cart')
     }
-    sendmail()
+   try {
+     sendmail()
+   } catch (error) {
+    console.log(error)
+   }
   }
 
     // const downloadInvoice = async () => {
