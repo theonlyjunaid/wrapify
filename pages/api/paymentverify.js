@@ -24,7 +24,7 @@ const handler = async (req, res) => {
         for (let slug in products) {
             await mongoose.connection.db.collection('products').updateOne({ slug: slug }, { $inc: { availableQty: -products[slug].qty } });
         }
-        res.redirect('/order?id=' + order._id + '&clearCart=1');
+        res.redirect('/order?id=' + order._id );
     }
     else {
         res.status(400).json({ message: 'This method is not allowed' });
